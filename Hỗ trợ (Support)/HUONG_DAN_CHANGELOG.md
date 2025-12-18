@@ -5,7 +5,7 @@
 
 ---
 
-## 📋 TỔNG QUAN
+## TỔNG QUAN
 
 **CHANGELOG.md** là file ghi lại lịch sử thay đổi của sản phẩm/service theo thời gian. File này giúp:
 - Người dùng biết được các thay đổi trong mỗi phiên bản
@@ -14,7 +14,7 @@
 
 ---
 
-## 🎯 CHANGELOG.md LÀ GÌ?
+## CHANGELOG.md LÀ GÌ?
 
 ### Định nghĩa
 
@@ -33,7 +33,7 @@
 
 ---
 
-## 📝 CẤU TRÚC CHANGELOG.md
+## CẤU TRÚC CHANGELOG.md
 
 ### Format chuẩn
 
@@ -94,7 +94,7 @@ và tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
-## 📋 CÁC LOẠI THAY ĐỔI
+## CÁC LOẠI THAY ĐỔI
 
 ### Added
 **Khi nào sử dụng**: Thêm tính năng mới
@@ -138,7 +138,7 @@ và tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
-## 🔄 QUY TRÌNH CẬP NHẬT CHANGELOG
+## QUY TRÌNH CẬP NHẬT CHANGELOG
 
 ### Khi phát triển tính năng mới
 
@@ -149,9 +149,9 @@ và tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 1. **Tạo release branch**: `release/v1.2.3`
 2. **Update CHANGELOG.md**:
-   - Di chuyển các thay đổi từ `[Unreleased]` sang version mới
-   - Thêm ngày release: `## [1.2.3] - 2024-12-17`
-   - Sắp xếp theo loại: Added, Changed, Fixed, Security, etc.
+ - Di chuyển các thay đổi từ `[Unreleased]` sang version mới
+ - Thêm ngày release: `## [1.2.3] - 2024-12-17`
+ - Sắp xếp theo loại: Added, Changed, Fixed, Security, etc.
 3. **Commit**: `git commit -m "chore: update CHANGELOG.md for v1.2.3"`
 4. **Merge vào main**
 
@@ -163,7 +163,7 @@ và tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
-## ✅ BEST PRACTICES
+## BEST PRACTICES
 
 ### 1. Viết rõ ràng
 
@@ -215,7 +215,7 @@ và tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ```markdown
 ## [2.0.0] - 2024-12-17
 
-### ⚠️ Breaking Changes
+### Breaking Changes
 - API /api/v1/users đã bị loại bỏ, sử dụng /api/v2/users
 - Thay đổi format response của API /api/users
 
@@ -225,7 +225,7 @@ và tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
-## 📝 TEMPLATE CHANGELOG.md
+## TEMPLATE CHANGELOG.md
 
 ```markdown
 # Changelog
@@ -238,24 +238,12 @@ và tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
-- 
-
-### Changed
-- 
-
-### Deprecated
-- 
-
-### Removed
-- 
-
-### Fixed
-- 
-
-### Security
-- 
-
-## [X.Y.Z] - YYYY-MM-DD
+- ### Changed
+- ### Deprecated
+- ### Removed
+- ### Fixed
+- ### Security
+- ## [X.Y.Z] - YYYY-MM-DD
 
 ### Added
 - Tính năng mới 1 (Issue #123, PR #456)
@@ -275,12 +263,8 @@ và tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [X.Y.Z-1] - YYYY-MM-DD
 
 ### Added
-- 
-
-### Fixed
-- 
-
----
+- ### Fixed
+- ---
 
 ## Links
 
@@ -290,7 +274,7 @@ và tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
-## 🔗 LIÊN KẾT VỚI RELEASE NOTE
+## LIÊN KẾT VỚI RELEASE NOTE
 
 ### Mối quan hệ
 
@@ -301,16 +285,16 @@ và tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 1. **Copy nội dung** từ CHANGELOG.md cho version mới
 2. **Bổ sung thông tin**:
-   - Git version (tag, commit)
-   - Docker image (tag, digest)
-   - Testing results
-   - Performance metrics
-   - Upgrade instructions
+ - Git version (tag, commit)
+ - Docker image (tag, digest)
+ - Testing results
+ - Performance metrics
+ - Upgrade instructions
 3. **Format lại** theo template Release Note
 
 ---
 
-## 📌 LƯU Ý
+## LƯU Ý
 
 1. **Luôn cập nhật CHANGELOG.md** khi có thay đổi
 2. **Commit riêng** cho CHANGELOG.md: `chore: update CHANGELOG.md`
@@ -320,7 +304,7 @@ và tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
-## 🔗 THAM KHẢO
+## THAM KHẢO
 
 - **Quy trình Release**: [`../Quy trình (QT-XXX)/QT-007-RELEASE_SAN_PHAM.md`](../Quy%20trình%20(QT-XXX)/QT-007-RELEASE_SAN_PHAM.md)
 - **Template Release Note**: [`../Template (TP-XXX)/TP-003-TEMPLATE_RELEASE_NOTE.md`](../Template%20(TP-XXX)/TP-003-TEMPLATE_RELEASE_NOTE.md)
@@ -329,6 +313,6 @@ và tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
-**Phiên bản**: 1.0  
+**Phiên bản**: 1.0 
 **Ngày cập nhật**: 2024-12-17
 

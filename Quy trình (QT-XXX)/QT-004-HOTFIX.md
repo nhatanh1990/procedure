@@ -2,7 +2,7 @@
 
 ---
 
-## 📋 THÔNG TIN TÀI LIỆU
+## THÔNG TIN TÀI LIỆU
 
 - **Mã quy trình**: QT-004
 - **Tên quy trình**: Quy trình Hotfix
@@ -13,7 +13,7 @@
 
 ---
 
-## 📚 MỤC LỤC
+## MỤC LỤC
 
 1. [Tổng quan](#1-tổng-quan)
 2. [Quy trình hotfix](#2-quy-trình-hotfix)
@@ -21,7 +21,7 @@
 4. [Quy trình phát triển hotfix](#4-quy-trình-phát-triển-hotfix)
 5. [Quy trình triển khai hotfix](#5-quy-trình-triển-khai-hotfix)
 6. [Quy trình hoàn thiện](#6-quy-trình-hoàn-thiện)
-7. [Quy định về Quyền Truy Cập Tối Thiểu](#7-quy-định-về-quyền-truy-cập-tối-thiểu) ⭐
+7. [Quy định về Quyền Truy Cập Tối Thiểu](#7-quy-định-về-quyền-truy-cập-tối-thiểu) 
 8. [Checklist](#8-checklist)
 
 ---
@@ -53,55 +53,55 @@ Quy trình hotfix nhằm xử lý nhanh chóng các sự cố nghiêm trọng tr
 
 ```mermaid
 flowchart TD
-    Start([Phát hiện sự cố]) --> Assess[Đánh giá sự cố]
-    
-    Assess -->|Không nghiêm trọng| Normal[Chuyển sang quy trình bình thường]
-    Normal --> End1([Kết thúc])
-    
-    Assess -->|Nghiêm trọng| Decide[Quyết định hotfix]
-    
-    Decide --> Approve[Phê duyệt khẩn]
-    
-    Approve -->|Có thể phê duyệt sau| Dev[Phát triển hotfix]
-    Approve -->|Phê duyệt ngay| Dev
-    
-    Dev --> CreateBranch[Tạo hotfix branch]
-    
-    CreateBranch --> Fix[Sửa lỗi]
-    
-    Fix --> QuickTest[Test nhanh]
-    
-    QuickTest -->|Fail| Fix
-    
-    QuickTest -->|Pass| Review{Code review?}
-    
-    Review -->|Có thời gian| CodeReview[Code review]
-    Review -->|Không có thời gian| Deploy
-    
-    CodeReview -->|Cần sửa| Fix
-    CodeReview -->|OK| Deploy
-    
-    Deploy[Triển khai hotfix] --> Verify[Kiểm tra]
-    
-    Verify -->|Fail| Rollback[Rollback]
-    Rollback --> End2([Kết thúc])
-    
-    Verify -->|Pass| Confirm[Xác nhận sửa lỗi]
-    
-    Confirm --> Merge[Merge vào main]
-    
-    Merge --> Complete[Bổ sung hồ sơ]
-    
-    Complete --> Evaluate[Đánh giá sau]
-    
-    Evaluate --> End3([Kết thúc])
-    
-    style Start fill:#FF6B6B
-    style End1 fill:#90EE90
-    style End2 fill:#FFA500
-    style End3 fill:#90EE90
-    style Deploy fill:#87CEEB
-    style Rollback fill:#FFA500
+ Start([Phát hiện sự cố]) --> Assess[Đánh giá sự cố]
+ 
+ Assess -->|Không nghiêm trọng| Normal[Chuyển sang quy trình bình thường]
+ Normal --> End1([Kết thúc])
+ 
+ Assess -->|Nghiêm trọng| Decide[Quyết định hotfix]
+ 
+ Decide --> Approve[Phê duyệt khẩn]
+ 
+ Approve -->|Có thể phê duyệt sau| Dev[Phát triển hotfix]
+ Approve -->|Phê duyệt ngay| Dev
+ 
+ Dev --> CreateBranch[Tạo hotfix branch]
+ 
+ CreateBranch --> Fix[Sửa lỗi]
+ 
+ Fix --> QuickTest[Test nhanh]
+ 
+ QuickTest -->|Fail| Fix
+ 
+ QuickTest -->|Pass| Review{Code review?}
+ 
+ Review -->|Có thời gian| CodeReview[Code review]
+ Review -->|Không có thời gian| Deploy
+ 
+ CodeReview -->|Cần sửa| Fix
+ CodeReview -->|OK| Deploy
+ 
+ Deploy[Triển khai hotfix] --> Verify[Kiểm tra]
+ 
+ Verify -->|Fail| Rollback[Rollback]
+ Rollback --> End2([Kết thúc])
+ 
+ Verify -->|Pass| Confirm[Xác nhận sửa lỗi]
+ 
+ Confirm --> Merge[Merge vào main]
+ 
+ Merge --> Complete[Bổ sung hồ sơ]
+ 
+ Complete --> Evaluate[Đánh giá sau]
+ 
+ Evaluate --> End3([Kết thúc])
+ 
+ style Start fill:#FF6B6B
+ style End1 fill:#90EE90
+ style End2 fill:#FFA500
+ style End3 fill:#90EE90
+ style Deploy fill:#87CEEB
+ style Rollback fill:#FFA500
 ```
 
 ### 2.2. Chi tiết từng bước
@@ -357,24 +357,24 @@ git checkout -b hotfix/issue-123
 ### 7.3. Quy trình cấp quyền khẩn cấp cho hotfix
 
 1. **Yêu cầu quyền**
-   - Tạo yêu cầu trong hệ thống quản lý quyền
-   - Mô tả lý do: Hotfix khẩn cấp
-   - Xác định thời gian: 2-4 giờ
+ - Tạo yêu cầu trong hệ thống quản lý quyền
+ - Mô tả lý do: Hotfix khẩn cấp
+ - Xác định thời gian: 2-4 giờ
 
 2. **Phê duyệt khẩn cấp**
-   - PM/PDM hoặc ECAB phê duyệt nhanh qua chat/phone
-   - Ghi log phê duyệt
-   - Phê duyệt chính thức sau (trong vòng 24 giờ)
+ - PM/PDM hoặc ECAB phê duyệt nhanh qua chat/phone
+ - Ghi log phê duyệt
+ - Phê duyệt chính thức sau (trong vòng 24 giờ)
 
 3. **Cấp quyền**
-   - IT cấp quyền tạm thời (JIT) ngay lập tức
-   - Tự động hết hạn sau 2-4 giờ
-   - Ghi log đầy đủ
+ - IT cấp quyền tạm thời (JIT) ngay lập tức
+ - Tự động hết hạn sau 2-4 giờ
+ - Ghi log đầy đủ
 
 4. **Thu hồi quyền**
-   - Tự động thu hồi sau khi hết hạn
-   - Thu hồi ngay sau khi hoàn thành hotfix
-   - Ghi log thu hồi
+ - Tự động thu hồi sau khi hết hạn
+ - Thu hồi ngay sau khi hoàn thành hotfix
+ - Ghi log thu hồi
 
 ### 7.4. Giám sát và ghi log
 

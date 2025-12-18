@@ -5,13 +5,13 @@
 
 ---
 
-## 📋 TỔNG QUAN
+## TỔNG QUAN
 
 File này quản lý metadata tập trung cho toàn bộ hệ thống quy trình trong folder QT.
 
 ---
 
-## 📝 THÔNG TIN CHUNG
+## THÔNG TIN CHUNG
 
 ### Thông tin tổ chức
 
@@ -27,7 +27,7 @@ File này quản lý metadata tập trung cho toàn bộ hệ thống quy trình
 
 ---
 
-## 📅 THÔNG TIN NGÀY THÁNG
+## THÔNG TIN NGÀY THÁNG
 
 ### Format ngày tháng
 
@@ -35,7 +35,7 @@ File này quản lý metadata tập trung cho toàn bộ hệ thống quy trình
 
 ---
 
-## 📄 THÔNG TIN FILE
+## THÔNG TIN FILE
 
 ### Quy trình (QT-XXX)
 
@@ -57,7 +57,7 @@ File này quản lý metadata tập trung cho toàn bộ hệ thống quy trình
 
 ---
 
-## 🔄 CẬP NHẬT
+## CẬP NHẬT
 
 ### Quy trình cập nhật
 
@@ -67,7 +67,7 @@ File này quản lý metadata tập trung cho toàn bộ hệ thống quy trình
 
 ---
 
-## 📌 LƯU Ý
+## LƯU Ý
 
 - File này là nguồn thông tin chính thức cho metadata
 - Tất cả metadata trong các file quy trình nên tham chiếu đến file này
@@ -75,5 +75,5 @@ File này quản lý metadata tập trung cho toàn bộ hệ thống quy trình
 
 ---
 
-**Phiên bản**: 1.0  
+**Phiên bản**: 1.0 
 **Ngày cập nhật**: 2024-12-17

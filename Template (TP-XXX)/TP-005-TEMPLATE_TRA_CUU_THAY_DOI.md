@@ -1,6 +1,6 @@
 # TP-005: TEMPLATE TRA CỨU THAY ĐỔI
 
-**Mã template**: TP-005  
+**Mã template**: TP-005 
 **Tham chiếu**: `QT-008-DANH_SACH_THAY_DOI_CHUAN.md`
 
 ---
@@ -105,16 +105,16 @@
 ### Loại thay đổi
 
 - [ ] **Chuẩn (Standard Change)**
-  - Quy trình: Đã ủy quyền trước, không cần CAB mỗi lần
-  - Tham chiếu: `QT-003-UPCODE.md` - Phần 3.1
+ - Quy trình: Đã ủy quyền trước, không cần CAB mỗi lần
+ - Tham chiếu: `QT-003-UPCODE.md` - Phần 3.1
 
 - [ ] **Thông thường (Normal Change)**
-  - Quy trình: Cần CAB phê duyệt
-  - Tham chiếu: `QT-003-UPCODE.md` - Phần 3.2
+ - Quy trình: Cần CAB phê duyệt
+ - Tham chiếu: `QT-003-UPCODE.md` - Phần 3.2
 
 - [ ] **Khẩn (Emergency Change)**
-  - Quy trình: ECAB hoặc Lãnh đạo, có thể phê duyệt sau
-  - Tham chiếu: `QT-004-HOTFIX.md`
+ - Quy trình: ECAB hoặc Lãnh đạo, có thể phê duyệt sau
+ - Tham chiếu: `QT-004-HOTFIX.md`
 
 ### Cấp độ phê duyệt
 

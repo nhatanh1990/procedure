@@ -1,6 +1,6 @@
 # CL-006: CHECKLIST TRA CỨU THAY ĐỔI
 
-**Mã checklist**: CL-006  
+**Mã checklist**: CL-006 
 **Tham chiếu**: `QT-008-DANH_SACH_THAY_DOI_CHUAN.md`
 
 ---

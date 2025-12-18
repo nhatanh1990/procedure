@@ -1,6 +1,6 @@
 # CL-005: CHECKLIST RELEASE
 
-**Mã checklist**: CL-005  
+**Mã checklist**: CL-005 
 **Tham chiếu quy trình**: QT-007
 
 ---

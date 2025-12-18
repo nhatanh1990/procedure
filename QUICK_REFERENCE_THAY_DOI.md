@@ -4,7 +4,7 @@
 
 ---
 
-## 📋 TRA CỨU THEO MÃ
+## TRA CỨU THEO MÃ
 
 | Mã | Tên thay đổi | Nhóm | Rủi ro | Loại | Cấp duyệt |
 |----|--------------|------|--------|------|-----------|
@@ -76,7 +76,7 @@
 
 ---
 
-## 🔍 TRA CỨU THEO NHÓM
+## TRA CỨU THEO NHÓM
 
 ### Nhóm A: Hạ tầng (19 loại)
 **Mã**: A1.1 - A5.3
@@ -113,7 +113,7 @@
 
 ---
 
-## ⚠️ TRA CỨU THEO MỨC ĐỘ RỦI RO
+## TRA CỨU THEO MỨC ĐỘ RỦI RO
 
 ### Rủi ro Thấp (25 loại)
 **Cấp duyệt**: PM/PDM, Lãnh đạo TT
@@ -137,7 +137,7 @@
 
 ---
 
-## 🚨 TRA CỨU THEO LOẠI THAY ĐỔI
+## TRA CỨU THEO LOẠI THAY ĐỔI
 
 ### Chuẩn (34 loại)
 **Quy trình**: Đã ủy quyền trước, không cần CAB mỗi lần
@@ -156,7 +156,7 @@
 
 ---
 
-## 📞 LIÊN HỆ
+## LIÊN HỆ
 
 - **Xem chi tiết**: `QT-008-DANH_SACH_THAY_DOI_CHUAN.md`
 - **Quy trình Upcode**: `QT-003-UPCODE.md`

@@ -2,7 +2,7 @@
 
 ---
 
-## 📋 THÔNG TIN TÀI LIỆU
+## THÔNG TIN TÀI LIỆU
 
 - **Mã quy trình**: QT-007
 - **Tên quy trình**: Quy trình Release Sản phẩm
@@ -13,7 +13,7 @@
 
 ---
 
-## 📚 MỤC LỤC
+## MỤC LỤC
 
 1. [Tổng quan](#1-tổng-quan)
 2. [Quy trình release](#2-quy-trình-release)
@@ -22,7 +22,7 @@
 5. [Deploy release](#5-deploy-release)
 6. [Publish release](#6-publish-release)
 7. [Release Note](#7-release-note)
-8. [Quy định về Quyền Truy Cập Tối Thiểu](#8-quy-định-về-quyền-truy-cập-tối-thiểu) ⭐
+8. [Quy định về Quyền Truy Cập Tối Thiểu](#8-quy-định-về-quyền-truy-cập-tối-thiểu) 
 9. [Checklist](#9-checklist)
 
 ---
@@ -55,65 +55,65 @@ Quy trình release sản phẩm nhằm phát hành phiên bản sản phẩm m�
 
 ```mermaid
 flowchart TD
-    Start([Chuẩn bị release]) --> CheckReady{Code sẵn sàng?}
-    
-    CheckReady -->|Chưa| Wait[Chờ code sẵn sàng]
-    Wait --> CheckReady
-    
-    CheckReady -->|Sẵn sàng| CreateBranch[Tạo release branch]
-    
-    CreateBranch --> UpdateVersion[Update version]
-    
-    UpdateVersion --> UpdateChangelog[Update CHANGELOG.md]
-    
-    UpdateChangelog --> WriteReleaseNote[Tạo Release Note]
-    
-    WriteReleaseNote --> ReviewReleaseNote[Review Release Note]
-    
-    ReviewReleaseNote -->|Cần sửa| WriteReleaseNote
-    
-    ReviewReleaseNote -->|OK| Merge[Merge vào main]
-    
-    Merge --> Tag[Tạo git tag]
-    
-    Tag --> Build[Build artifacts]
-    
-    Build --> TestArtifacts[Test artifacts]
-    
-    TestArtifacts -->|Fail| FixBuild[Sửa lỗi build]
-    FixBuild --> Build
-    
-    TestArtifacts -->|Pass| PushArtifacts[Push artifacts]
-    
-    PushArtifacts --> DeployStaging[Deploy lên Staging]
-    
-    DeployStaging --> TestStaging[Test trên Staging]
-    
-    TestStaging -->|Fail| RollbackStaging[Rollback Staging]
-    RollbackStaging --> FixIssue[Sửa lỗi]
-    FixIssue --> Tag
-    
-    TestStaging -->|Pass| DeployProd[Deploy lên Production]
-    
-    DeployProd --> TestProd[Test trên Production]
-    
-    TestProd -->|Fail| RollbackProd[Rollback Production]
-    RollbackProd --> FixIssue
-    
-    TestProd -->|Pass| PublishReleaseNote[Publish Release Note]
-    
-    PublishReleaseNote --> Notify[Thông báo các team]
-    
-    Notify --> UpdateDoc[Update documentation]
-    
-    UpdateDoc --> Record[Ghi nhận]
-    
-    Record --> End([Kết thúc])
-    
-    style Start fill:#90EE90
-    style End fill:#FFB6C1
-    style DeployProd fill:#87CEEB
-    style RollbackProd fill:#FFA500
+ Start([Chuẩn bị release]) --> CheckReady{Code sẵn sàng?}
+ 
+ CheckReady -->|Chưa| Wait[Chờ code sẵn sàng]
+ Wait --> CheckReady
+ 
+ CheckReady -->|Sẵn sàng| CreateBranch[Tạo release branch]
+ 
+ CreateBranch --> UpdateVersion[Update version]
+ 
+ UpdateVersion --> UpdateChangelog[Update CHANGELOG.md]
+ 
+ UpdateChangelog --> WriteReleaseNote[Tạo Release Note]
+ 
+ WriteReleaseNote --> ReviewReleaseNote[Review Release Note]
+ 
+ ReviewReleaseNote -->|Cần sửa| WriteReleaseNote
+ 
+ ReviewReleaseNote -->|OK| Merge[Merge vào main]
+ 
+ Merge --> Tag[Tạo git tag]
+ 
+ Tag --> Build[Build artifacts]
+ 
+ Build --> TestArtifacts[Test artifacts]
+ 
+ TestArtifacts -->|Fail| FixBuild[Sửa lỗi build]
+ FixBuild --> Build
+ 
+ TestArtifacts -->|Pass| PushArtifacts[Push artifacts]
+ 
+ PushArtifacts --> DeployStaging[Deploy lên Staging]
+ 
+ DeployStaging --> TestStaging[Test trên Staging]
+ 
+ TestStaging -->|Fail| RollbackStaging[Rollback Staging]
+ RollbackStaging --> FixIssue[Sửa lỗi]
+ FixIssue --> Tag
+ 
+ TestStaging -->|Pass| DeployProd[Deploy lên Production]
+ 
+ DeployProd --> TestProd[Test trên Production]
+ 
+ TestProd -->|Fail| RollbackProd[Rollback Production]
+ RollbackProd --> FixIssue
+ 
+ TestProd -->|Pass| PublishReleaseNote[Publish Release Note]
+ 
+ PublishReleaseNote --> Notify[Thông báo các team]
+ 
+ Notify --> UpdateDoc[Update documentation]
+ 
+ UpdateDoc --> Record[Ghi nhận]
+ 
+ Record --> End([Kết thúc])
+ 
+ style Start fill:#90EE90
+ style End fill:#FFB6C1
+ style DeployProd fill:#87CEEB
+ style RollbackProd fill:#FFA500
 ```
 
 ### 2.2. Chi tiết từng bước
@@ -227,10 +227,10 @@ git checkout -b release/v1.2.3
 **Công việc**:
 - [ ] Update version trong code (theo QT-006)
 - [ ] Update CHANGELOG.md
-  - Di chuyển các thay đổi từ `[Unreleased]` sang version mới
-  - Thêm ngày release: `## [X.Y.Z] - YYYY-MM-DD`
-  - Sắp xếp theo loại: Added, Changed, Fixed, Security, etc.
-  - **Tham chiếu**: `Hỗ trợ (Support)/HUONG_DAN_CHANGELOG.md` - Hướng dẫn chi tiết về CHANGELOG.md
+ - Di chuyển các thay đổi từ `[Unreleased]` sang version mới
+ - Thêm ngày release: `## [X.Y.Z] - YYYY-MM-DD`
+ - Sắp xếp theo loại: Added, Changed, Fixed, Security, etc.
+ - **Tham chiếu**: `Hỗ trợ (Support)/HUONG_DAN_CHANGELOG.md` - Hướng dẫn chi tiết về CHANGELOG.md
 - [ ] Commit changes
 
 ### 4.3. Merge vào main
@@ -391,7 +391,7 @@ Release Note là tài liệu mô tả các thay đổi trong một phiên bản 
 - Release Type (Major/Minor/Patch)
 - Previous Version
 
-#### 7.2.2. Version Information ⭐ MỚI
+#### 7.2.2. Version Information MỚI
 
 **Git Version**:
 - Git Tag (ví dụ: `v1.2.3`)
@@ -402,7 +402,7 @@ Release Note là tài liệu mô tả các thay đổi trong một phiên bản 
 **Docker Image**:
 - Image Name (registry/namespace/service-name)
 - Image Tag (ví dụ: `v1.2.3`)
-- Image Digest (sha256 digest) ⭐ **Khuyến nghị sử dụng cho production**
+- Image Digest (sha256 digest) **Khuyến nghị sử dụng cho production**
 - Full Image (image với tag và digest)
 
 **Ví dụ**:
@@ -424,15 +424,15 @@ docker pull registry.example.com/myorg/user-service:v1.2.3@sha256:abc123...
 - **Bảo mật (Security)**: CVE và severity nếu có
 - **Dependencies**: Updated/Added/Removed
 
-#### 7.2.4. Upgrade Instructions ⭐ MỚI
+#### 7.2.4. Upgrade Instructions MỚI
 
 - Hướng dẫn upgrade cho Docker/Kubernetes
 - Hướng dẫn upgrade cho Docker Compose
 - Ví dụ commands cụ thể
 
-#### 7.2.5. Testing Results (Kiến nghị) ⭐
+#### 7.2.5. Testing Results (Kiến nghị) 
 
-> **💡 Lưu ý**: Phần này là kiến nghị, điền nếu có thông tin test quan trọng hoặc cần thiết.
+> ** Lưu ý**: Phần này là kiến nghị, điền nếu có thông tin test quan trọng hoặc cần thiết.
 
 - Unit Tests (coverage %, pass/fail)
 - Integration Tests
@@ -442,9 +442,9 @@ docker pull registry.example.com/myorg/user-service:v1.2.3@sha256:abc123...
 - Performance Tests (nếu có)
 - Ghi chú về testing
 
-#### 7.2.6. Performance Metrics (Kiến nghị) ⭐
+#### 7.2.6. Performance Metrics (Kiến nghị) 
 
-> **💡 Lưu ý**: Phần này là kiến nghị, điền nếu có cải thiện performance đáng kể hoặc cần lưu ý.
+> ** Lưu ý**: Phần này là kiến nghị, điền nếu có cải thiện performance đáng kể hoặc cần lưu ý.
 
 - Response Time (trước/sau, % thay đổi)
 - Throughput (trước/sau, % thay đổi)
@@ -463,31 +463,31 @@ docker pull registry.example.com/myorg/user-service:v1.2.3@sha256:abc123...
 
 ```
 1. Thu thập thông tin
-   → Từ commit messages
-   → Từ pull requests
-   → Từ issue tracker
-   → Từ development team
-   → Git tag và commit hash
-   → Docker image tag và digest
+ → Từ commit messages
+ → Từ pull requests
+ → Từ issue tracker
+ → Từ development team
+ → Git tag và commit hash
+ → Docker image tag và digest
 
 2. Viết Release Note
-   → Sử dụng template TP-003 (v2.0 - Agile)
-   → Điền đầy đủ thông tin Git Version
-   → Điền đầy đủ thông tin Docker Image (bao gồm digest)
-   → Mô tả ngắn gọn, rõ ràng các thay đổi
-   → Liệt kê breaking changes (nếu có)
-   → Thêm upgrade instructions
+ → Sử dụng template TP-003 (v2.0 - Agile)
+ → Điền đầy đủ thông tin Git Version
+ → Điền đầy đủ thông tin Docker Image (bao gồm digest)
+ → Mô tả ngắn gọn, rõ ràng các thay đổi
+ → Liệt kê breaking changes (nếu có)
+ → Thêm upgrade instructions
 
 3. Review
-   → Review bởi development team
-   → Review bởi product owner
-   → Review bởi QA team
-   → Verify Git tag và Docker image thông tin
+ → Review bởi development team
+ → Review bởi product owner
+ → Review bởi QA team
+ → Verify Git tag và Docker image thông tin
 
 4. Publish
-   → Publish trên documentation site
-   → Publish trên GitHub/GitLab release page
-   → Đảm bảo Docker image đã được push với đúng tag và digest
+ → Publish trên documentation site
+ → Publish trên GitHub/GitLab release page
+ → Đảm bảo Docker image đã được push với đúng tag và digest
 ```
 
 ### 7.4. Lưu ý quan trọng
@@ -537,19 +537,19 @@ docker pull registry.example.com/myorg/user-service:v1.2.3
 
 | Vai trò | Quyền | Điều kiện |
 |---------|-------|-----------|
-| **Developer** | ❌ Không được tạo release | Chỉ được đề xuất |
-| **DevOps** | ✅ Tạo release | Sau khi có phê duyệt |
-| **PM/PDM** | ✅ Tạo release | Sau khi có phê duyệt |
-| **Product Owner** | ✅ Tạo release | Sau khi có phê duyệt |
+| **Developer** | Không được tạo release | Chỉ được đề xuất |
+| **DevOps** | Tạo release | Sau khi có phê duyệt |
+| **PM/PDM** | Tạo release | Sau khi có phê duyệt |
+| **Product Owner** | Tạo release | Sau khi có phê duyệt |
 
 #### 8.2.2. Quyền publish release
 
 | Vai trò | Quyền | Điều kiện |
 |---------|-------|-----------|
-| **Developer** | ❌ Không được publish | Chỉ được đề xuất |
-| **DevOps** | ✅ Publish release | Sau khi có phê duyệt |
-| **PM/PDM** | ✅ Publish release | Sau khi có phê duyệt |
-| **Product Owner** | ✅ Publish release | Sau khi có phê duyệt |
+| **Developer** | Không được publish | Chỉ được đề xuất |
+| **DevOps** | Publish release | Sau khi có phê duyệt |
+| **PM/PDM** | Publish release | Sau khi có phê duyệt |
+| **Product Owner** | Publish release | Sau khi có phê duyệt |
 
 #### 8.2.3. Quyền deploy release
 
@@ -567,24 +567,24 @@ docker pull registry.example.com/myorg/user-service:v1.2.3
 ### 8.3. Quy trình cấp quyền tạm thời cho release
 
 1. **Yêu cầu quyền**
-   - Tạo yêu cầu trong hệ thống quản lý quyền
-   - Mô tả lý do: Release sản phẩm
-   - Xác định thời gian: 1-2 giờ
+ - Tạo yêu cầu trong hệ thống quản lý quyền
+ - Mô tả lý do: Release sản phẩm
+ - Xác định thời gian: 1-2 giờ
 
 2. **Phê duyệt**
-   - PM/PDM phê duyệt cho quyền Level 1.0-2.0
-   - Ban CLGSP phê duyệt cho quyền Level 3.0
-   - Lãnh đạo phê duyệt cho quyền Level 4.0
+ - PM/PDM phê duyệt cho quyền Level 1.0-2.0
+ - Ban CLGSP phê duyệt cho quyền Level 3.0
+ - Lãnh đạo phê duyệt cho quyền Level 4.0
 
 3. **Cấp quyền**
-   - IT cấp quyền theo role
-   - Tự động hết hạn sau thời gian quy định
-   - Ghi log đầy đủ
+ - IT cấp quyền theo role
+ - Tự động hết hạn sau thời gian quy định
+ - Ghi log đầy đủ
 
 4. **Thu hồi quyền**
-   - Tự động thu hồi sau khi hết hạn
-   - Thu hồi ngay sau khi hoàn thành release
-   - Ghi log thu hồi
+ - Tự động thu hồi sau khi hết hạn
+ - Thu hồi ngay sau khi hoàn thành release
+ - Ghi log thu hồi
 
 ### 8.4. Giám sát và ghi log
 

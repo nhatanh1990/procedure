@@ -1,6 +1,6 @@
 # CL-001: CHECKLIST QUẢN TRỊ VẬN HÀNH
 
-**Mã checklist**: CL-001  
+**Mã checklist**: CL-001 
 **Tham chiếu quy trình**: QT-002
 
 ---

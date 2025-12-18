@@ -81,16 +81,16 @@ Tăng cường bảo mật tài khoản người dùng bằng cách thêm xác t
 ### Loại thay đổi
 
 - [x] **Chuẩn (Standard Change)**
-  - Quy trình: Đã ủy quyền trước, không cần CAB mỗi lần
-  - Tham chiếu: `QT-003-UPCODE.md` - Phần 3.1
+ - Quy trình: Đã ủy quyền trước, không cần CAB mỗi lần
+ - Tham chiếu: `QT-003-UPCODE.md` - Phần 3.1
 
 - [ ] **Thông thường (Normal Change)**
-  - Quy trình: Cần CAB phê duyệt
-  - Tham chiếu: `QT-003-UPCODE.md` - Phần 3.2
+ - Quy trình: Cần CAB phê duyệt
+ - Tham chiếu: `QT-003-UPCODE.md` - Phần 3.2
 
 - [ ] **Khẩn (Emergency Change)**
-  - Quy trình: ECAB hoặc Lãnh đạo, có thể phê duyệt sau
-  - Tham chiếu: `QT-004-HOTFIX.md`
+ - Quy trình: ECAB hoặc Lãnh đạo, có thể phê duyệt sau
+ - Tham chiếu: `QT-004-HOTFIX.md`
 
 **Lý do**: Mã B2.1 là Standard Change, đã được ủy quyền trước. Tính năng đã được test kỹ trên UAT/Staging, không có breaking changes.
 
@@ -135,10 +135,10 @@ Tăng cường bảo mật tài khoản người dùng bằng cách thêm xác t
 
 1. [x] Tra cứu mã thay đổi - **Đã hoàn thành**
 2. [ ] Tạo RFC - Sử dụng `TP-001-TEMPLATE_RFC.md`
-   - Điền mã thay đổi: B2.1
-   - Điền nhóm: B - Ứng dụng
-   - Điền loại thay đổi: Standard Change
-   - Điền cấp độ phê duyệt: Level 1.0
+ - Điền mã thay đổi: B2.1
+ - Điền nhóm: B - Ứng dụng
+ - Điền loại thay đổi: Standard Change
+ - Điền cấp độ phê duyệt: Level 1.0
 3. [ ] Gửi phê duyệt cho PM/PDM dự án
 4. [ ] Thực hiện theo quy trình Standard Change trong QT-003
 

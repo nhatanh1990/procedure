@@ -5,15 +5,15 @@
 
 ---
 
-## 📋 TỔNG QUAN
+## TỔNG QUAN
 
 Folder này chứa các tài liệu hỗ trợ giúp người dùng sử dụng hệ thống quy trình một cách hiệu quả.
 
 ---
 
-## 📚 DANH SÁCH FILE
+## DANH SÁCH FILE
 
-### 🚀 Hướng dẫn sử dụng
+### Hướng dẫn sử dụng
 
 #### 1. QUICK_START.md
 
@@ -32,7 +32,7 @@ Folder này chứa các tài liệu hỗ trợ giúp người dùng sử dụng 
 
 ---
 
-#### 2. HUONG_DAN_SU_DUNG_QUYEN_TRUY_CAP.md ⭐
+#### 2. HUONG_DAN_SU_DUNG_QUYEN_TRUY_CAP.md 
 
 **Mục đích**: Hướng dẫn tổng hợp về quyền truy cập
 
@@ -50,7 +50,7 @@ Folder này chứa các tài liệu hỗ trợ giúp người dùng sử dụng 
 
 ---
 
-### 🆘 Xử lý vấn đề
+### Xử lý vấn đề
 
 #### 3. TROUBLESHOOTING.md
 
@@ -70,9 +70,9 @@ Folder này chứa các tài liệu hỗ trợ giúp người dùng sử dụng 
 
 ---
 
-### 📝 Tài liệu kỹ thuật
+### Tài liệu kỹ thuật
 
-### 📝 Tài liệu kỹ thuật
+### Tài liệu kỹ thuật
 
 #### 5. CHANGELOG.md
 
@@ -146,7 +146,7 @@ Folder này chứa các tài liệu hỗ trợ giúp người dùng sử dụng 
 
 ---
 
-## 🚀 HƯỚNG DẪN SỬ DỤNG
+## HƯỚNG DẪN SỬ DỤNG
 
 ### Cho người mới
 
@@ -176,7 +176,7 @@ Folder này chứa các tài liệu hỗ trợ giúp người dùng sử dụng 
 
 ---
 
-## 📌 LƯU Ý
+## LƯU Ý
 
 - Tất cả file trong folder này là tài liệu hỗ trợ
 - File chính vẫn nằm ở root folder QT
@@ -185,28 +185,28 @@ Folder này chứa các tài liệu hỗ trợ giúp người dùng sử dụng 
 
 ---
 
-## 🔗 LIÊN KẾT
+## LIÊN KẾT
 
-- **README chính**: [`../README.md`](../README.md) ⭐
+- **README chính**: [`../README.md`](../README.md) 
 - **Hướng dẫn sử dụng nhanh**: [`../HUONG_DAN_SU_DUNG_NHANH.md`](../HUONG_DAN_SU_DUNG_NHANH.md)
 - **Best Practices**: [`../BEST_PRACTICES.md`](../BEST_PRACTICES.md)
 
 ---
 
-## 📊 CẤU TRÚC FOLDER
+## CẤU TRÚC FOLDER
 
 ```
 Hỗ trợ (Support)/
-├── README.md (File này)
-├── QUICK_START.md (Hướng dẫn nhanh cho người mới)
-├── HUONG_DAN_SU_DUNG_QUYEN_TRUY_CAP.md (Hướng dẫn quyền truy cập) ⭐
-├── TROUBLESHOOTING.md (Xử lý vấn đề)
-├── CHANGELOG.md (Lịch sử thay đổi)
-├── HUONG_DAN_CHANGELOG.md (Hướng dẫn CHANGELOG)
-└── METADATA_CONFIG.md (Quản lý metadata)
+ README.md (File này)
+ QUICK_START.md (Hướng dẫn nhanh cho người mới)
+ HUONG_DAN_SU_DUNG_QUYEN_TRUY_CAP.md (Hướng dẫn quyền truy cập) 
+ TROUBLESHOOTING.md (Xử lý vấn đề)
+ CHANGELOG.md (Lịch sử thay đổi)
+ HUONG_DAN_CHANGELOG.md (Hướng dẫn CHANGELOG)
+ METADATA_CONFIG.md (Quản lý metadata)
 ```
 
 ---
 
-**Phiên bản**: 2.0  
+**Phiên bản**: 2.0 
 **Ngày cập nhật**: 2024-12-17

@@ -5,7 +5,7 @@
 
 ---
 
-## 📋 TỔNG QUAN
+## TỔNG QUAN
 
 Tài liệu này tổng hợp hướng dẫn sử dụng **Chính sách Quyền Truy Cập Tối Thiểu** trong các quy trình và phương pháp thực hiện nhanh.
 
@@ -13,84 +13,84 @@ Tài liệu này tổng hợp hướng dẫn sử dụng **Chính sách Quyền 
 
 ---
 
-## 💡 TẠI SAO BẠN NÊN ĐỌC TÀI LIỆU NÀY?
+## TẠI SAO BẠN NÊN ĐỌC TÀI LIỆU NÀY?
 
-### ✅ Lợi ích cho bạn
-- ⚡ **Làm việc hiệu quả hơn**: Biết rõ quyền của mình và cách yêu cầu quyền bổ sung nhanh chóng
-- 🛡️ **Bảo vệ bản thân**: Tránh các lỗi vô ý có thể gây hậu quả nghiêm trọng
-- 📚 **Hiểu rõ quy trình**: Không bị lúng túng khi cần quyền, biết ai cần phê duyệt
-- ⏱️ **Tiết kiệm thời gian**: Quy trình rõ ràng giúp bạn nhận quyền nhanh chóng
-- 🔒 **An toàn hơn**: Bảo vệ bạn và công ty khỏi các mối đe dọa bảo mật
+### Lợi ích cho bạn
+- **Làm việc hiệu quả hơn**: Biết rõ quyền của mình và cách yêu cầu quyền bổ sung nhanh chóng
+- **Bảo vệ bản thân**: Tránh các lỗi vô ý có thể gây hậu quả nghiêm trọng
+- **Hiểu rõ quy trình**: Không bị lúng túng khi cần quyền, biết ai cần phê duyệt
+- ⏱ **Tiết kiệm thời gian**: Quy trình rõ ràng giúp bạn nhận quyền nhanh chóng
+- **An toàn hơn**: Bảo vệ bạn và công ty khỏi các mối đe dọa bảo mật
 
-### 📊 Số liệu thuyết phục
+### Số liệu thuyết phục
 - **Giảm 80-90%** rủi ro bị tấn công khi tuân thủ Least Privilege
 - **Giảm 60-70%** lỗi do con người
 - **74%** các vụ vi phạm bảo mật liên quan đến quyền quá cao
 - **$4.45 triệu USD** - chi phí trung bình cho mỗi vụ vi phạm dữ liệu
 
-**👉 Muốn biết thêm?** Xem phần 1.1-1.5 trong `../CHÍNH SÁCH QUYỀN TRUY CẬP TỐI THIỂU.md`
+** Muốn biết thêm?** Xem phần 1.1-1.5 trong `../CHÍNH SÁCH QUYỀN TRUY CẬP TỐI THIỂU.md`
 
 ---
 
-## 🚀 PHƯƠNG PHÁP THỰC HIỆN NHANH
+## PHƯƠNG PHÁP THỰC HIỆN NHANH
 
 ### Tôi cần cấp quyền, làm gì?
 
 #### Scenario 1: Cấp quyền vĩnh viễn
 
 1. **Tra cứu quyền**
-   - Mở `../QUICK_REFERENCE_QUYEN_TRUY_CAP.md`
-   - Tìm quyền theo vai trò và hoạt động
+ - Mở `../QUICK_REFERENCE_QUYEN_TRUY_CAP.md`
+ - Tìm quyền theo vai trò và hoạt động
 
 2. **Điền template**
-   - Mở `../Template (TP-XXX)/TP-006-TEMPLATE_YEU_CAU_CAP_QUYEN.md`
-   - Điền thông tin đầy đủ
+ - Mở `../Template (TP-XXX)/TP-006-TEMPLATE_YEU_CAU_CAP_QUYEN.md`
+ - Điền thông tin đầy đủ
 
 3. **Xác định cấp phê duyệt**
-   - Level 1.0 → PM/PDM
-   - Level 2.0 → Ban CLGSP hoặc Lãnh đạo TT
-   - Level 3.0 → Ban CLGSP + Ban KTHT
-   - Level 4.0 → Lãnh đạo Công ty
+ - Level 1.0 → PM/PDM
+ - Level 2.0 → Ban CLGSP hoặc Lãnh đạo TT
+ - Level 3.0 → Ban CLGSP + Ban KTHT
+ - Level 4.0 → Lãnh đạo Công ty
 
 4. **Gửi phê duyệt**
-   - Gửi template đã điền cho người phê duyệt đúng cấp
+ - Gửi template đã điền cho người phê duyệt đúng cấp
 
 5. **IT cấp quyền**
-   - IT sử dụng `../Checklist (CL-XXX)/CL-011-CHECKLIST_QUYEN_TRUY_CAP.md`
-   - Cấp quyền theo role và ghi log
+ - IT sử dụng `../Checklist (CL-XXX)/CL-011-CHECKLIST_QUYEN_TRUY_CAP.md`
+ - Cấp quyền theo role và ghi log
 
 #### Scenario 2: Cấp quyền tạm thời JIT
 
 1. **Điền template**
-   - Ghi rõ "Tạm thời (JIT)" và thời gian cần
+ - Ghi rõ "Tạm thời (JIT)" và thời gian cần
 
 2. **Phê duyệt nhanh**
-   - Có thể phê duyệt qua chat/phone
+ - Có thể phê duyệt qua chat/phone
 
 3. **IT cấp quyền**
-   - Cấp quyền với thời gian hết hạn tự động
+ - Cấp quyền với thời gian hết hạn tự động
 
 4. **Tự động thu hồi**
-   - Quyền tự động hết hạn sau thời gian quy định
+ - Quyền tự động hết hạn sau thời gian quy định
 
 #### Scenario 3: Cấp quyền khẩn cấp cho Hotfix
 
 1. **Yêu cầu khẩn cấp**
-   - Ghi rõ "Hotfix khẩn cấp"
+ - Ghi rõ "Hotfix khẩn cấp"
 
 2. **Phê duyệt nhanh**
-   - PM/PDM hoặc ECAB phê duyệt qua chat/phone
-   - Ghi log sau
+ - PM/PDM hoặc ECAB phê duyệt qua chat/phone
+ - Ghi log sau
 
 3. **Cấp quyền ngay**
-   - IT cấp quyền tạm thời (JIT)
+ - IT cấp quyền tạm thời (JIT)
 
 4. **Thu hồi sau hotfix**
-   - Tự động thu hồi hoặc thu hồi ngay sau khi hoàn thành
+ - Tự động thu hồi hoặc thu hồi ngay sau khi hoàn thành
 
 ---
 
-## 🎯 QUYỀN TRUY CẬP TRONG CÁC QUY TRÌNH
+## QUYỀN TRUY CẬP TRONG CÁC QUY TRÌNH
 
 ### QT-002: Quản trị Vận hành
 
@@ -141,7 +141,7 @@ Tài liệu này tổng hợp hướng dẫn sử dụng **Chính sách Quyền 
 
 ---
 
-## 📋 QUY TRÌNH CẤP QUYỀN TỔNG QUÁT
+## QUY TRÌNH CẤP QUYỀN TỔNG QUÁT
 
 ### Bước 1: Tra cứu quyền
 
@@ -176,7 +176,7 @@ Tài liệu này tổng hợp hướng dẫn sử dụng **Chính sách Quyền 
 
 ---
 
-## ✅ CHECKLIST NHANH
+## CHECKLIST NHANH
 
 ### Trước khi yêu cầu quyền
 
@@ -200,14 +200,14 @@ Tài liệu này tổng hợp hướng dẫn sử dụng **Chính sách Quyền 
 
 ---
 
-## 📚 TÀI LIỆU THAM KHẢO
+## TÀI LIỆU THAM KHẢO
 
 ### File chính
 
 1. **CHÍNH SÁCH QUYỀN TRUY CẬP TỐI THIỂU.md** - Chính sách đầy đủ
-2. **QUICK_REFERENCE_QUYEN_TRUY_CAP.md** - Tra cứu nhanh ⭐
-3. **TP-006-TEMPLATE_YEU_CAU_CAP_QUYEN.md** - Template yêu cầu ⭐
-4. **CL-011-CHECKLIST_QUYEN_TRUY_CAP.md** - Checklist ⭐
+2. **QUICK_REFERENCE_QUYEN_TRUY_CAP.md** - Tra cứu nhanh 
+3. **TP-006-TEMPLATE_YEU_CAU_CAP_QUYEN.md** - Template yêu cầu 
+4. **CL-011-CHECKLIST_QUYEN_TRUY_CAP.md** - Checklist 
 
 ### File theo quy trình
 
@@ -219,7 +219,7 @@ Tài liệu này tổng hợp hướng dẫn sử dụng **Chính sách Quyền 
 
 ---
 
-## 🎯 TIPS
+## TIPS
 
 1. **Sử dụng Quick Reference**: Luôn bắt đầu với Quick Reference để tra cứu nhanh
 2. **Yêu cầu sớm**: Yêu cầu quyền trước khi cần
@@ -229,6 +229,6 @@ Tài liệu này tổng hợp hướng dẫn sử dụng **Chính sách Quyền 
 
 ---
 
-**Phiên bản**: 2.0  
+**Phiên bản**: 2.0 
 **Ngày cập nhật**: 2024-12-17
 

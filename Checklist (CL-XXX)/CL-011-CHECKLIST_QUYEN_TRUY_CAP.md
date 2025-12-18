@@ -1,11 +1,11 @@
 # CL-011: CHECKLIST QUYỀN TRUY CẬP TỐI THIỂU
 
-**Mã checklist**: CL-011  
+**Mã checklist**: CL-011 
 **Tham chiếu**: `CHÍNH SÁCH QUYỀN TRUY CẬP TỐI THIỂU.md`
 
 ---
 
-## 📋 CHECKLIST CẤP QUYỀN
+## CHECKLIST CẤP QUYỀN
 
 ### Bước 1: Yêu cầu quyền
 
@@ -40,7 +40,7 @@
 
 ---
 
-## 📋 CHECKLIST RÀ SOÁT QUYỀN
+## CHECKLIST RÀ SOÁT QUYỀN
 
 ### Thu thập dữ liệu
 
@@ -73,7 +73,7 @@
 
 ---
 
-## 📋 CHECKLIST CẤP QUYỀN TẠM THỜI (JIT)
+## CHECKLIST CẤP QUYỀN TẠM THỜI (JIT)
 
 ### Yêu cầu
 
@@ -102,7 +102,7 @@
 
 ---
 
-## 📋 CHECKLIST THIẾT LẬP MFA
+## CHECKLIST THIẾT LẬP MFA
 
 ### Chuẩn bị
 
@@ -125,7 +125,7 @@
 
 ---
 
-## 📋 CHECKLIST QUYỀN MÁY CHỦ (SSH/SUDO)
+## CHECKLIST QUYỀN MÁY CHỦ (SSH/SUDO)
 
 ### Cấp quyền SSH
 
@@ -147,7 +147,7 @@
 
 ---
 
-## 📋 CHECKLIST QUYỀN DATABASE
+## CHECKLIST QUYỀN DATABASE
 
 ### Cấp quyền database
 
@@ -167,7 +167,7 @@
 
 ---
 
-## 📋 CHECKLIST QUYỀN DEPLOY
+## CHECKLIST QUYỀN DEPLOY
 
 ### Kiểm tra quyền deploy
 
@@ -184,7 +184,7 @@
 
 ---
 
-## 📋 CHECKLIST RÀ SOÁT ĐỊNH KỲ
+## CHECKLIST RÀ SOÁT ĐỊNH KỲ
 
 ### Rà soát hàng tháng (Quyền admin)
 
@@ -211,7 +211,7 @@
 
 ---
 
-## 📋 CHECKLIST XỬ LÝ TÀI KHOẢN NGHỈ VIỆC
+## CHECKLIST XỬ LÝ TÀI KHOẢN NGHỈ VIỆC
 
 ### Khi nhận thông báo nghỉ việc
 
@@ -223,7 +223,7 @@
 
 ---
 
-## 📋 CHECKLIST KIỂM TRA BẢO MẬT
+## CHECKLIST KIỂM TRA BẢO MẬT
 
 ### Kiểm tra định kỳ
 
@@ -235,7 +235,7 @@
 
 ---
 
-## 📋 CHECKLIST QUYỀN CLOUD/CONTAINER
+## CHECKLIST QUYỀN CLOUD/CONTAINER
 
 ### Kubernetes RBAC
 
@@ -266,7 +266,7 @@
 
 ---
 
-## 📋 CHECKLIST QUYỀN API/APPLICATION
+## CHECKLIST QUYỀN API/APPLICATION
 
 ### API Key Management
 
@@ -297,7 +297,7 @@
 
 ---
 
-## 📋 CHECKLIST QUẢN LÝ SECRET
+## CHECKLIST QUẢN LÝ SECRET
 
 ### Tạo Secret
 
@@ -335,7 +335,7 @@
 
 ---
 
-## 📋 CHECKLIST AUDIT VÀ COMPLIANCE
+## CHECKLIST AUDIT VÀ COMPLIANCE
 
 ### Audit Log
 
@@ -356,7 +356,7 @@
 
 ---
 
-## 📋 CHECKLIST INCIDENT RESPONSE
+## CHECKLIST INCIDENT RESPONSE
 
 ### Phát hiện lạm dụng quyền
 

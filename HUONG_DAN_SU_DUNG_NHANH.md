@@ -5,50 +5,50 @@
 
 ---
 
-## 🎯 TÔI CẦN LÀM GÌ?
+## TÔI CẦN LÀM GÌ?
 
 ### Decision Tree - Chọn đúng file
 
-💡 **Lưu ý**: File này là hướng dẫn chi tiết. Nếu bạn là người mới, xem phần [Hướng dẫn cho người mới](#6-tôi-là-người-mới-không-biết-bắt-đầu-từ-đâu) trước.
+ **Lưu ý**: File này là hướng dẫn chi tiết. Nếu bạn là người mới, xem phần [Hướng dẫn cho người mới](#6-tôi-là-người-mới-không-biết-bắt-đầu-từ-đâu) trước.
 
 ```
 BẮT ĐẦU
-  │
-  ├─ Tôi muốn DEPLOY CODE?
-  │   │
-  │   ├─ Lỗi khẩn cấp trên Production?
-  │   │   └─→ QT-004 (Hotfix) + CL-003 + TP-002
-  │   │
-  │   ├─ Deploy tính năng mới / thay đổi?
-  │   │   │
-  │   │   ├─ Đã biết mã thay đổi chuẩn?
-  │   │   │   └─→ QT-003 (Upcode) + CL-002 + TP-001
-  │   │   │
-  │   │   └─ Chưa biết mã thay đổi?
-  │   │       └─→ TP-005 (Tra cứu) → QT-008 → QT-003
-  │   │
-  │   └─ Release sản phẩm mới?
-  │       └─→ QT-007 (Release) + CL-005 + TP-003
-  │
-  ├─ Tôi muốn QUẢN TRỊ VẬN HÀNH?
-  │   └─→ QT-002 (Vận hành) + CL-001
-  │
-  ├─ Tôi muốn TẠO TÀI NGUYÊN MỚI?
-  │   └─→ QT-005 (Provisioning) + CL-004 + TP-004
-  │
-  ├─ Tôi muốn QUẢN LÝ PHIÊN BẢN?
-  │   └─→ QT-006 (Versioning)
-  │
-  ├─ Tôi muốn CẤP QUYỀN TRUY CẬP?
-  │   └─→ QUICK_REFERENCE_QUYEN_TRUY_CAP → TP-006 → CL-011
-  │
-  └─ Tôi là NGƯỜI MỚI?
-      └─→ README.md → QUICK_START.md
+ 
+ Tôi muốn DEPLOY CODE?
+ 
+ Lỗi khẩn cấp trên Production?
+ → QT-004 (Hotfix) + CL-003 + TP-002
+ 
+ Deploy tính năng mới / thay đổi?
+ 
+ Đã biết mã thay đổi chuẩn?
+ → QT-003 (Upcode) + CL-002 + TP-001
+ 
+ Chưa biết mã thay đổi?
+ → TP-005 (Tra cứu) → QT-008 → QT-003
+ 
+ Release sản phẩm mới?
+ → QT-007 (Release) + CL-005 + TP-003
+ 
+ Tôi muốn QUẢN TRỊ VẬN HÀNH?
+ → QT-002 (Vận hành) + CL-001
+ 
+ Tôi muốn TẠO TÀI NGUYÊN MỚI?
+ → QT-005 (Provisioning) + CL-004 + TP-004
+ 
+ Tôi muốn QUẢN LÝ PHIÊN BẢN?
+ → QT-006 (Versioning)
+ 
+ Tôi muốn CẤP QUYỀN TRUY CẬP?
+ → QUICK_REFERENCE_QUYEN_TRUY_CAP → TP-006 → CL-011
+ 
+ Tôi là NGƯỜI MỚI?
+ → README.md → QUICK_START.md
 ```
 
 ---
 
-## ⚡ CÁC TÌNH HUỐNG THƯỜNG GẶP
+## CÁC TÌNH HUỐNG THƯỜNG GẶP
 
 ### 1. Tôi cần deploy code lên Production
 
@@ -81,10 +81,10 @@ BẮT ĐẦU
 1. Đọc `QT-003-UPCODE.md`
 2. Sử dụng `CL-002-CHECKLIST_UPCODE.md`
 3. Sử dụng checklist theo nhóm (nếu cần):
-   - Nhóm A (Hạ tầng): `CL-007`
-   - Nhóm B (Ứng dụng): `CL-008`
-   - Nhóm C (Dữ liệu): `CL-009`
-   - Nhóm D (Sự cố): `CL-010`
+ - Nhóm A (Hạ tầng): `CL-007`
+ - Nhóm B (Ứng dụng): `CL-008`
+ - Nhóm C (Dữ liệu): `CL-009`
+ - Nhóm D (Sự cố): `CL-010`
 
 ---
 
@@ -133,30 +133,30 @@ BẮT ĐẦU
 ### 6. Tôi là người mới, không biết bắt đầu từ đâu
 
 1. **Bắt đầu**: `README.md` (File chính)
-   - Xem phần "BẮT ĐẦU TẠI ĐÂY"
-   - Xem phần "CÁC TÌNH HUỐNG THƯỜNG GẶP"
-   
+ - Xem phần "BẮT ĐẦU TẠI ĐÂY"
+ - Xem phần "CÁC TÌNH HUỐNG THƯỜNG GẶP"
+ 
 2. **Xem decision tree**: Phần trên của file này
-   - Chọn tình huống phù hợp
-   
+ - Chọn tình huống phù hợp
+ 
 3. **Làm theo quy trình**: Chọn tình huống và làm theo
-   - Mỗi tình huống có quy trình tóm tắt rõ ràng
+ - Mỗi tình huống có quy trình tóm tắt rõ ràng
 
 ---
 
-## 📋 QUY TRÌNH TÓM TẮT
+## QUY TRÌNH TÓM TẮT
 
 ### Upcode (Deploy thông thường)
 
 ```
 Tra cứu mã thay đổi (TP-005)
-  ↓
+ ↓
 Tạo RFC (TP-001)
-  ↓
+ ↓
 Phê duyệt
-  ↓
+ ↓
 Thực hiện (QT-003 + CL-002)
-  ↓
+ ↓
 Kiểm tra và hoàn tất
 ```
 
@@ -164,11 +164,11 @@ Kiểm tra và hoàn tất
 
 ```
 Tạo Hotfix Request (TP-002)
-  ↓
+ ↓
 Phê duyệt khẩn cấp
-  ↓
+ ↓
 Thực hiện (QT-004 + CL-003)
-  ↓
+ ↓
 Kiểm tra và hoàn tất
 ```
 
@@ -176,17 +176,17 @@ Kiểm tra và hoàn tất
 
 ```
 Quản lý version (QT-006)
-  ↓
+ ↓
 Tạo Release Note (TP-003)
-  ↓
+ ↓
 Thực hiện release (QT-007 + CL-005)
-  ↓
+ ↓
 Deploy (QT-003)
 ```
 
 ---
 
-## 🎯 QUY TẮC VÀNG
+## QUY TẮC VÀNG
 
 ### 1. Luôn bắt đầu với Quick Reference
 
@@ -219,11 +219,11 @@ Deploy (QT-003)
 
 ---
 
-## 📚 FILE QUAN TRỌNG NHẤT
+## FILE QUAN TRỌNG NHẤT
 
 ### Cho người mới
 
-1. **README.md** - Bắt đầu tại đây ⭐
+1. **README.md** - Bắt đầu tại đây 
 2. **QUICK_START.md** - Hướng dẫn nhanh cho người mới
 3. **HUONG_DAN_SU_DUNG_NHANH.md** - File này - Hướng dẫn chi tiết
 
@@ -248,7 +248,7 @@ Deploy (QT-003)
 
 ---
 
-## ⚡ TIPS THỰC HIỆN NHANH
+## TIPS THỰC HIỆN NHANH
 
 ### 1. Bookmark các file thường dùng
 
@@ -278,7 +278,7 @@ Deploy (QT-003)
 
 ---
 
-## 🆘 GẶP VẤN ĐỀ?
+## GẶP VẤN ĐỀ?
 
 ### Không biết bắt đầu từ đâu?
 
@@ -302,7 +302,7 @@ Deploy (QT-003)
 
 ---
 
-## ✅ CHECKLIST NHANH
+## CHECKLIST NHANH
 
 ### Trước khi bắt đầu
 
@@ -329,6 +329,6 @@ Deploy (QT-003)
 
 ---
 
-**Phiên bản**: 2.0  
+**Phiên bản**: 2.0 
 **Ngày cập nhật**: 2024-12-17
 

@@ -2,7 +2,7 @@
 
 ---
 
-## 📋 THÔNG TIN TÀI LIỆU
+## THÔNG TIN TÀI LIỆU
 
 - **Mã quy trình**: QT-006
 - **Tên quy trình**: Quy trình Versioning
@@ -13,7 +13,7 @@
 
 ---
 
-## 📚 MỤC LỤC
+## MỤC LỤC
 
 1. [Tổng quan](#1-tổng-quan)
 2. [Semantic Versioning](#2-semantic-versioning)
@@ -104,22 +104,22 @@ Semantic Versioning (SemVer) là chuẩn versioning được sử dụng rộng 
 
 ```
 1. Xác định loại thay đổi
-   → Breaking changes? → Tăng MAJOR
-   → Tính năng mới? → Tăng MINOR
-   → Bug fix? → Tăng PATCH
+ → Breaking changes? → Tăng MAJOR
+ → Tính năng mới? → Tăng MINOR
+ → Bug fix? → Tăng PATCH
 
 2. Update version
-   → Update trong code (package.json, pom.xml, ...)
-   → Update trong CHANGELOG.md
-   → Update trong documentation
+ → Update trong code (package.json, pom.xml, ...)
+ → Update trong CHANGELOG.md
+ → Update trong documentation
 
 3. Tạo tag
-   → Tạo git tag: vX.Y.Z
-   → Push tag lên remote
+ → Tạo git tag: vX.Y.Z
+ → Push tag lên remote
 
 4. Ghi nhận
-   → Ghi nhận version trong release note
-   → Ghi nhận trong changelog
+ → Ghi nhận version trong release note
+ → Ghi nhận trong changelog
 ```
 
 ### 3.2. Chi tiết từng bước
@@ -173,9 +173,9 @@ Semantic Versioning (SemVer) là chuẩn versioning được sử dụng rộng 
 
 ```json
 {
-  "name": "my-service",
-  "version": "1.2.3",
-  ...
+ "name": "my-service",
+ "version": "1.2.3",
+ ...
 }
 ```
 
@@ -183,10 +183,10 @@ Semantic Versioning (SemVer) là chuẩn versioning được sử dụng rộng 
 
 ```xml
 <project>
-  <groupId>com.example</groupId>
-  <artifactId>my-service</artifactId>
-  <version>1.2.3</version>
-  ...
+ <groupId>com.example</groupId>
+ <artifactId>my-service</artifactId>
+ <version>1.2.3</version>
+ ...
 </project>
 ```
 

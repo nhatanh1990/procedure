@@ -5,11 +5,11 @@
 
 ---
 
-## 🎯 TÔI LÀ NGƯỜI MỚI, BẮT ĐẦU TỪ ĐÂU?
+## TÔI LÀ NGƯỜI MỚI, BẮT ĐẦU TỪ ĐÂU?
 
 ### Bước 1: Đọc README
 
-👉 **Bắt đầu tại**: [`../README.md`](../README.md)
+ **Bắt đầu tại**: [`../README.md`](../README.md)
 
 - Xem phần "BẮT ĐẦU TẠI ĐÂY"
 - Xem phần "CÁC TÌNH HUỐNG THƯỜNG GẶP"
@@ -17,7 +17,7 @@
 
 ### Bước 2: Xem Decision Tree
 
-👉 **Xem**: [`../HUONG_DAN_SU_DUNG_NHANH.md`](../HUONG_DAN_SU_DUNG_NHANH.md)
+ **Xem**: [`../HUONG_DAN_SU_DUNG_NHANH.md`](../HUONG_DAN_SU_DUNG_NHANH.md)
 
 - Chọn tình huống phù hợp
 - Tìm đúng file cần thiết
@@ -29,7 +29,7 @@
 
 ---
 
-## 📋 QUY TẮC VÀNG
+## QUY TẮC VÀNG
 
 1. **Luôn bắt đầu với Quick Reference** - Tra cứu nhanh trước
 2. **Luôn sử dụng Template** - Không tự tạo format
@@ -39,21 +39,21 @@
 
 ---
 
-## 🆘 GẶP VẤN ĐỀ?
+## GẶP VẤN ĐỀ?
 
-👉 **Xem**: `TROUBLESHOOTING.md` - Hướng dẫn xử lý vấn đề thường gặp
+ **Xem**: `TROUBLESHOOTING.md` - Hướng dẫn xử lý vấn đề thường gặp
 
 ---
 
-## 📚 TÀI LIỆU THAM KHẢO
+## TÀI LIỆU THAM KHẢO
 
 - **README.md** - File chính, tổng quan
 - **HUONG_DAN_SU_DUNG_NHANH.md** - Hướng dẫn chi tiết với decision tree
 - **BEST_PRACTICES.md** - Chuẩn mực sử dụng
 
-💡 **Lưu ý**: Xem phần "CÁC TÌNH HUỐNG THƯỜNG GẶP" trong `../README.md` để biết quy trình chi tiết cho từng tình huống.
+ **Lưu ý**: Xem phần "CÁC TÌNH HUỐNG THƯỜNG GẶP" trong `../README.md` để biết quy trình chi tiết cho từng tình huống.
 
 ---
 
-**Phiên bản**: 2.0  
+**Phiên bản**: 2.0 
 **Ngày cập nhật**: 2024-12-17

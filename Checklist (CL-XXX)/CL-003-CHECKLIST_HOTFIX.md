@@ -1,6 +1,6 @@
 # CL-003: CHECKLIST HOTFIX
 
-**Mã checklist**: CL-003  
+**Mã checklist**: CL-003 
 **Tham chiếu quy trình**: QT-004
 
 ---

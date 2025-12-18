@@ -1,6 +1,6 @@
 # CL-002: CHECKLIST UPCODE
 
-**Mã checklist**: CL-002  
+**Mã checklist**: CL-002 
 **Tham chiếu quy trình**: QT-003
 
 ---

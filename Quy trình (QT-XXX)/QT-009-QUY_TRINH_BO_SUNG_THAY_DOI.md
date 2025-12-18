@@ -2,7 +2,7 @@
 
 ---
 
-## 📋 THÔNG TIN TÀI LIỆU
+## THÔNG TIN TÀI LIỆU
 
 - **Mã quy trình**: QT-009
 - **Tên quy trình**: Quy trình Bổ sung Thay đổi vào Danh sách Chuẩn
@@ -13,7 +13,7 @@
 
 ---
 
-## 📚 MỤC LỤC
+## MỤC LỤC
 
 1. [Tổng quan](#1-tổng-quan)
 2. [Quy trình bổ sung](#2-quy-trình-bổ-sung)
@@ -52,47 +52,47 @@ Quy trình này quy định cách thức đề xuất và bổ sung các loại 
 
 ```mermaid
 flowchart TD
-    Start([Phát hiện thay đổi<br/>không có trong danh sách]) --> CheckCount{Đã thực hiện<br/>≥ 3 lần thành công?}
-    
-    CheckCount -->|Chưa đủ| Continue[Tiếp tục<br/>theo dõi]
-    CheckCount -->|Đủ| CollectData[Thu thập dữ liệu<br/>- Số lần thực hiện<br/>- Tỷ lệ thành công<br/>- Thời gian xử lý TB<br/>- Rủi ro thực tế]
-    
-    CollectData --> Evaluate[Đánh giá<br/>- Tính lặp lại<br/>- Mức độ rủi ro<br/>- Tính phù hợp với<br/>tiêu chí Thay đổi chuẩn]
-    
-    Evaluate --> CheckCriteria{Đáp ứng<br/>tiêu chí<br/>Thay đổi chuẩn?}
-    
-    CheckCriteria -->|Không| Reject[Không đề xuất<br/>Tiếp tục theo dõi]
-    CheckCriteria -->|Có| CreateProposal[Tạo đề xuất bổ sung<br/>- Mô tả loại thay đổi<br/>- Đề xuất mức độ rủi ro<br/>- Đề xuất cấp độ phê duyệt<br/>- Dữ liệu thống kê]
-    
-    CreateProposal --> SubmitCAB[Gửi Ban CLGSP<br/>Ban KTHT xem xét]
-    
-    SubmitCAB --> ReviewCAB{Ban CLGSP/Ban KTHT<br/>xem xét}
-    
-    ReviewCAB -->|Cần bổ sung| Revise[Điều chỉnh<br/>đề xuất]
-    Revise --> SubmitCAB
-    
-    ReviewCAB -->|Đồng ý| Approve[Phê duyệt<br/>bổ sung vào danh sách]
-    ReviewCAB -->|Từ chối| Reject
-    
-    Approve --> UpdateStandard[Cập nhật<br/>danh sách chuẩn<br/>QT-008]
-    
-    UpdateStandard --> UpdateSystems[Cập nhật<br/>các sheet hệ thống<br/>nếu cần]
-    
-    UpdateSystems --> Notify[Thông báo<br/>các bên liên quan<br/>- PM/PDM<br/>- DevOps<br/>- Nhân viên kỹ thuật]
-    
-    Notify --> UpdateJIRA[Cập nhật JIRA<br/>Ghi nhận thay đổi]
-    
-    UpdateJIRA --> End([Kết thúc])
-    Reject --> End
-    Continue --> End
-    
-    style Start fill:#90EE90
-    style End fill:#FFB6C1
-    style CollectData fill:#87CEEB
-    style Evaluate fill:#FFE4B5
-    style Approve fill:#90EE90
-    style UpdateStandard fill:#DDA0DD
-    style Notify fill:#FFE4B5
+ Start([Phát hiện thay đổi<br/>không có trong danh sách]) --> CheckCount{Đã thực hiện<br/>≥ 3 lần thành công?}
+ 
+ CheckCount -->|Chưa đủ| Continue[Tiếp tục<br/>theo dõi]
+ CheckCount -->|Đủ| CollectData[Thu thập dữ liệu<br/>- Số lần thực hiện<br/>- Tỷ lệ thành công<br/>- Thời gian xử lý TB<br/>- Rủi ro thực tế]
+ 
+ CollectData --> Evaluate[Đánh giá<br/>- Tính lặp lại<br/>- Mức độ rủi ro<br/>- Tính phù hợp với<br/>tiêu chí Thay đổi chuẩn]
+ 
+ Evaluate --> CheckCriteria{Đáp ứng<br/>tiêu chí<br/>Thay đổi chuẩn?}
+ 
+ CheckCriteria -->|Không| Reject[Không đề xuất<br/>Tiếp tục theo dõi]
+ CheckCriteria -->|Có| CreateProposal[Tạo đề xuất bổ sung<br/>- Mô tả loại thay đổi<br/>- Đề xuất mức độ rủi ro<br/>- Đề xuất cấp độ phê duyệt<br/>- Dữ liệu thống kê]
+ 
+ CreateProposal --> SubmitCAB[Gửi Ban CLGSP<br/>Ban KTHT xem xét]
+ 
+ SubmitCAB --> ReviewCAB{Ban CLGSP/Ban KTHT<br/>xem xét}
+ 
+ ReviewCAB -->|Cần bổ sung| Revise[Điều chỉnh<br/>đề xuất]
+ Revise --> SubmitCAB
+ 
+ ReviewCAB -->|Đồng ý| Approve[Phê duyệt<br/>bổ sung vào danh sách]
+ ReviewCAB -->|Từ chối| Reject
+ 
+ Approve --> UpdateStandard[Cập nhật<br/>danh sách chuẩn<br/>QT-008]
+ 
+ UpdateStandard --> UpdateSystems[Cập nhật<br/>các sheet hệ thống<br/>nếu cần]
+ 
+ UpdateSystems --> Notify[Thông báo<br/>các bên liên quan<br/>- PM/PDM<br/>- DevOps<br/>- Nhân viên kỹ thuật]
+ 
+ Notify --> UpdateJIRA[Cập nhật JIRA<br/>Ghi nhận thay đổi]
+ 
+ UpdateJIRA --> End([Kết thúc])
+ Reject --> End
+ Continue --> End
+ 
+ style Start fill:#90EE90
+ style End fill:#FFB6C1
+ style CollectData fill:#87CEEB
+ style Evaluate fill:#FFE4B5
+ style Approve fill:#90EE90
+ style UpdateStandard fill:#DDA0DD
+ style Notify fill:#FFE4B5
 ```
 
 ### 2.2. Chi tiết từng bước
@@ -220,23 +220,23 @@ Một loại thay đổi **KHÔNG** được coi là "Thay đổi chuẩn" nếu
 
 ```
 1. Gửi đề xuất
-   → Gửi đến Ban CLGSP/Ban KTHT
-   → Kèm theo dữ liệu thống kê
-   → Kèm theo template đề xuất
+ → Gửi đến Ban CLGSP/Ban KTHT
+ → Kèm theo dữ liệu thống kê
+ → Kèm theo template đề xuất
 
 2. Xem xét
-   → Ban CLGSP/Ban KTHT xem xét
-   → Đánh giá theo tiêu chí
-   → Yêu cầu bổ sung (nếu cần)
+ → Ban CLGSP/Ban KTHT xem xét
+ → Đánh giá theo tiêu chí
+ → Yêu cầu bổ sung (nếu cần)
 
 3. Phê duyệt
-   → Đồng ý: Chuyển sang cập nhật
-   → Từ chối: Gửi phản hồi và đóng đề xuất
-   → Cần bổ sung: Yêu cầu điều chỉnh
+ → Đồng ý: Chuyển sang cập nhật
+ → Từ chối: Gửi phản hồi và đóng đề xuất
+ → Cần bổ sung: Yêu cầu điều chỉnh
 
 4. Cập nhật
-   → Cập nhật vào danh sách chuẩn
-   → Thông báo các bên liên quan
+ → Cập nhật vào danh sách chuẩn
+ → Thông báo các bên liên quan
 ```
 
 ### 4.3. Thời gian xử lý

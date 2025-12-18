@@ -1,6 +1,6 @@
 # TP-006: TEMPLATE YÊU CẦU CẤP QUYỀN
 
-**Mã template**: TP-006  
+**Mã template**: TP-006 
 **Tham chiếu**: `CHÍNH SÁCH QUYỀN TRUY CẬP TỐI THIỂU.md`
 
 ---
@@ -32,9 +32,9 @@
 
 - [ ] **Vĩnh viễn**
 - [ ] **Tạm thời**
-  - **Thời gian bắt đầu**: [YYYY-MM-DD HH:mm]
-  - **Thời gian kết thúc**: [YYYY-MM-DD HH:mm]
-  - **Thời hạn**: [X giờ/phút/ngày]
+ - **Thời gian bắt đầu**: [YYYY-MM-DD HH:mm]
+ - **Thời gian kết thúc**: [YYYY-MM-DD HH:mm]
+ - **Thời hạn**: [X giờ/phút/ngày]
 
 ### Chi tiết quyền
 

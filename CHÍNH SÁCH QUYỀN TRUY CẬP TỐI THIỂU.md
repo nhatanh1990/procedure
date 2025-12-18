@@ -13,7 +13,7 @@ Chính sách này quy định cách thức cấp quyền, quản lý truy cập 
 
 ## 1.1. TẠI SAO QUYỀN TRUY CẬP TỐI THIỂU QUAN TRỌNG?
 
-### 🎯 Lợi ích cụ thể
+### Lợi ích cụ thể
 
 #### 1. Bảo vệ khỏi các mối đe dọa bảo mật
 - **Giảm 80-90% rủi ro bị tấn công**: Khi tài khoản bị xâm nhập, kẻ tấn công chỉ có quyền hạn chế, không thể gây thiệt hại lớn
@@ -50,14 +50,14 @@ Chính sách này quy định cách thức cấp quyền, quản lý truy cập 
 
 ## 1.2. RỦI RO NẾU KHÔNG TUÂN THỦ
 
-### ⚠️ Hậu quả nghiêm trọng
+### Hậu quả nghiêm trọng
 
 #### 1. Rủi ro bảo mật cao
 - **Tài khoản bị xâm nhập = Toàn bộ hệ thống bị đe dọa**: Nếu tài khoản có quyền quá cao bị xâm nhập, kẻ tấn công có thể:
-  - Xóa toàn bộ dữ liệu
-  - Đánh cắp thông tin nhạy cảm
-  - Vô hiệu hóa toàn bộ hệ thống
-  - Cài đặt backdoor, malware
+ - Xóa toàn bộ dữ liệu
+ - Đánh cắp thông tin nhạy cảm
+ - Vô hiệu hóa toàn bộ hệ thống
+ - Cài đặt backdoor, malware
 
 #### 2. Vi phạm pháp luật và tiêu chuẩn
 - **GDPR**: Phạt lên đến 4% doanh thu hoặc 20 triệu EUR (tùy mức nào cao hơn)
@@ -85,7 +85,7 @@ Chính sách này quy định cách thức cấp quyền, quản lý truy cập 
 
 ## 1.3. SỐ LIỆU VÀ THỐNG KÊ
 
-### 📊 Bằng chứng về tầm quan trọng
+### Bằng chứng về tầm quan trọng
 
 #### Thống kê về vi phạm bảo mật
 - **74%** các vụ vi phạm bảo mật liên quan đến quyền truy cập quá cao (Verizon Data Breach Report 2023)
@@ -108,7 +108,7 @@ Chính sách này quy định cách thức cấp quyền, quản lý truy cập 
 
 ## 1.4. FAQ - CÂU HỎI THƯỜNG GẶP
 
-### ❓ Tại sao tôi không thể có quyền admin để "tiện làm việc"?
+### Tại sao tôi không thể có quyền admin để "tiện làm việc"?
 
 **Trả lời**: 
 - Quyền admin không chỉ "tiện" cho bạn, mà cũng "tiện" cho kẻ tấn công nếu tài khoản của bạn bị xâm nhập
@@ -116,7 +116,7 @@ Chính sách này quy định cách thức cấp quyền, quản lý truy cập 
 - Quyền tạm thời (JIT) cho phép bạn có quyền cao khi cần, nhưng tự động hết hạn sau đó
 - Quy trình cấp quyền đã được tối ưu để nhanh chóng và thuận tiện
 
-### ❓ Quy trình cấp quyền có phức tạp không?
+### Quy trình cấp quyền có phức tạp không?
 
 **Trả lời**:
 - Không! Quy trình đã được chuẩn hóa và đơn giản hóa
@@ -124,7 +124,7 @@ Chính sách này quy định cách thức cấp quyền, quản lý truy cập 
 - Quyền cơ bản (Level 1.0-2.0) được phê duyệt nhanh chóng
 - Quyền tạm thời (JIT) có thể được cấp trong vài phút
 
-### ❓ Nếu tôi cần quyền khẩn cấp thì sao?
+### Nếu tôi cần quyền khẩn cấp thì sao?
 
 **Trả lời**:
 - Quyền khẩn cấp (ví dụ: Hotfix) có thể được phê duyệt nhanh qua chat/phone
@@ -132,7 +132,7 @@ Chính sách này quy định cách thức cấp quyền, quản lý truy cập 
 - Ghi log sau để đảm bảo tuân thủ
 - Quyền tự động hết hạn sau khi hoàn thành
 
-### ❓ Tôi có thể yêu cầu quyền tạm thời (JIT) không?
+### Tôi có thể yêu cầu quyền tạm thời (JIT) không?
 
 **Trả lời**:
 - Có! JIT là cách tốt nhất để có quyền cao khi cần
@@ -140,14 +140,14 @@ Chính sách này quy định cách thức cấp quyền, quản lý truy cập 
 - Không cần nhớ thu hồi quyền
 - An toàn hơn quyền vĩnh viễn
 
-### ❓ Nếu tôi nghỉ việc, quyền của tôi sẽ được xử lý như thế nào?
+### Nếu tôi nghỉ việc, quyền của tôi sẽ được xử lý như thế nào?
 
 **Trả lời**:
 - Quyền sẽ được thu hồi trong vòng 24 giờ sau khi nghỉ việc
 - Đây là quy trình tự động để đảm bảo an toàn
 - Nếu bạn quay lại, quyền sẽ được cấp lại theo quy trình
 
-### ❓ Tôi có thể chia sẻ tài khoản với đồng nghiệp không?
+### Tôi có thể chia sẻ tài khoản với đồng nghiệp không?
 
 **Trả lời**:
 - **KHÔNG!** Mỗi người phải có tài khoản riêng
@@ -155,7 +155,7 @@ Chính sách này quy định cách thức cấp quyền, quản lý truy cập 
 - Không thể truy vết ai đã làm gì
 - Nếu cần quyền, hãy yêu cầu cấp quyền riêng
 
-### ❓ Tại sao tôi phải sử dụng MFA?
+### Tại sao tôi phải sử dụng MFA?
 
 **Trả lời**:
 - MFA bảo vệ tài khoản của bạn ngay cả khi password bị lộ
@@ -163,7 +163,7 @@ Chính sách này quy định cách thức cấp quyền, quản lý truy cập 
 - Bắt buộc cho tài khoản admin và quyền cao
 - Chỉ mất 30 giây để thiết lập, nhưng bảo vệ bạn suốt đời
 
-### ❓ Tôi có thể xem log của mình không?
+### Tôi có thể xem log của mình không?
 
 **Trả lời**:
 - Có! Bạn có thể xem log các hoạt động của mình
@@ -199,9 +199,9 @@ Chính sách này quy định cách thức cấp quyền, quản lý truy cập 
 4. **Scope-limited**: Quyền chỉ áp dụng cho phạm vi cần thiết (môi trường, hệ thống, resource cụ thể)
 
 **Ví dụ:**
-- ✅ **Đủ quyền**: Developer có quyền Read/Write trên môi trường Development để phát triển
-- ❌ **Không đủ quyền (thiếu)**: Developer chỉ có Read-only nhưng cần Write để test
-- ❌ **Quá quyền (dư thừa)**: Developer có quyền Delete trên Production (không cần thiết)
+- **Đủ quyền**: Developer có quyền Read/Write trên môi trường Development để phát triển
+- **Không đủ quyền (thiếu)**: Developer chỉ có Read-only nhưng cần Write để test
+- **Quá quyền (dư thừa)**: Developer có quyền Delete trên Production (không cần thiết)
 
 **Nguyên tắc:**
 - Mỗi người dùng, ứng dụng, dịch vụ chỉ được cấp quyền đủ để hoàn thành nhiệm vụ.
@@ -214,6 +214,303 @@ Chính sách này quy định cách thức cấp quyền, quản lý truy cập 
 ## 3.3 Cấp quyền tạm thời (Just-In-Time – JIT)
 - Quyền cao (root/admin) chỉ được cấp khi có yêu cầu chính đáng.
 - Tự động hết hạn sau khoảng thời gian xác định.
+
+## 3.3.1. Break-Glass Access (Tài khoản khẩn cấp)
+
+### 3.3.1.1. Định nghĩa
+
+**Break-Glass Access** là cơ chế cấp quyền khẩn cấp trong trường hợp:
+- Sự cố nghiêm trọng cần xử lý ngay lập tức
+- Hệ thống bị down, cần truy cập để khôi phục
+- Không thể liên hệ được người có quyền phê duyệt
+- Tình huống khẩn cấp đe dọa tính mạng, an toàn, hoặc tài sản
+
+**Nguyên tắc**:
+- **Chỉ sử dụng trong trường hợp khẩn cấp thực sự**
+- **Phải có lý do chính đáng và được ghi nhận**
+- **Tự động thu hồi sau thời gian ngắn (thường 1-4 giờ)**
+- **Bắt buộc phải có review và approval sau**
+
+### 3.3.1.2. Quy trình Break-Glass Access
+
+#### A. Khi nào sử dụng Break-Glass
+
+**Các trường hợp được phép**:
+- **Sự cố nghiêm trọng**: Hệ thống down, mất dữ liệu, bảo mật bị xâm nhập
+- **Không thể liên hệ**: Không thể liên hệ được người phê duyệt (ngoài giờ, khẩn cấp)
+- **Tình huống đe dọa**: Đe dọa tính mạng, an toàn, hoặc tài sản
+- **Khôi phục dịch vụ**: Cần khôi phục dịch vụ quan trọng ngay lập tức
+
+**Các trường hợp KHÔNG được phép**:
+- **Tiện lợi**: Chỉ vì "tiện" hoặc "nhanh"
+- **Thiếu phê duyệt**: Không muốn chờ phê duyệt
+- **Thiếu quyền**: Không có quyền thông thường
+- **Thói quen**: Sử dụng như quyền thông thường
+
+#### B. Quy trình sử dụng Break-Glass
+
+**Bước 1: Đánh giá tình huống**
+- [ ] Xác định đây có phải tình huống khẩn cấp thực sự không
+- [ ] Đánh giá mức độ nghiêm trọng
+- [ ] Xác định không thể sử dụng quyền thông thường
+- [ ] Xác định không thể chờ phê duyệt
+
+**Bước 2: Sử dụng Break-Glass**
+- [ ] Yêu cầu Break-Glass Access qua hệ thống
+- [ ] Cung cấp lý do chi tiết
+- [ ] Xác nhận đây là tình huống khẩn cấp
+- [ ] Hệ thống tự động cấp quyền (nếu có automation) hoặc IT Team cấp ngay
+
+**Bước 3: Thực hiện công việc**
+- [ ] Sử dụng quyền để xử lý sự cố
+- [ ] Ghi log đầy đủ mọi hành động
+- [ ] Không sử dụng quyền cho mục đích khác
+
+**Bước 4: Thu hồi quyền**
+- [ ] Quyền tự động hết hạn sau 1-4 giờ (tùy cấu hình)
+- [ ] Hoặc thu hồi ngay sau khi hoàn thành
+- [ ] Ghi log thu hồi quyền
+
+**Bước 5: Review và Approval sau**
+- [ ] Báo cáo sử dụng Break-Glass trong vòng 24 giờ
+- [ ] IT Manager hoặc Security Team review
+- [ ] Phê duyệt hoặc từ chối (nếu không chính đáng)
+- [ ] Ghi nhận vào audit log
+
+#### C. Quy định Break-Glass Access
+
+**Thời gian hết hạn**:
+- **Mặc định**: 2 giờ
+- **Tối đa**: 4 giờ (cần lý do đặc biệt)
+- **Tự động thu hồi**: Sau khi hết hạn
+
+**Giám sát**:
+- **Real-time monitoring**: Giám sát thời gian thực mọi hoạt động
+- **Automated alerts**: Cảnh báo ngay khi Break-Glass được sử dụng
+- **Behavioral analytics**: Phân tích hành vi để phát hiện bất thường
+- **Immediate notification**: Thông báo ngay cho IT Manager và Security Team
+
+**Ghi log**:
+- **Bắt buộc ghi log**: Mọi hành động với Break-Glass đều phải được ghi log
+- **Nội dung log**: Timestamp, user, action, resource, reason, IP address, session ID
+- **Lưu trữ**: Log được lưu ít nhất 1 năm (quan trọng hơn log thông thường)
+- **Không thể xóa**: Log không thể xóa hoặc chỉnh sửa (immutable)
+
+**Review**:
+- **Bắt buộc review**: Mọi trường hợp sử dụng Break-Glass đều phải được review
+- **Thời gian review**: Trong vòng 24 giờ sau khi sử dụng
+- **Người review**: IT Manager hoặc Security Team
+- **Kết quả**: Phê duyệt hoặc từ chối (nếu không chính đáng)
+
+**Hậu quả nếu lạm dụng**:
+- **Cảnh báo**: Lần đầu tiên lạm dụng (không chính đáng)
+- **Thu hồi quyền**: Lần thứ hai lạm dụng
+- **Kỷ luật**: Lần thứ ba lạm dụng hoặc lạm dụng nghiêm trọng
+- **Ghi nhận**: Tất cả lạm dụng đều được ghi nhận vào hồ sơ
+
+### 3.3.1.3. Cách thức thực hiện Break-Glass
+
+#### A. Hệ thống IAM
+
+**Cách thức**:
+- **AWS**: Sử dụng IAM Break-Glass role với time-bound access
+- **Azure**: Sử dụng Azure AD Privileged Identity Management (PIM) với emergency access
+- **GCP**: Sử dụng Cloud IAM với emergency access
+- **On-premise**: Sử dụng PAM (Privileged Access Management) tool
+
+**Ví dụ cấu hình (AWS)**:
+```json
+{
+ "Version": "2012-10-17",
+ "Statement": [
+ {
+ "Effect": "Allow",
+ "Action": "*",
+ "Resource": "*",
+ "Condition": {
+ "DateLessThan": {
+ "aws:CurrentTime": "2024-12-17T14:00:00Z"
+ },
+ "StringEquals": {
+ "aws:RequestTag/BreakGlass": "true"
+ }
+ }
+ }
+ ]
+}
+```
+
+**Ví dụ cấu hình (Azure PIM)**:
+```yaml
+BreakGlassAccess:
+ Type: Emergency
+ Duration: 2h
+ ApprovalRequired: false
+ NotificationRequired: true
+ AuditLogRequired: true
+ AutoRevoke: true
+```
+
+#### B. Hệ thống máy chủ
+
+**Cách thức**:
+- **Linux/Unix**: Sử dụng sudo với break-glass account
+- **Windows**: Sử dụng Emergency Access Account trong Active Directory
+- **Container**: Sử dụng Kubernetes break-glass service account
+
+**Ví dụ cấu hình sudo (Linux)**:
+```bash
+# File: /etc/sudoers.d/break-glass
+# Break-glass account chỉ được sử dụng trong trường hợp khẩn cấp
+break-glass ALL=(ALL) ALL
+# Tự động log và alert
+Defaults:break-glass logfile=/var/log/break-glass.log
+Defaults:break-glass mail_always
+Defaults:break-glass timestamp_timeout=120
+```
+
+#### C. Hệ thống Database
+
+**Cách thức**:
+- **MySQL/MariaDB**: Sử dụng break-glass user với time-bound access
+- **PostgreSQL**: Sử dụng break-glass role với session timeout
+- **SQL Server**: Sử dụng break-glass login với time-bound access
+
+**Ví dụ cấu hình (MySQL)**:
+```sql
+-- Tạo break-glass user
+CREATE USER 'break-glass'@'%' IDENTIFIED BY 'secure-password';
+
+-- Cấp quyền (tạm thời)
+GRANT ALL PRIVILEGES ON *.* TO 'break-glass'@'%' 
+WITH GRANT OPTION;
+
+-- Tự động thu hồi sau 2 giờ (qua script hoặc tool)
+-- SET PASSWORD FOR 'break-glass'@'%' = PASSWORD('revoked');
+```
+
+### 3.3.1.4. Quản trị Break-Glass Access
+
+#### A. Quản lý tài khoản Break-Glass
+
+**Quy định**:
+- **Số lượng tài khoản**: Tối đa 2-3 tài khoản Break-Glass cho mỗi hệ thống
+- **Người quản lý**: Chỉ IT Manager và Security Team được quản lý
+- **Lưu trữ credentials**: Credentials được lưu trong Vault, chỉ IT Manager và Security Team được truy cập
+- **Rotation**: Credentials được rotate định kỳ (mỗi 90 ngày)
+
+**Quy trình quản lý**:
+```
+1. Tạo tài khoản Break-Glass
+ ↓
+2. Lưu credentials trong Vault
+ ↓
+3. Cấu hình time-bound access
+ ↓
+4. Cấu hình monitoring và alerting
+ ↓
+5. Test break-glass access (định kỳ)
+ ↓
+6. Rotate credentials (mỗi 90 ngày)
+```
+
+#### B. Giám sát và cảnh báo
+
+**Cảnh báo tự động**:
+- **Ngay khi sử dụng**: Cảnh báo ngay khi Break-Glass được sử dụng
+- **Khi gần hết hạn**: Cảnh báo 15 phút trước khi hết hạn
+- **Khi hết hạn**: Cảnh báo khi Break-Glass hết hạn
+- **Khi có bất thường**: Cảnh báo khi phát hiện hành vi bất thường
+
+**Kênh cảnh báo**:
+- **Email**: Gửi cho IT Manager và Security Team
+- **SMS**: Gửi cho IT Manager và Security Team (cho Critical)
+- **Slack/Teams**: Thông báo real-time
+- **Dashboard**: Hiển thị trên Security Dashboard
+
+**Ví dụ cảnh báo**:
+```
+[BREAK-GLASS ALERT]
+User: devops01@company.com
+Action: Break-Glass Access activated
+Resource: prod-database-server-01
+Reason: Critical database corruption, need immediate access
+Time: 2024-12-17T10:30:00Z
+Expires: 2024-12-17T12:30:00Z (2 hours)
+```
+
+#### C. Review và Audit
+
+**Review định kỳ**:
+- **Hàng tuần**: Review tất cả Break-Glass usage trong tuần
+- **Hàng tháng**: Review tổng hợp và phân tích xu hướng
+- **Hàng quý**: Review toàn diện và đánh giá hiệu quả
+
+**Nội dung review**:
+- Số lần sử dụng Break-Glass
+- Lý do sử dụng
+- Tính chính đáng của việc sử dụng
+- Hành động đã thực hiện
+- Kết quả và tác động
+
+**Audit**:
+- **Audit log**: Tất cả Break-Glass usage đều được ghi vào audit log
+- **Retention**: Audit log được lưu ít nhất 1 năm
+- **Access**: Chỉ IT Manager và Security Team được truy cập audit log
+- **Compliance**: Audit log được sử dụng cho compliance audit
+
+### 3.3.1.5. Best Practices
+
+#### Nên làm
+
+- **Chỉ sử dụng trong trường hợp khẩn cấp thực sự**
+- **Ghi log đầy đủ mọi hành động**
+- **Báo cáo sử dụng trong vòng 24 giờ**
+- **Thu hồi quyền ngay sau khi hoàn thành**
+- **Review định kỳ để cải thiện**
+
+#### Không nên làm
+
+- **Lạm dụng Break-Glass cho mục đích thông thường**
+- **Sử dụng mà không ghi log**
+- **Quên báo cáo sau khi sử dụng**
+- **Không thu hồi quyền sau khi hoàn thành**
+- **Chia sẻ credentials Break-Glass**
+
+### 3.3.1.6. Ví dụ sử dụng Break-Glass
+
+**Scenario 1: Database corruption nghiêm trọng**
+
+**Tình huống**:
+- Database Production bị corruption nghiêm trọng
+- Hệ thống không thể hoạt động
+- Cần truy cập ngay để khôi phục
+- Không thể liên hệ được DBA (ngoài giờ)
+
+**Quy trình**:
+1. Đánh giá: Đây là tình huống khẩn cấp thực sự
+2. Yêu cầu Break-Glass: Yêu cầu qua hệ thống với lý do "Critical database corruption"
+3. Sử dụng: Hệ thống tự động cấp quyền DBAdmin trong 2 giờ
+4. Thực hiện: Khôi phục database, ghi log đầy đủ
+5. Thu hồi: Quyền tự động hết hạn sau 2 giờ
+6. Báo cáo: Báo cáo trong vòng 24 giờ, được phê duyệt
+
+**Scenario 2: Security incident**
+
+**Tình huống**:
+- Phát hiện security incident nghiêm trọng
+- Cần truy cập ngay để điều tra và khắc phục
+- Không thể chờ phê duyệt thông thường
+
+**Quy trình**:
+1. Đánh giá: Đây là tình huống khẩn cấp thực sự
+2. Yêu cầu Break-Glass: Yêu cầu qua hệ thống với lý do "Security incident investigation"
+3. Sử dụng: Hệ thống tự động cấp quyền Security Admin trong 2 giờ
+4. Thực hiện: Điều tra và khắc phục, ghi log đầy đủ
+5. Thu hồi: Quyền tự động hết hạn sau 2 giờ
+6. Báo cáo: Báo cáo trong vòng 24 giờ, được phê duyệt
+
+---
 
 ## 3.4 Tài khoản quản trị tách biệt
 - Tài khoản làm việc hằng ngày ≠ tài khoản admin.
@@ -343,20 +640,20 @@ SET DEFAULT ROLE 'readonly_role' FOR 'developer01'@'%';
 **Ví dụ IAM policy (AWS):**
 ```json
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "s3:GetObject",
-        "s3:ListBucket"
-      ],
-      "Resource": [
-        "arn:aws:s3:::dev-bucket/*",
-        "arn:aws:s3:::dev-bucket"
-      ]
-    }
-  ]
+ "Version": "2012-10-17",
+ "Statement": [
+ {
+ "Effect": "Allow",
+ "Action": [
+ "s3:GetObject",
+ "s3:ListBucket"
+ ],
+ "Resource": [
+ "arn:aws:s3:::dev-bucket/*",
+ "arn:aws:s3:::dev-bucket"
+ ]
+ }
+ ]
 }
 ```
 
@@ -380,12 +677,12 @@ SET DEFAULT ROLE 'readonly_role' FOR 'developer01'@'%';
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  namespace: production
-  name: developer-role
+ namespace: production
+ name: developer-role
 rules:
 - apiGroups: [""]
-  resources: ["pods", "services"]
-  verbs: ["get", "list", "watch"]
+ resources: ["pods", "services"]
+ verbs: ["get", "list", "watch"]
 ```
 
 **Ai thực hiện:**
@@ -696,19 +993,19 @@ Cơ chế kiểm soát là các biện pháp, quy trình, công nghệ và chín
 **Cơ chế:**
 - **Automated provisioning**: Tự động cấp quyền dựa trên role và approval
 - **Automated deprovisioning**: Tự động thu hồi quyền khi:
-  - Quyền tạm thời hết hạn
-  - Người dùng nghỉ việc
-  - Phát hiện vi phạm
-  - Không sử dụng trong thời gian dài
+ - Quyền tạm thời hết hạn
+ - Người dùng nghỉ việc
+ - Phát hiện vi phạm
+ - Không sử dụng trong thời gian dài
 
 **Ví dụ:**
 ```yaml
 # Ví dụ tự động thu hồi quyền JIT sau 2 giờ
 JIT_Access:
-  AutoRevoke: true
-  Timeout: 2h
-  Notification: true
-  LogAction: true
+ AutoRevoke: true
+ Timeout: 2h
+ Notification: true
+ LogAction: true
 ```
 
 ### B. Tự động hóa giám sát và cảnh báo
@@ -792,17 +1089,17 @@ JIT_Access:
 
 ```
 1. Xác định yêu cầu kiểm soát
-   ↓
+ ↓
 2. Thiết kế kiểm soát
-   ↓
+ ↓
 3. Phê duyệt kiểm soát
-   ↓
+ ↓
 4. Triển khai kiểm soát
-   ↓
+ ↓
 5. Kiểm thử kiểm soát
-   ↓
+ ↓
 6. Giám sát và đánh giá
-   ↓
+ ↓
 7. Cải thiện liên tục
 ```
 
@@ -942,26 +1239,26 @@ JIT_Access:
 
 ```
 1. Người dùng gửi yêu cầu
-   → Tạo yêu cầu trong hệ thống quản lý quyền
-   → Mô tả lý do cần quyền
-   → Xác định thời gian cần quyền (nếu tạm thời)
-   → Xác định role/quyền cần
+ → Tạo yêu cầu trong hệ thống quản lý quyền
+ → Mô tả lý do cần quyền
+ → Xác định thời gian cần quyền (nếu tạm thời)
+ → Xác định role/quyền cần
 
 2. Quản lý phê duyệt
-   → PM/PDM phê duyệt cho quyền Level 1.0-2.0
-   → Ban CLGSP phê duyệt cho quyền Level 3.0
-   → Lãnh đạo phê duyệt cho quyền Level 4.0
-   → Đánh giá tính hợp lý của yêu cầu
+ → PM/PDM phê duyệt cho quyền Level 1.0-2.0
+ → Ban CLGSP phê duyệt cho quyền Level 3.0
+ → Lãnh đạo phê duyệt cho quyền Level 4.0
+ → Đánh giá tính hợp lý của yêu cầu
 
 3. IT cấp quyền theo role
-   → Cấp quyền theo role đã được định nghĩa
-   → Không cấp quyền dư thừa
-   → Thiết lập thời gian hết hạn (nếu tạm thời)
+ → Cấp quyền theo role đã được định nghĩa
+ → Không cấp quyền dư thừa
+ → Thiết lập thời gian hết hạn (nếu tạm thời)
 
 4. Lưu log & thông báo
-   → Ghi log đầy đủ: người yêu cầu, người phê duyệt, quyền được cấp, thời gian
-   → Thông báo cho người dùng
-   → Thông báo cho quản lý
+ → Ghi log đầy đủ: người yêu cầu, người phê duyệt, quyền được cấp, thời gian
+ → Thông báo cho người dùng
+ → Thông báo cho quản lý
 ```
 
 ### 7.1.2. Template yêu cầu cấp quyền
@@ -976,7 +1273,7 @@ JIT_Access:
 | **Người phê duyệt** | Tên, chức vụ |
 | **Ngày phê duyệt** | Ngày phê duyệt |
 | **Ngày cấp quyền** | Ngày IT cấp quyền |
-| **Ngày hết hạn** | Ngày quyền hết hạn (nếu tạm thời) |  
+| **Ngày hết hạn** | Ngày quyền hết hạn (nếu tạm thời) | 
 
 ## 7.2 Rà soát quyền
 
@@ -993,27 +1290,27 @@ JIT_Access:
 
 ```
 1. Thu thập dữ liệu
-   → Danh sách tài khoản
-   → Danh sách quyền của từng tài khoản
-   → Lịch sử sử dụng quyền
-   → Log truy cập
+ → Danh sách tài khoản
+ → Danh sách quyền của từng tài khoản
+ → Lịch sử sử dụng quyền
+ → Log truy cập
 
 2. Phân tích
-   → Xác định quyền không cần thiết
-   → Xác định quyền chưa sử dụng
-   → Xác định quyền tạm thời đã hết hạn
-   → Xác định tài khoản không hoạt động
+ → Xác định quyền không cần thiết
+ → Xác định quyền chưa sử dụng
+ → Xác định quyền tạm thời đã hết hạn
+ → Xác định tài khoản không hoạt động
 
 3. Đề xuất
-   → Đề xuất thu hồi quyền không cần thiết
-   → Đề xuất khóa tài khoản không hoạt động
-   → Đề xuất điều chỉnh quyền
+ → Đề xuất thu hồi quyền không cần thiết
+ → Đề xuất khóa tài khoản không hoạt động
+ → Đề xuất điều chỉnh quyền
 
 4. Phê duyệt và thực hiện
-   → Quản lý phê duyệt
-   → IT thực hiện thu hồi/điều chỉnh
-   → Ghi log đầy đủ
-   → Thông báo cho người dùng
+ → Quản lý phê duyệt
+ → IT thực hiện thu hồi/điều chỉnh
+ → Ghi log đầy đủ
+ → Thông báo cho người dùng
 ```
 
 ### 7.2.3. Tự động khóa tài khoản
@@ -1063,8 +1360,8 @@ JIT_Access:
 ## 8.2 Quy trình DRP (Disaster Recovery Plan)
 - Phân loại hệ thống theo mức ưu tiên.
 - Mục tiêu:
-  - RTO < 4 giờ
-  - RPO < 1 giờ
+ - RTO < 4 giờ
+ - RPO < 1 giờ
 
 ## 8.3 Kiểm thử DRP
 - 6 tháng/lần.
@@ -1231,10 +1528,10 @@ JIT_Access:
 # 10. QUẢN LÝ THAY ĐỔI (CHANGE MANAGEMENT)
 
 ## 10.1 Quy trình thay đổi
-1. Gửi Change Request (CR).  
-2. Đánh giá rủi ro & phê duyệt.  
-3. Thực hiện thay đổi.  
-4. Kiểm tra hậu triển khai.  
+1. Gửi Change Request (CR). 
+2. Đánh giá rủi ro & phê duyệt. 
+3. Thực hiện thay đổi. 
+4. Kiểm tra hậu triển khai. 
 
 ## 10.2 Tài liệu cần có
 - Change log.
@@ -1288,24 +1585,24 @@ Ghi lại:
 ## 12.5. Quy trình cấp quyền tạm thời cho upcode
 
 1. **Yêu cầu quyền**
-   - Tạo yêu cầu trong hệ thống quản lý quyền
-   - Mô tả lý do cần quyền (ví dụ: deploy lên Production)
-   - Xác định thời gian cần quyền (thường là 1-2 giờ)
+ - Tạo yêu cầu trong hệ thống quản lý quyền
+ - Mô tả lý do cần quyền (ví dụ: deploy lên Production)
+ - Xác định thời gian cần quyền (thường là 1-2 giờ)
 
 2. **Phê duyệt**
-   - PM/PDM phê duyệt cho quyền Level 1.0-2.0
-   - Ban CLGSP phê duyệt cho quyền Level 3.0
-   - Lãnh đạo phê duyệt cho quyền Level 4.0
+ - PM/PDM phê duyệt cho quyền Level 1.0-2.0
+ - Ban CLGSP phê duyệt cho quyền Level 3.0
+ - Lãnh đạo phê duyệt cho quyền Level 4.0
 
 3. **Cấp quyền**
-   - IT cấp quyền theo role
-   - Tự động hết hạn sau thời gian quy định
-   - Ghi log đầy đủ
+ - IT cấp quyền theo role
+ - Tự động hết hạn sau thời gian quy định
+ - Ghi log đầy đủ
 
 4. **Thu hồi quyền**
-   - Tự động thu hồi sau khi hết hạn
-   - Thu hồi ngay sau khi hoàn thành deploy
-   - Ghi log thu hồi
+ - Tự động thu hồi sau khi hết hạn
+ - Thu hồi ngay sau khi hoàn thành deploy
+ - Ghi log thu hồi
 
 **Tham chiếu**: `QT-003-UPCODE.md` - Phần 9
 
@@ -1329,12 +1626,12 @@ Ghi lại:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  namespace: production
-  name: developer-role
+ namespace: production
+ name: developer-role
 rules:
 - apiGroups: [""]
-  resources: ["pods", "services"]
-  verbs: ["get", "list", "watch"]
+ resources: ["pods", "services"]
+ verbs: ["get", "list", "watch"]
 ```
 
 ### 13.1.2. ClusterRole và ClusterRoleBinding
@@ -1382,10 +1679,10 @@ rules:
 
 | Vai trò | Pull | Push | Delete | Quản lý repository |
 |---------|------|------|--------|-------------------|
-| **Developer** | ✅ (dev/staging) | ✅ (dev/staging) | ❌ | ❌ |
-| **DevOps** | ✅ (all) | ✅ (all) | ✅ (staging/dev) | ✅ (staging/dev) |
-| **QA** | ✅ (dev/staging) | ❌ | ❌ | ❌ |
-| **DBA** | ✅ (all) | ❌ | ❌ | ❌ |
+| **Developer** | (dev/staging) | (dev/staging) | | |
+| **DevOps** | (all) | (all) | (staging/dev) | (staging/dev) |
+| **QA** | (dev/staging) | | | |
+| **DBA** | (all) | | | |
 
 ### 13.2.2. Quy định
 
@@ -1505,9 +1802,9 @@ rules:
 **Quy định**:
 - Mỗi API key có rate limit riêng
 - Rate limit theo role:
-  - **Developer**: 100 requests/minute
-  - **Application**: 1000 requests/minute
-  - **Admin**: 5000 requests/minute
+ - **Developer**: 100 requests/minute
+ - **Application**: 1000 requests/minute
+ - **Admin**: 5000 requests/minute
 - Vượt quá rate limit sẽ bị block tạm thời
 
 ### 14.1.4. API Versioning và Permissions
@@ -1545,10 +1842,10 @@ rules:
 **Ví dụ**:
 | Feature | Developer | DevOps | QA | Admin |
 |---------|-----------|--------|----|----|
-| View users | ✅ | ✅ | ✅ | ✅ |
-| Create users | ✅ (dev) | ✅ | ✅ (staging) | ✅ |
-| Delete users | ❌ | ❌ | ❌ | ✅ |
-| Export data | ❌ | ✅ | ✅ | ✅ |
+| View users | | | | |
+| Create users | (dev) | | (staging) | |
+| Delete users | | | | |
+| Export data | | | | |
 
 ### 14.2.3. Role-based Feature Access
 
@@ -1573,10 +1870,10 @@ rules:
 **Quyền truy cập Vault**:
 | Vai trò | Read | Write | Delete | Admin |
 |---------|------|-------|--------|-------|
-| **Developer** | ✅ (dev secrets) | ❌ | ❌ | ❌ |
-| **DevOps** | ✅ (all) | ✅ (dev/staging) | ❌ | ❌ |
-| **DBA** | ✅ (DB secrets) | ❌ | ❌ | ❌ |
-| **Admin** | ✅ (all) | ✅ (all) | ✅ (all) | ✅ |
+| **Developer** | (dev secrets) | | | |
+| **DevOps** | (all) | (dev/staging) | | |
+| **DBA** | (DB secrets) | | | |
+| **Admin** | (all) | (all) | (all) | |
 
 ### 15.1.2. AWS Secrets Manager
 
@@ -1632,10 +1929,10 @@ rules:
 
 **Quy định**:
 - Secrets phải được rotate định kỳ:
-  - **API keys**: 90 ngày
-  - **Database passwords**: 180 ngày
-  - **SSL certificates**: Trước khi hết hạn
-  - **SSH keys**: 365 ngày
+ - **API keys**: 90 ngày
+ - **Database passwords**: 180 ngày
+ - **SSL certificates**: Trước khi hết hạn
+ - **SSH keys**: 365 ngày
 - Rotation phải được tự động hóa khi có thể
 
 **Quy trình**:
@@ -1679,12 +1976,12 @@ rules:
 **Quy định**:
 - Tất cả hành động với quyền cao đều phải được ghi log
 - Log phải bao gồm:
-  - Timestamp
-  - User/Service account
-  - Action (create, read, update, delete)
-  - Resource
-  - IP address
-  - Result (success/failure)
+ - Timestamp
+ - User/Service account
+ - Action (create, read, update, delete)
+ - Resource
+ - IP address
+ - Result (success/failure)
 - Log không được chỉnh sửa hoặc xóa
 
 ### 16.1.2. Retention Policy
@@ -1759,20 +2056,20 @@ rules:
 
 ```
 1. Phát hiện lạm dụng quyền
-   ↓
+ ↓
 2. Đánh giá mức độ nghiêm trọng
-   - Critical: Thu hồi ngay lập tức
-   - High: Thu hồi trong 1 giờ
-   - Medium: Thu hồi trong 24 giờ
-   ↓
+ - Critical: Thu hồi ngay lập tức
+ - High: Thu hồi trong 1 giờ
+ - Medium: Thu hồi trong 24 giờ
+ ↓
 3. Thu hồi quyền ngay lập tức
-   ↓
+ ↓
 4. Khóa tài khoản (nếu cần)
-   ↓
+ ↓
 5. Thu thập evidence
-   ↓
+ ↓
 6. Phân tích và báo cáo
-   ↓
+ ↓
 7. Khắc phục và cải thiện
 ```
 
@@ -1798,15 +2095,15 @@ rules:
 
 ```
 1. Xác định tài khoản/quyền cần thu hồi
-   ↓
+ ↓
 2. Thu hồi quyền ngay lập tức (không cần phê duyệt)
-   ↓
+ ↓
 3. Khóa tài khoản (nếu cần)
-   ↓
+ ↓
 4. Thông báo cho Security Team và IT Manager
-   ↓
+ ↓
 5. Ghi log đầy đủ
-   ↓
+ ↓
 6. Báo cáo sau (trong 24 giờ)
 ```
 
@@ -1828,15 +2125,15 @@ rules:
 
 ```
 1. Yêu cầu khôi phục quyền
-   ↓
+ ↓
 2. Phê duyệt (Security Team hoặc IT Manager)
-   ↓
+ ↓
 3. Xác minh tài khoản an toàn
-   ↓
+ ↓
 4. Khôi phục quyền
-   ↓
+ ↓
 5. Ghi log đầy đủ
-   ↓
+ ↓
 6. Monitor tài khoản trong 7 ngày
 ```
 
@@ -1993,44 +2290,44 @@ rules:
 
 **Nội dung đánh giá:**
 1. **Hiệu quả kiểm soát hiện tại**
-   - Kiểm soát có hoạt động đúng không?
-   - Kiểm soát có phát hiện được vi phạm không?
-   - Kiểm soát có ngăn chặn được vi phạm không?
+ - Kiểm soát có hoạt động đúng không?
+ - Kiểm soát có phát hiện được vi phạm không?
+ - Kiểm soát có ngăn chặn được vi phạm không?
 
 2. **Phát hiện gap và rủi ro mới**
-   - Có gap nào trong kiểm soát không?
-   - Có rủi ro mới nào xuất hiện không?
-   - Kiểm soát có đủ để bảo vệ khỏi rủi ro mới không?
+ - Có gap nào trong kiểm soát không?
+ - Có rủi ro mới nào xuất hiện không?
+ - Kiểm soát có đủ để bảo vệ khỏi rủi ro mới không?
 
 3. **Đề xuất cải thiện**
-   - Kiểm soát nào cần được tăng cường?
-   - Kiểm soát nào cần được tự động hóa?
-   - Kiểm soát nào cần được thêm mới?
+ - Kiểm soát nào cần được tăng cường?
+ - Kiểm soát nào cần được tự động hóa?
+ - Kiểm soát nào cần được thêm mới?
 
 4. **Cập nhật kiểm soát**
-   - Triển khai cải thiện
-   - Kiểm thử kiểm soát mới
-   - Giám sát hiệu quả
+ - Triển khai cải thiện
+ - Kiểm thử kiểm soát mới
+ - Giám sát hiệu quả
 
 ### 19.3.2. Quy trình cải thiện liên tục
 
 ```
 1. Thu thập dữ liệu
-   ↓
+ ↓
 2. Phân tích và đánh giá
-   ↓
+ ↓
 3. Xác định gap và cơ hội cải thiện
-   ↓
+ ↓
 4. Thiết kế giải pháp
-   ↓
+ ↓
 5. Phê duyệt giải pháp
-   ↓
+ ↓
 6. Triển khai giải pháp
-   ↓
+ ↓
 7. Kiểm thử và xác nhận
-   ↓
+ ↓
 8. Giám sát và đánh giá
-   ↓
+ ↓
 9. Lặp lại quy trình
 ```
 
@@ -2215,11 +2512,11 @@ Checklist chi tiết cho:
 - Rà soát định kỳ
 - Xử lý tài khoản nghỉ việc
 - Kiểm tra bảo mật
-- Quyền Cloud/Container (Kubernetes, Docker, Cloud IAM) ⭐
-- Quyền API/Application (API key, OAuth, Feature flags) ⭐
-- Quản lý Secret (Vault, Secrets Manager) ⭐
-- Audit và Compliance ⭐
-- Incident Response ⭐
+- Quyền Cloud/Container (Kubernetes, Docker, Cloud IAM) 
+- Quyền API/Application (API key, OAuth, Feature flags) 
+- Quản lý Secret (Vault, Secrets Manager) 
+- Audit và Compliance 
+- Incident Response 
 
 ### 21.2. Quick Reference
 
@@ -2235,11 +2532,11 @@ Bảng tra cứu nhanh:
 - MFA
 - Tự động khóa tài khoản
 - Quy trình tóm tắt
-- Quyền Cloud/Container ⭐
-- Quyền API/Application ⭐
-- Quản lý Secret ⭐
-- Audit Log Retention ⭐
-- Incident Response ⭐
+- Quyền Cloud/Container 
+- Quyền API/Application 
+- Quản lý Secret 
+- Audit Log Retention 
+- Incident Response 
 
 ### 21.3. Template
 
@@ -2266,7 +2563,10 @@ Template để tạo yêu cầu cấp quyền với đầy đủ thông tin cầ
 
 ---
 
-**Phiên bản**: 3.0
+**Phiên bản**: 3.1
 **Ngày ban hành**: [Ngày hiện tại]
 **Người soạn**: 
 **Trạng thái**: Chính thức
+
+**Cập nhật lần cuối**: 2024-12-17
+- Bổ sung Break-Glass Access (Phần 3.3.1) - Tài khoản khẩn cấp với quy trình và phương pháp quản trị đầy đủ

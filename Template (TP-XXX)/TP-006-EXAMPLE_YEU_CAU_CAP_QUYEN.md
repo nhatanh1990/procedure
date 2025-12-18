@@ -27,9 +27,9 @@ Cần quyền deploy tính năng Two-Factor Authentication (2FA) lên môi trư�
 
 - [ ] **Vĩnh viễn**
 - [x] **Tạm thời**
-  - **Thời gian bắt đầu**: 2024-12-17 14:00
-  - **Thời gian kết thúc**: 2024-12-17 16:00
-  - **Thời hạn**: 2 giờ
+ - **Thời gian bắt đầu**: 2024-12-17 14:00
+ - **Thời gian kết thúc**: 2024-12-17 16:00
+ - **Thời hạn**: 2 giờ
 
 ### Chi tiết quyền
 
@@ -78,10 +78,10 @@ Cần quyền deploy tính năng Two-Factor Authentication (2FA) lên môi trư�
 - **Người cấp quyền**: Lê Văn D - IT Team
 - **Ngày cấp quyền**: 2024-12-17 13:55
 - **Quyền đã cấp**: 
-  - Deploy access trên Production environment
-  - SSH access đến production servers (10.0.1.10, 10.0.1.11)
-  - Configuration access để cập nhật config
-  - Log access để monitor deployment
+ - Deploy access trên Production environment
+ - SSH access đến production servers (10.0.1.10, 10.0.1.11)
+ - Configuration access để cập nhật config
+ - Log access để monitor deployment
 - **IP whitelist**: 10.0.1.50 (IP của người yêu cầu)
 - **MFA**: Đã kích hoạt
 
