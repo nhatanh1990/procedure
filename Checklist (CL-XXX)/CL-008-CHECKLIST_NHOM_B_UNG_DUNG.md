@@ -1,6 +1,6 @@
 # CL-008: CHECKLIST NHÓM B - ỨNG DỤNG
 
-**Mã checklist**: CL-008  
+**Mã checklist**: CL-008 
 **Tham chiếu**: `QT-008-DANH_SACH_THAY_DOI_CHUAN.md` - Nhóm B
 
 ---

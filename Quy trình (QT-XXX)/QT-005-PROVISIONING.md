@@ -2,7 +2,7 @@
 
 ---
 
-## 📋 THÔNG TIN TÀI LIỆU
+## THÔNG TIN TÀI LIỆU
 
 - **Mã quy trình**: QT-005
 - **Tên quy trình**: Quy trình Provisioning
@@ -13,14 +13,14 @@
 
 ---
 
-## 📚 MỤC LỤC
+## MỤC LỤC
 
 1. [Tổng quan](#1-tổng-quan)
 2. [Quy trình provisioning](#2-quy-trình-provisioning)
 3. [Các loại tài nguyên](#3-các-loại-tài-nguyên)
 4. [Thiết kế và cấu hình](#4-thiết-kế-và-cấu-hình)
 5. [Kiểm thử và bàn giao](#5-kiểm-thử-và-bàn-giao)
-6. [Quy định về Quyền Truy Cập Tối Thiểu](#6-quy-định-về-quyền-truy-cập-tối-thiểu) ⭐
+6. [Quy định về Quyền Truy Cập Tối Thiểu](#6-quy-định-về-quyền-truy-cập-tối-thiểu) 
 7. [Checklist](#7-checklist)
 
 ---
@@ -52,54 +52,54 @@ Quy trình provisioning nhằm cung cấp và cấu hình tài nguyên hệ th�
 
 ```mermaid
 flowchart TD
-    Start([Yêu cầu provisioning]) --> Request[Tạo Provisioning Request]
-    
-    Request --> Approve[Phê duyệt]
-    
-    Approve -->|Chưa phê duyệt| Wait[Chờ phê duyệt]
-    Wait --> Approve
-    
-    Approve -->|Đã phê duyệt| Design[Thiết kế]
-    
-    Design --> ReviewDesign[Review thiết kế]
-    
-    ReviewDesign -->|Cần sửa| Design
-    
-    ReviewDesign -->|OK| Allocate[Phân bổ tài nguyên]
-    
-    Allocate --> Create[Tạo tài nguyên]
-    
-    Create --> ConfigSystem[Cấu hình hệ thống]
-    
-    ConfigSystem --> ConfigNetwork[Cấu hình mạng]
-    
-    ConfigNetwork --> ConfigSecurity[Cấu hình bảo mật]
-    
-    ConfigSecurity --> ConfigApp[Cấu hình ứng dụng]
-    
-    ConfigApp --> ConfigDB[Cấu hình database]
-    
-    ConfigDB --> ConfigMonitor[Cấu hình monitoring]
-    
-    ConfigMonitor --> ConfigBackup[Cấu hình backup]
-    
-    ConfigBackup --> Test[Kiểm thử]
-    
-    Test -->|Fail| Fix[Sửa lỗi]
-    Fix --> Test
-    
-    Test -->|Pass| Document[Tài liệu hóa]
-    
-    Document --> Handover[Bàn giao]
-    
-    Handover --> Record[Ghi nhận]
-    
-    Record --> End([Kết thúc])
-    
-    style Start fill:#90EE90
-    style End fill:#FFB6C1
-    style Approve fill:#87CEEB
-    style Test fill:#FFD700
+ Start([Yêu cầu provisioning]) --> Request[Tạo Provisioning Request]
+ 
+ Request --> Approve[Phê duyệt]
+ 
+ Approve -->|Chưa phê duyệt| Wait[Chờ phê duyệt]
+ Wait --> Approve
+ 
+ Approve -->|Đã phê duyệt| Design[Thiết kế]
+ 
+ Design --> ReviewDesign[Review thiết kế]
+ 
+ ReviewDesign -->|Cần sửa| Design
+ 
+ ReviewDesign -->|OK| Allocate[Phân bổ tài nguyên]
+ 
+ Allocate --> Create[Tạo tài nguyên]
+ 
+ Create --> ConfigSystem[Cấu hình hệ thống]
+ 
+ ConfigSystem --> ConfigNetwork[Cấu hình mạng]
+ 
+ ConfigNetwork --> ConfigSecurity[Cấu hình bảo mật]
+ 
+ ConfigSecurity --> ConfigApp[Cấu hình ứng dụng]
+ 
+ ConfigApp --> ConfigDB[Cấu hình database]
+ 
+ ConfigDB --> ConfigMonitor[Cấu hình monitoring]
+ 
+ ConfigMonitor --> ConfigBackup[Cấu hình backup]
+ 
+ ConfigBackup --> Test[Kiểm thử]
+ 
+ Test -->|Fail| Fix[Sửa lỗi]
+ Fix --> Test
+ 
+ Test -->|Pass| Document[Tài liệu hóa]
+ 
+ Document --> Handover[Bàn giao]
+ 
+ Handover --> Record[Ghi nhận]
+ 
+ Record --> End([Kết thúc])
+ 
+ style Start fill:#90EE90
+ style End fill:#FFB6C1
+ style Approve fill:#87CEEB
+ style Test fill:#FFD700
 ```
 
 ### 2.2. Chi tiết từng bước
@@ -415,10 +415,10 @@ flowchart TD
 
 | Vai trò | Server | Database | Network | Storage |
 |---------|--------|----------|---------|---------|
-| **Developer** | ❌ | ❌ | ❌ | ❌ |
-| **DevOps** | ✅* | ✅* | ✅* | ✅* |
-| **Infrastructure** | ✅* | ✅* | ✅* | ✅* |
-| **DBA** | ❌ | ✅* | ❌ | ❌ |
+| **Developer** | | | | |
+| **DevOps** | * | * | * | * |
+| **Infrastructure** | * | * | * | * |
+| **DBA** | | * | | |
 
 *Sau khi có phê duyệt
 
@@ -426,10 +426,10 @@ flowchart TD
 
 | Vai trò | Server Config | DB Config | Network Config | Security Config |
 |---------|---------------|-----------|----------------|-----------------|
-| **Developer** | ❌ | ❌ | ❌ | ❌ |
-| **DevOps** | ✅* | ✅* | ✅* | ✅* |
-| **Infrastructure** | ✅* | ✅* | ✅* | ✅* |
-| **DBA** | ❌ | ✅* | ❌ | ❌ |
+| **Developer** | | | | |
+| **DevOps** | * | * | * | * |
+| **Infrastructure** | * | * | * | * |
+| **DBA** | | * | | |
 
 *Sau khi có phê duyệt
 
@@ -443,25 +443,25 @@ flowchart TD
 ### 6.3. Quy trình cấp quyền cho provisioning
 
 1. **Yêu cầu quyền**
-   - Tạo yêu cầu trong hệ thống quản lý quyền
-   - Mô tả lý do: Tạo tài nguyên mới
-   - Xác định loại tài nguyên và quyền cần
-   - Xác định thời gian: Vĩnh viễn hoặc tạm thời
+ - Tạo yêu cầu trong hệ thống quản lý quyền
+ - Mô tả lý do: Tạo tài nguyên mới
+ - Xác định loại tài nguyên và quyền cần
+ - Xác định thời gian: Vĩnh viễn hoặc tạm thời
 
 2. **Phê duyệt**
-   - PM/PDM phê duyệt cho quyền Level 1.0-2.0
-   - Ban CLGSP phê duyệt cho quyền Level 3.0
-   - Lãnh đạo phê duyệt cho quyền Level 4.0
+ - PM/PDM phê duyệt cho quyền Level 1.0-2.0
+ - Ban CLGSP phê duyệt cho quyền Level 3.0
+ - Lãnh đạo phê duyệt cho quyền Level 4.0
 
 3. **Cấp quyền**
-   - IT cấp quyền theo role
-   - Cấp quyền cho tài nguyên cụ thể
-   - Ghi log đầy đủ
+ - IT cấp quyền theo role
+ - Cấp quyền cho tài nguyên cụ thể
+ - Ghi log đầy đủ
 
 4. **Thu hồi quyền**
-   - Thu hồi quyền khi không còn cần
-   - Thu hồi quyền khi tài nguyên bị xóa
-   - Ghi log thu hồi
+ - Thu hồi quyền khi không còn cần
+ - Thu hồi quyền khi tài nguyên bị xóa
+ - Ghi log thu hồi
 
 ### 6.4. Giám sát và ghi log
 

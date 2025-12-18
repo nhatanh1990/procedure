@@ -1,6 +1,6 @@
 # TP-001: TEMPLATE RFC (REQUEST FOR CHANGE)
 
-**Mã template**: TP-001  
+**Mã template**: TP-001 
 **Tham chiếu quy trình**: QT-003
 
 ---

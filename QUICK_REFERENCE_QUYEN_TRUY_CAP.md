@@ -5,26 +5,26 @@
 
 ---
 
-## 💡 TẠI SAO QUAN TRỌNG? (TÓM TẮT)
+## TẠI SAO QUAN TRỌNG? (TÓM TẮT)
 
-### ✅ Lợi ích chính
-- 🛡️ **Giảm 80-90% rủi ro bảo mật**: Bảo vệ khỏi tấn công, vi phạm dữ liệu
-- ✅ **Tuân thủ pháp luật**: ISO 27001, GDPR, SOC 2, PCI DSS
-- ⚡ **Giảm 60-70% lỗi vô ý**: Tránh xóa nhầm, cấu hình sai
-- 🔍 **Truy vết dễ dàng**: Biết rõ ai làm gì, khi nào
-- 💰 **Tiết kiệm chi phí**: Tránh thiệt hại hàng triệu USD từ sự cố bảo mật
+### Lợi ích chính
+- **Giảm 80-90% rủi ro bảo mật**: Bảo vệ khỏi tấn công, vi phạm dữ liệu
+- **Tuân thủ pháp luật**: ISO 27001, GDPR, SOC 2, PCI DSS
+- **Giảm 60-70% lỗi vô ý**: Tránh xóa nhầm, cấu hình sai
+- **Truy vết dễ dàng**: Biết rõ ai làm gì, khi nào
+- **Tiết kiệm chi phí**: Tránh thiệt hại hàng triệu USD từ sự cố bảo mật
 
-### ⚠️ Rủi ro nếu không tuân thủ
-- 💸 **Thiệt hại tài chính**: Trung bình $4.45 triệu USD/vụ vi phạm
-- 📉 **Mất danh tiếng**: 66% khách hàng mất niềm tin sau sự cố
-- ⚖️ **Vi phạm pháp luật**: Phạt GDPR lên đến 4% doanh thu
-- 🔒 **Rủi ro bảo mật cao**: 74% vụ vi phạm liên quan đến quyền quá cao
+### Rủi ro nếu không tuân thủ
+- **Thiệt hại tài chính**: Trung bình $4.45 triệu USD/vụ vi phạm
+- **Mất danh tiếng**: 66% khách hàng mất niềm tin sau sự cố
+- **Vi phạm pháp luật**: Phạt GDPR lên đến 4% doanh thu
+- **Rủi ro bảo mật cao**: 74% vụ vi phạm liên quan đến quyền quá cao
 
-**👉 Xem chi tiết**: Phần 1.1-1.5 trong `CHÍNH SÁCH QUYỀN TRUY CẬP TỐI THIỂU.md`
+** Xem chi tiết**: Phần 1.1-1.5 trong `CHÍNH SÁCH QUYỀN TRUY CẬP TỐI THIỂU.md`
 
 ---
 
-## 🎯 NGUYÊN TẮC CƠ BẢN
+## NGUYÊN TẮC CƠ BẢN
 
 | Nguyên tắc | Mô tả |
 |------------|-------|
@@ -36,7 +36,7 @@
 
 ---
 
-## 👥 QUYỀN THEO VAI TRÒ
+## QUYỀN THEO VAI TRÒ
 
 ### Quyền truy cập môi trường
 
@@ -53,10 +53,10 @@
 
 | Vai trò | Development | Staging/UAT | Production/DR |
 |---------|-------------|-------------|---------------|
-| **Developer** | ✅ Deploy | ❌ Không deploy | ❌ Không deploy |
-| **DevOps** | ✅ Deploy | ✅ Deploy | ✅ Deploy* |
-| **QA** | ❌ Không deploy | ❌ Không deploy | ❌ Không deploy |
-| **DBA** | ✅ DB changes | ✅ DB changes | ✅ DB changes* |
+| **Developer** | Deploy | Không deploy | Không deploy |
+| **DevOps** | Deploy | Deploy | Deploy* |
+| **QA** | Không deploy | Không deploy | Không deploy |
+| **DBA** | DB changes | DB changes | DB changes* |
 
 *Sau khi có phê duyệt (theo QT-003)
 
@@ -73,7 +73,7 @@
 
 ---
 
-## 🔐 QUYỀN DATABASE (ROLE)
+## QUYỀN DATABASE (ROLE)
 
 | Role | Quyền | Đối tượng | Mục đích |
 |------|-------|-----------|----------|
@@ -83,7 +83,7 @@
 
 ---
 
-## 📋 CẤP ĐỘ PHÊ DUYỆT
+## CẤP ĐỘ PHÊ DUYỆT
 
 | Level | Người phê duyệt | Quyền |
 |-------|-----------------|-------|
@@ -94,7 +94,7 @@
 
 ---
 
-## ⏱️ THỜI GIAN QUYỀN TẠM THỜI (JIT)
+## ⏱ THỜI GIAN QUYỀN TẠM THỜI (JIT)
 
 | Loại quyền | Thời gian tối đa | Ghi chú |
 |------------|------------------|---------|
@@ -105,7 +105,7 @@
 
 ---
 
-## 🔄 RÀ SOÁT ĐỊNH KỲ
+## RÀ SOÁT ĐỊNH KỲ
 
 | Loại rà soát | Tần suất | Người thực hiện |
 |--------------|----------|-----------------|
@@ -116,18 +116,18 @@
 
 ---
 
-## 🔒 MFA (MULTI-FACTOR AUTHENTICATION)
+## MFA (MULTI-FACTOR AUTHENTICATION)
 
 | Loại tài khoản | MFA | Phương thức |
 |----------------|-----|-------------|
-| **Tài khoản admin** | ✅ Bắt buộc | TOTP (Google Authenticator, Authy) hoặc SMS |
-| **Tài khoản có quyền cao** | ✅ Bắt buộc | TOTP hoặc SMS |
-| **Tài khoản người dùng thông thường** | 💡 Khuyến khích | TOTP hoặc SMS |
-| **Tài khoản service** | ❌ Không áp dụng | API key/Token |
+| **Tài khoản admin** | Bắt buộc | TOTP (Google Authenticator, Authy) hoặc SMS |
+| **Tài khoản có quyền cao** | Bắt buộc | TOTP hoặc SMS |
+| **Tài khoản người dùng thông thường** | Khuyến khích | TOTP hoặc SMS |
+| **Tài khoản service** | Không áp dụng | API key/Token |
 
 ---
 
-## 🚨 TỰ ĐỘNG KHÓA TÀI KHOẢN
+## TỰ ĐỘNG KHÓA TÀI KHOẢN
 
 | Điều kiện | Hành động | Thời gian cảnh báo |
 |-----------|-----------|-------------------|
@@ -138,49 +138,49 @@
 
 ---
 
-## 📝 QUY TRÌNH CẤP QUYỀN (TÓM TẮT)
+## QUY TRÌNH CẤP QUYỀN (TÓM TẮT)
 
 ```
 1. Yêu cầu quyền
-   ↓
+ ↓
 2. Phê duyệt (Level 1.0-4.0)
-   ↓
+ ↓
 3. Cấp quyền theo role
-   ↓
+ ↓
 4. Ghi log & thông báo
 ```
 
 ---
 
-## 🔍 QUY TRÌNH RÀ SOÁT (TÓM TẮT)
+## QUY TRÌNH RÀ SOÁT (TÓM TẮT)
 
 ```
 1. Thu thập dữ liệu
-   ↓
+ ↓
 2. Phân tích
-   ↓
+ ↓
 3. Đề xuất
-   ↓
+ ↓
 4. Phê duyệt và thực hiện
 ```
 
 ---
 
-## ⚡ QUY TRÌNH CẤP QUYỀN TẠM THỜI (JIT)
+## QUY TRÌNH CẤP QUYỀN TẠM THỜI (JIT)
 
 ```
 1. Yêu cầu quyền (mô tả lý do, thời gian)
-   ↓
+ ↓
 2. Phê duyệt nhanh
-   ↓
+ ↓
 3. Cấp quyền (tự động hết hạn)
-   ↓
+ ↓
 4. Thu hồi sau khi hoàn thành
 ```
 
 ---
 
-## 📞 LIÊN HỆ
+## LIÊN HỆ
 
 - **Yêu cầu quyền**: [Hệ thống quản lý quyền]
 - **Hỗ trợ IT**: [Email/Phone]
@@ -188,7 +188,7 @@
 
 ---
 
-## 🔗 THAM CHIẾU
+## THAM CHIẾU
 
 - **Chính sách đầy đủ**: `CHÍNH SÁCH QUYỀN TRUY CẬP TỐI THIỂU.md`
 - **Checklist**: `CL-011-CHECKLIST_QUYEN_TRUY_CAP.md`
@@ -196,7 +196,7 @@
 
 ---
 
-## ☁️ QUYỀN CLOUD/CONTAINER
+## QUYỀN CLOUD/CONTAINER
 
 ### Kubernetes RBAC
 
@@ -213,9 +213,9 @@
 
 | Vai trò | Pull | Push | Delete |
 |---------|------|------|--------|
-| **Developer** | ✅ (dev/staging) | ✅ (dev/staging) | ❌ |
-| **DevOps** | ✅ (all) | ✅ (all) | ✅ (staging/dev) |
-| **QA** | ✅ (dev/staging) | ❌ | ❌ |
+| **Developer** | (dev/staging) | (dev/staging) | |
+| **DevOps** | (all) | (all) | (staging/dev) |
+| **QA** | (dev/staging) | | |
 
 ### Cloud IAM
 
@@ -229,7 +229,7 @@
 
 ---
 
-## 🔐 QUYỀN API/APPLICATION
+## QUYỀN API/APPLICATION
 
 ### API Key Rate Limiting
 
@@ -243,22 +243,22 @@
 
 | Vai trò | Enable/Disable |
 |---------|----------------|
-| **Developer** | ❌ |
-| **DevOps** | ✅ (dev/staging) |
-| **Admin** | ✅ (all) |
+| **Developer** | |
+| **DevOps** | (dev/staging) |
+| **Admin** | (all) |
 
 ---
 
-## 🔑 QUYỀN SECRET MANAGEMENT
+## QUYỀN SECRET MANAGEMENT
 
 ### HashiCorp Vault
 
 | Vai trò | Read | Write | Delete | Admin |
 |---------|------|-------|--------|-------|
-| **Developer** | ✅ (dev secrets) | ❌ | ❌ | ❌ |
-| **DevOps** | ✅ (all) | ✅ (dev/staging) | ❌ | ❌ |
-| **DBA** | ✅ (DB secrets) | ❌ | ❌ | ❌ |
-| **Admin** | ✅ (all) | ✅ (all) | ✅ (all) | ✅ |
+| **Developer** | (dev secrets) | | | |
+| **DevOps** | (all) | (dev/staging) | | |
+| **DBA** | (DB secrets) | | | |
+| **Admin** | (all) | (all) | (all) | |
 
 ### Secret Rotation
 
@@ -271,7 +271,7 @@
 
 ---
 
-## 📊 AUDIT LOG RETENTION
+## AUDIT LOG RETENTION
 
 | Loại log | Retention |
 |----------|-----------|
@@ -283,7 +283,7 @@
 
 ---
 
-## 🚨 INCIDENT RESPONSE
+## INCIDENT RESPONSE
 
 ### Escalation
 

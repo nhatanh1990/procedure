@@ -5,13 +5,13 @@
 
 ---
 
-## 📋 TỔNG QUAN
+## TỔNG QUAN
 
 Tài liệu này cung cấp hướng dẫn xử lý các vấn đề thường gặp khi sử dụng hệ thống quy trình.
 
 ---
 
-## ❓ FAQ - CÂU HỎI THƯỜNG GẶP
+## FAQ - CÂU HỎI THƯỜNG GẶP
 
 ### 1. Tôi không biết thay đổi của mình thuộc loại nào?
 
@@ -57,11 +57,11 @@ Tài liệu này cung cấp hướng dẫn xử lý các vấn đề thường g
 - Mỗi template đều có file example tương ứng
 - Xem file example để hiểu cách điền
 - Danh sách example:
-  - [`TP-001-EXAMPLE_RFC.md`](../Template%20(TP-XXX)/TP-001-EXAMPLE_RFC.md)
-  - [`TP-002-EXAMPLE_HOTFIX.md`](../Template%20(TP-XXX)/TP-002-EXAMPLE_HOTFIX.md)
-  - [`TP-003-EXAMPLE_RELEASE_NOTE.md`](../Template%20(TP-XXX)/TP-003-EXAMPLE_RELEASE_NOTE.md)
-  - [`TP-004-EXAMPLE_PROVISIONING.md`](../Template%20(TP-XXX)/TP-004-EXAMPLE_PROVISIONING.md)
-  - [`TP-005-EXAMPLE_TRA_CUU_THAY_DOI.md`](../Template%20(TP-XXX)/TP-005-EXAMPLE_TRA_CUU_THAY_DOI.md)
+ - [`TP-001-EXAMPLE_RFC.md`](../Template%20(TP-XXX)/TP-001-EXAMPLE_RFC.md)
+ - [`TP-002-EXAMPLE_HOTFIX.md`](../Template%20(TP-XXX)/TP-002-EXAMPLE_HOTFIX.md)
+ - [`TP-003-EXAMPLE_RELEASE_NOTE.md`](../Template%20(TP-XXX)/TP-003-EXAMPLE_RELEASE_NOTE.md)
+ - [`TP-004-EXAMPLE_PROVISIONING.md`](../Template%20(TP-XXX)/TP-004-EXAMPLE_PROVISIONING.md)
+ - [`TP-005-EXAMPLE_TRA_CUU_THAY_DOI.md`](../Template%20(TP-XXX)/TP-005-EXAMPLE_TRA_CUU_THAY_DOI.md)
 
 ---
 
@@ -84,7 +84,7 @@ Tài liệu này cung cấp hướng dẫn xử lý các vấn đề thường g
 
 ---
 
-## 🔧 VẤN ĐỀ KỸ THUẬT
+## VẤN ĐỀ KỸ THUẬT
 
 ### Vấn đề 1: Không tìm thấy file
 
@@ -127,7 +127,7 @@ Tài liệu này cung cấp hướng dẫn xử lý các vấn đề thường g
 
 ---
 
-## 🚨 VẤN ĐỀ QUY TRÌNH
+## VẤN ĐỀ QUY TRÌNH
 
 ### Vấn đề 1: RFC bị từ chối
 
@@ -164,7 +164,7 @@ Tài liệu này cung cấp hướng dẫn xử lý các vấn đề thường g
 
 ---
 
-## 📞 LIÊN HỆ HỖ TRỢ
+## LIÊN HỆ HỖ TRỢ
 
 ### Khi cần hỗ trợ
 
@@ -181,7 +181,7 @@ Tài liệu này cung cấp hướng dẫn xử lý các vấn đề thường g
 
 ---
 
-## 📝 BÁO CÁO VẤN ĐỀ
+## BÁO CÁO VẤN ĐỀ
 
 ### Khi phát hiện vấn đề trong tài liệu
 
@@ -202,7 +202,7 @@ Tài liệu này cung cấp hướng dẫn xử lý các vấn đề thường g
 
 ---
 
-## ✅ CHECKLIST TROUBLESHOOTING
+## CHECKLIST TROUBLESHOOTING
 
 Khi gặp vấn đề, làm theo các bước:
 
@@ -215,6 +215,6 @@ Khi gặp vấn đề, làm theo các bước:
 
 ---
 
-**Phiên bản**: 1.0  
+**Phiên bản**: 1.0 
 **Ngày cập nhật**: 2024-12-17
 

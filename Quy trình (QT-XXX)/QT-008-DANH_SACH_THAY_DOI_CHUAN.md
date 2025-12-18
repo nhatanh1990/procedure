@@ -2,7 +2,7 @@
 
 ---
 
-## 📋 THÔNG TIN TÀI LIỆU
+## THÔNG TIN TÀI LIỆU
 
 - **Mã quy trình**: QT-008
 - **Tên quy trình**: Danh sách Thay đổi Chuẩn
@@ -13,7 +13,7 @@
 
 ---
 
-## 📚 MỤC LỤC
+## MỤC LỤC
 
 1. [Tổng quan](#1-tổng-quan)
 2. [Nhóm A: Thay đổi Hạ tầng](#2-nhóm-a-thay-đổi-hạ-tầng-infrastructure)

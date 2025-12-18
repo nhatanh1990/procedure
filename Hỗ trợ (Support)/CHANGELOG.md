@@ -26,22 +26,22 @@ và tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Changed
 - Cập nhật README.md với section về file Example
 - Cải thiện template TP-003 (Release Note) cho Agile (v2.0)
-  - Thêm Git version information
-  - Thêm Docker image information
-  - Thêm Testing Results và Performance Metrics (kiến nghị)
-  - Tối ưu cho quy trình Agile
+ - Thêm Git version information
+ - Thêm Docker image information
+ - Thêm Testing Results và Performance Metrics (kiến nghị)
+ - Tối ưu cho quy trình Agile
 - Tổ chức lại folder QT: Gộp README_QUY_TRINH.md và QT-001 vào README.md
 - Loại bỏ thông tin thời gian không cần thiết trong tất cả file
 - Rút gọn và tối ưu folder "Hỗ trợ (Support)"
 - Cập nhật CHÍNH SÁCH QUYỀN TRUY CẬP TỐI THIỂU.md lên phiên bản 3.0
-  - Bổ sung phần 1.1-1.4: Tại sao quan trọng, Rủi ro, Số liệu, FAQ
-  - Bổ sung phần 3.1.1: Định nghĩa "đủ quyền" chi tiết
-  - Bổ sung phần 3.7.1: Ghi nhận (Logging) ra sao
-  - Bổ sung phần 3.9: Cách thức thực hiện và Ai thực hiện
-  - Bổ sung phần 3.10: Cơ chế kiểm soát toàn diện
-  - Bổ sung phần 9.4: Dashboard và Báo cáo
-  - Bổ sung phần 19: Tổng hợp cơ chế kiểm soát
-  - Loại bỏ phần 1.3: CASE STUDIES VÀ BÀI HỌC
+ - Bổ sung phần 1.1-1.4: Tại sao quan trọng, Rủi ro, Số liệu, FAQ
+ - Bổ sung phần 3.1.1: Định nghĩa "đủ quyền" chi tiết
+ - Bổ sung phần 3.7.1: Ghi nhận (Logging) ra sao
+ - Bổ sung phần 3.9: Cách thức thực hiện và Ai thực hiện
+ - Bổ sung phần 3.10: Cơ chế kiểm soát toàn diện
+ - Bổ sung phần 9.4: Dashboard và Báo cáo
+ - Bổ sung phần 19: Tổng hợp cơ chế kiểm soát
+ - Loại bỏ phần 1.3: CASE STUDIES VÀ BÀI HỌC
 - Cập nhật CL-011-CHECKLIST_QUYEN_TRUY_CAP.md lên phiên bản 2.0
 - Cập nhật HUONG_DAN_SU_DUNG_QUYEN_TRUY_CAP.md lên phiên bản 2.0
 - Cập nhật QT-003-UPCODE.md lên phiên bản 2.0
@@ -77,10 +77,10 @@ và tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - README.md (thay thế QT-001): Quy trình Tổng hợp
 - QT-002: Quy trình Quản trị Vận hành
 - QT-003: Quy trình Upcode
-  - Phân loại hệ thống (Cốt lõi/Vệ tinh)
-  - Bảng RACI chi tiết
-  - Quy trình xử lý ngoại lệ
-  - Quy định về quyền truy cập tối thiểu
+ - Phân loại hệ thống (Cốt lõi/Vệ tinh)
+ - Bảng RACI chi tiết
+ - Quy trình xử lý ngoại lệ
+ - Quy định về quyền truy cập tối thiểu
 - QT-004: Quy trình Hotfix
 - QT-005: Quy trình Provisioning
 - QT-006: Quy trình Versioning
@@ -134,5 +134,5 @@ và tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
-**Phiên bản hiện tại**: 1.0.0  
+**Phiên bản hiện tại**: 1.0.0 
 **Ngày cập nhật gần nhất**: 2024-12-17

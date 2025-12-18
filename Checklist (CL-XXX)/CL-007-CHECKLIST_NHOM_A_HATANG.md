@@ -1,6 +1,6 @@
 # CL-007: CHECKLIST NHÓM A - HẠ TẦNG
 
-**Mã checklist**: CL-007  
+**Mã checklist**: CL-007 
 **Tham chiếu**: `QT-008-DANH_SACH_THAY_DOI_CHUAN.md` - Nhóm A
 
 ---

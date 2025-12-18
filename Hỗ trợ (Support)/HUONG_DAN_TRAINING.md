@@ -3,13 +3,13 @@
 
 ---
 
-## 📋 TỔNG QUAN
+## TỔNG QUAN
 
 Tài liệu này hướng dẫn cách training nhân viên mới về hệ thống quy trình quản trị vận hành, upcode, hotfix và thay đổi hệ thống.
 
 ---
 
-## 🎯 MỤC TIÊU TRAINING
+## MỤC TIÊU TRAINING
 
 Sau khi hoàn thành training, nhân viên mới có thể:
 - Hiểu rõ hệ thống quy trình
@@ -20,7 +20,7 @@ Sau khi hoàn thành training, nhân viên mới có thể:
 
 ---
 
-## 📚 TÀI LIỆU TRAINING
+## TÀI LIỆU TRAINING
 
 ### Tài liệu bắt buộc
 
@@ -41,27 +41,27 @@ Sau khi hoàn thành training, nhân viên mới có thể:
 
 ---
 
-## 🎓 CHƯƠNG TRÌNH TRAINING
+## CHƯƠNG TRÌNH TRAINING
 
 ### Module 1: Tổng quan
 
 #### Nội dung
 
 1. **Giới thiệu hệ thống quy trình**
-   - Mục đích và phạm vi
-   - Cấu trúc tài liệu
-   - Mối quan hệ giữa các quy trình
+ - Mục đích và phạm vi
+ - Cấu trúc tài liệu
+ - Mối quan hệ giữa các quy trình
 
 2. **Các khái niệm cơ bản**
-   - Standard Change, Normal Change, Emergency Change
-   - Production, DR, UAT, Staging
-   - RFC, CAB, ECAB
-   - Rollback, Hotfix
+ - Standard Change, Normal Change, Emergency Change
+ - Production, DR, UAT, Staging
+ - RFC, CAB, ECAB
+ - Rollback, Hotfix
 
 3. **Hướng dẫn sử dụng tài liệu**
-   - Cách đọc quy trình
-   - Cách sử dụng checklist
-   - Cách sử dụng template
+ - Cách đọc quy trình
+ - Cách sử dụng checklist
+ - Cách sử dụng template
 
 #### Bài tập
 
@@ -76,17 +76,17 @@ Sau khi hoàn thành training, nhân viên mới có thể:
 #### Nội dung
 
 1. **Danh sách thay đổi chuẩn (QT-008)**
-   - 4 nhóm thay đổi (A/B/C/D)
-   - 58 loại thay đổi
-   - Cách tra cứu
+ - 4 nhóm thay đổi (A/B/C/D)
+ - 58 loại thay đổi
+ - Cách tra cứu
 
 2. **Quick Reference**
-   - Bảng tra cứu nhanh
-   - Tra cứu theo mã, nhóm, rủi ro
+ - Bảng tra cứu nhanh
+ - Tra cứu theo mã, nhóm, rủi ro
 
 3. **Xử lý ngoại lệ**
-   - Khi nào là ngoại lệ
-   - Quy trình xử lý ngoại lệ
+ - Khi nào là ngoại lệ
+ - Quy trình xử lý ngoại lệ
 
 #### Bài tập
 
@@ -101,32 +101,32 @@ Sau khi hoàn thành training, nhân viên mới có thể:
 #### Nội dung
 
 1. **Tổng quan quy trình upcode**
-   - Các bước chính
-   - Flowchart
+ - Các bước chính
+ - Flowchart
 
 2. **Phân loại thay đổi**
-   - Standard Change
-   - Normal Change
-   - Emergency Change
+ - Standard Change
+ - Normal Change
+ - Emergency Change
 
 3. **Đánh giá rủi ro**
-   - Ma trận đánh giá rủi ro
-   - Xác định Level
-   - Bảng RACI
+ - Ma trận đánh giá rủi ro
+ - Xác định Level
+ - Bảng RACI
 
 4. **Quy trình kiểm thử**
-   - Mức độ kiểm thử theo Level
-   - Các loại kiểm thử
+ - Mức độ kiểm thử theo Level
+ - Các loại kiểm thử
 
 5. **Quy trình triển khai**
-   - Chuẩn bị
-   - Triển khai
-   - Kiểm tra
-   - Giám sát
+ - Chuẩn bị
+ - Triển khai
+ - Kiểm tra
+ - Giám sát
 
 6. **Quy trình rollback**
-   - Khi nào cần rollback
-   - Quy trình rollback
+ - Khi nào cần rollback
+ - Quy trình rollback
 
 #### Bài tập
 
@@ -141,19 +141,19 @@ Sau khi hoàn thành training, nhân viên mới có thể:
 #### Nội dung
 
 1. **Tổng quan quy trình hotfix**
-   - Khi nào cần hotfix
-   - Sự khác biệt với upcode thông thường
+ - Khi nào cần hotfix
+ - Sự khác biệt với upcode thông thường
 
 2. **Quy trình hotfix**
-   - Phát hiện sự cố
-   - Phê duyệt khẩn
-   - Phát triển hotfix
-   - Triển khai hotfix
-   - Hoàn thiện
+ - Phát hiện sự cố
+ - Phê duyệt khẩn
+ - Phát triển hotfix
+ - Triển khai hotfix
+ - Hoàn thiện
 
 3. **Phân loại sự cố**
-   - Critical, High, Medium, Low
-   - Major Incident, Serious Incident
+ - Critical, High, Medium, Low
+ - Major Incident, Serious Incident
 
 #### Bài tập
 
@@ -167,19 +167,19 @@ Sau khi hoàn thành training, nhân viên mới có thể:
 #### Nội dung
 
 1. **Checklist**
-   - CL-001 đến CL-010
-   - Cách sử dụng checklist
+ - CL-001 đến CL-010
+ - Cách sử dụng checklist
 
 2. **Template**
-   - TP-001: Template RFC
-   - TP-002: Template Hotfix
-   - TP-003: Template Release Note
-   - TP-004: Template Provisioning
-   - TP-005: Template Tra Cứu
+ - TP-001: Template RFC
+ - TP-002: Template Hotfix
+ - TP-003: Template Release Note
+ - TP-004: Template Provisioning
+ - TP-005: Template Tra Cứu
 
 3. **Thực hành**
-   - Điền template RFC
-   - Sử dụng checklist
+ - Điền template RFC
+ - Sử dụng checklist
 
 #### Bài tập
 
@@ -260,34 +260,34 @@ Sau khi hoàn thành training, nhân viên mới có thể:
 
 ---
 
-## ✅ ĐÁNH GIÁ SAU TRAINING
+## ĐÁNH GIÁ SAU TRAINING
 
 ### Kiểm tra lý thuyết
 
 1. **Câu hỏi trắc nghiệm** (20 câu)
-   - Khái niệm cơ bản
-   - Quy trình
-   - Tra cứu loại thay đổi
+ - Khái niệm cơ bản
+ - Quy trình
+ - Tra cứu loại thay đổi
 
 2. **Câu hỏi tự luận** (5 câu)
-   - Giải thích quy trình
-   - Phân tích tình huống
-   - Đề xuất giải pháp
+ - Giải thích quy trình
+ - Phân tích tình huống
+ - Đề xuất giải pháp
 
 ### Kiểm tra thực hành
 
 1. **Thực hành tra cứu**
-   - Tra cứu 10 loại thay đổi
-   - Xác định quy trình
+ - Tra cứu 10 loại thay đổi
+ - Xác định quy trình
 
 2. **Thực hành tạo RFC**
-   - Tạo RFC cho một thay đổi
-   - Đánh giá rủi ro
-   - Xác định Level
+ - Tạo RFC cho một thay đổi
+ - Đánh giá rủi ro
+ - Xác định Level
 
 3. **Thực hành case study**
-   - Xử lý 2 case study
-   - Giải thích quy trình
+ - Xử lý 2 case study
+ - Giải thích quy trình
 
 ### Tiêu chí đạt
 
@@ -297,7 +297,7 @@ Sau khi hoàn thành training, nhân viên mới có thể:
 
 ---
 
-## 📖 FAQ (FREQUENTLY ASKED QUESTIONS)
+## FAQ (FREQUENTLY ASKED QUESTIONS)
 
 ### Q1: Làm thế nào để tra cứu loại thay đổi?
 
@@ -358,7 +358,7 @@ Sau khi hoàn thành training, nhân viên mới có thể:
 
 ---
 
-## 🎯 KẾ HOẠCH TRAINING
+## KẾ HOẠCH TRAINING
 
 ### Training cơ bản (1 ngày)
 
@@ -377,7 +377,7 @@ Sau khi hoàn thành training, nhân viên mới có thể:
 
 ---
 
-## 📝 CHECKLIST TRAINING
+## CHECKLIST TRAINING
 
 ### Trước training
 
@@ -404,7 +404,7 @@ Sau khi hoàn thành training, nhân viên mới có thể:
 
 ---
 
-## 🔗 TÀI LIỆU THAM KHẢO
+## TÀI LIỆU THAM KHẢO
 
 - **README.md**: File chính, tổng quan hệ thống
 - **QT-003**: Quy trình Upcode

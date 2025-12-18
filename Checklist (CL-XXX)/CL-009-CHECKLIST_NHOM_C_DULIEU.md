@@ -1,6 +1,6 @@
 # CL-009: CHECKLIST NHÓM C - DỮ LIỆU & CẤU HÌNH
 
-**Mã checklist**: CL-009  
+**Mã checklist**: CL-009 
 **Tham chiếu**: `QT-008-DANH_SACH_THAY_DOI_CHUAN.md` - Nhóm C
 
 ---

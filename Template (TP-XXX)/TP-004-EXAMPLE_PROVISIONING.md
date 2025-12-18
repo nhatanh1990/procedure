@@ -72,25 +72,25 @@ Triển khai phiên bản mới của Payment Gateway với kiến trúc microse
 
 #### Subnet
 - **Số lượng**: 3
-  - **Subnet 1**: 10.20.1.0/24 (Application servers - Public)
-  - **Subnet 2**: 10.20.2.0/24 (Database servers - Private)
-  - **Subnet 3**: 10.20.3.0/24 (Cache servers - Private)
+ - **Subnet 1**: 10.20.1.0/24 (Application servers - Public)
+ - **Subnet 2**: 10.20.2.0/24 (Database servers - Private)
+ - **Subnet 3**: 10.20.3.0/24 (Cache servers - Private)
 
 #### Security Group/Firewall
 - **Application Servers**:
-  - Inbound: Port 80, 443 từ Load Balancer
-  - Inbound: Port 22 từ VPN/Admin network
-  - Outbound: All (for API calls)
-  
+ - Inbound: Port 80, 443 từ Load Balancer
+ - Inbound: Port 22 từ VPN/Admin network
+ - Outbound: All (for API calls)
+ 
 - **Database Servers**:
-  - Inbound: Port 5432 từ Application servers only
-  - Inbound: Port 22 từ VPN/Admin network
-  - Outbound: All (for backups)
-  
+ - Inbound: Port 5432 từ Application servers only
+ - Inbound: Port 22 từ VPN/Admin network
+ - Outbound: All (for backups)
+ 
 - **Cache Servers**:
-  - Inbound: Port 6379, 16379 từ Application servers only
-  - Inbound: Port 22 từ VPN/Admin network
-  - Outbound: All
+ - Inbound: Port 6379, 16379 từ Application servers only
+ - Inbound: Port 22 từ VPN/Admin network
+ - Outbound: All
 
 #### Load Balancer
 - **Type**: Application Load Balancer
@@ -120,21 +120,21 @@ Triển khai phiên bản mới của Payment Gateway với kiến trúc microse
 #### Monitoring
 - **Tools**: Prometheus + Grafana
 - **Metrics**: 
-  - CPU, Memory, Disk usage
-  - Network traffic
-  - Application metrics (request rate, response time, error rate)
-  - Database metrics (connections, queries, replication lag)
-  - Cache metrics (hit rate, memory usage)
+ - CPU, Memory, Disk usage
+ - Network traffic
+ - Application metrics (request rate, response time, error rate)
+ - Database metrics (connections, queries, replication lag)
+ - Cache metrics (hit rate, memory usage)
 - **Alerting**: AlertManager với Slack integration
 
 #### Logging
 - **Tools**: ELK Stack (Elasticsearch, Logstash, Kibana)
 - **Retention**: 30 ngày
 - **Log Sources**:
-  - Application logs
-  - Access logs
-  - Database logs
-  - System logs
+ - Application logs
+ - Access logs
+ - Database logs
+ - System logs
 
 ---
 
@@ -142,60 +142,60 @@ Triển khai phiên bản mới của Payment Gateway với kiến trúc microse
 
 ### Kiến trúc
 ```
-                    [Internet]
-                         |
-                    [Load Balancer]
-                         |
-        +----------------+----------------+
-        |                |                |
-   [App Server 1]  [App Server 2]  [App Server 3]
-        |                |                |
-        +----------------+----------------+
-                         |
-        +----------------+----------------+
-        |                |                |
-   [Redis Node 1]  [Redis Node 2]  [Redis Node 3]
-        |                |                |
-        +----------------+----------------+
-                         |
-        +----------------+----------------+
-        |                |                |
-   [DB Master]    [DB Replica 1]  [DB Replica 2]
+ [Internet]
+ |
+ [Load Balancer]
+ |
+ +----------------+----------------+
+ | | |
+ [App Server 1] [App Server 2] [App Server 3]
+ | | |
+ +----------------+----------------+
+ |
+ +----------------+----------------+
+ | | |
+ [Redis Node 1] [Redis Node 2] [Redis Node 3]
+ | | |
+ +----------------+----------------+
+ |
+ +----------------+----------------+
+ | | |
+ [DB Master] [DB Replica 1] [DB Replica 2]
 ```
 
 **Link sơ đồ**: [Link đến sơ đồ chi tiết trên Confluence]
 
 ### Cấu hình
 - **Application Servers**: 
-  - Docker runtime
-  - Nginx reverse proxy
-  - Application containers (payment-service, notification-service)
-  
+ - Docker runtime
+ - Nginx reverse proxy
+ - Application containers (payment-service, notification-service)
+ 
 - **Database**:
-  - PostgreSQL 15.x với streaming replication
-  - Patroni cho high availability
-  - PgBouncer cho connection pooling
-  
+ - PostgreSQL 15.x với streaming replication
+ - Patroni cho high availability
+ - PgBouncer cho connection pooling
+ 
 - **Cache**:
-  - Redis 7.x Cluster mode
-  - 3 master nodes, 3 replica nodes
-  - Persistence enabled (AOF)
+ - Redis 7.x Cluster mode
+ - 3 master nodes, 3 replica nodes
+ - Persistence enabled (AOF)
 
 ### Bảo mật
 - **Network Security**: 
-  - Private subnets cho database và cache
-  - Security groups với least privilege
-  - VPN access cho admin
-  
+ - Private subnets cho database và cache
+ - Security groups với least privilege
+ - VPN access cho admin
+ 
 - **Application Security**:
-  - SSL/TLS encryption
-  - API authentication (JWT)
-  - Rate limiting
-  
+ - SSL/TLS encryption
+ - API authentication (JWT)
+ - Rate limiting
+ 
 - **Database Security**:
-  - Encrypted connections (SSL)
-  - Role-based access control
-  - Regular security updates
+ - Encrypted connections (SSL)
+ - Role-based access control
+ - Regular security updates
 
 ### Network
 - **VPC**: Isolated VPC cho UAT environment

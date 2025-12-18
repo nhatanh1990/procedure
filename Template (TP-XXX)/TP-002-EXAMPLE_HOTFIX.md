@@ -150,9 +150,9 @@ Triển khai thành công. Hotfix đã được deploy lên Production lúc 12:0
 - [x] Nguyên nhân đã được phân tích: Bug trong logic tính toán session timeout
 - [x] Quy trình đã được đánh giá: Cần cải thiện unit test coverage
 - [x] Đề xuất cải tiến đã được ghi nhận: 
-  - Tăng unit test coverage cho session service
-  - Thêm integration test cho session flow
-  - Code review kỹ hơn các thay đổi liên quan đến time calculation
+ - Tăng unit test coverage cho session service
+ - Thêm integration test cho session flow
+ - Code review kỹ hơn các thay đổi liên quan đến time calculation
 - [x] Runbook đã được cập nhật: Thêm troubleshooting guide cho session issues
 
 ---

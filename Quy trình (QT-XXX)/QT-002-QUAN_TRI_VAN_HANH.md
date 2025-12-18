@@ -2,7 +2,7 @@
 
 ---
 
-## 📋 THÔNG TIN TÀI LIỆU
+## THÔNG TIN TÀI LIỆU
 
 - **Mã quy trình**: QT-002
 - **Tên quy trình**: Quy trình Quản trị Vận hành
@@ -13,7 +13,7 @@
 
 ---
 
-## 📚 MỤC LỤC
+## MỤC LỤC
 
 1. [Tổng quan](#1-tổng-quan)
 2. [Quy trình giám sát hệ thống](#2-quy-trình-giám-sát-hệ-thống)
@@ -23,7 +23,7 @@
 6. [Quy trình quản lý tài nguyên](#6-quy-trình-quản-lý-tài-nguyên)
 7. [Quy trình xử lý sự cố vận hành](#7-quy-trình-xử-lý-sự-cố-vận-hành)
 8. [Quy định và tiêu chuẩn](#8-quy-định-và-tiêu-chuẩn)
-9. [Quy định về Quyền Truy Cập Tối Thiểu](#9-quy-định-về-quyền-truy-cập-tối-thiểu) ⭐
+9. [Quy định về Quyền Truy Cập Tối Thiểu](#9-quy-định-về-quyền-truy-cập-tối-thiểu) 
 10. [Checklist](#10-checklist)
 
 ---
@@ -93,22 +93,22 @@ Giám sát hệ thống là hoạt động theo dõi liên tục các chỉ số
 
 ```
 1. Thiết lập monitoring
-   → Cấu hình monitoring tools (Prometheus, Grafana, ...)
-   → Thiết lập alerting rules
-   → Thiết lập dashboard
-   → Thiết lập notification channels
+ → Cấu hình monitoring tools (Prometheus, Grafana, ...)
+ → Thiết lập alerting rules
+ → Thiết lập dashboard
+ → Thiết lập notification channels
 
 2. Giám sát liên tục
-   → Monitoring 24/7
-   → Kiểm tra dashboard định kỳ
-   → Xử lý cảnh báo
-   → Ghi nhận sự kiện
+ → Monitoring 24/7
+ → Kiểm tra dashboard định kỳ
+ → Xử lý cảnh báo
+ → Ghi nhận sự kiện
 
 3. Phân tích và báo cáo
-   → Phân tích xu hướng
-   → Phân tích hiệu năng
-   → Báo cáo định kỳ (hàng ngày, hàng tuần, hàng tháng)
-   → Đề xuất cải tiến
+ → Phân tích xu hướng
+ → Phân tích hiệu năng
+ → Báo cáo định kỳ (hàng ngày, hàng tuần, hàng tháng)
+ → Đề xuất cải tiến
 ```
 
 ### 2.4. Alerting rules
@@ -178,28 +178,28 @@ Quản lý log bao gồm việc ghi, thu thập, phân tích và lưu trữ log.
 
 ```
 1. Ghi log
-   → Ghi log đầy đủ, có cấu trúc
-   → Không ghi thông tin nhạy cảm (password, token, ...)
-   → Sử dụng log level phù hợp
-   → Sử dụng structured logging (JSON)
+ → Ghi log đầy đủ, có cấu trúc
+ → Không ghi thông tin nhạy cảm (password, token, ...)
+ → Sử dụng log level phù hợp
+ → Sử dụng structured logging (JSON)
 
 2. Thu thập log
-   → Centralized logging (ELK, Loki, ...)
-   → Log rotation (theo size/time)
-   → Log retention policy
-   → Log aggregation
+ → Centralized logging (ELK, Loki, ...)
+ → Log rotation (theo size/time)
+ → Log retention policy
+ → Log aggregation
 
 3. Phân tích log
-   → Tìm kiếm log
-   → Phân tích lỗi
-   → Phân tích xu hướng
-   → Phân tích bảo mật
+ → Tìm kiếm log
+ → Phân tích lỗi
+ → Phân tích xu hướng
+ → Phân tích bảo mật
 
 4. Lưu trữ log
-   → Lưu trữ theo chính sách
-   → Backup log quan trọng
-   → Xóa log cũ theo chính sách
-   → Archive log (nếu cần)
+ → Lưu trữ theo chính sách
+ → Backup log quan trọng
+ → Xóa log cũ theo chính sách
+ → Archive log (nếu cần)
 ```
 
 ### 3.4. Log retention policy
@@ -248,34 +248,34 @@ Quản lý backup bao gồm việc lập lịch, thực hiện, kiểm tra và q
 
 ```
 1. Lập lịch backup
-   → Thiết lập schedule backup
-   → Tự động hóa backup
-   → Kiểm tra backup thành công
-   → Cảnh báo nếu backup thất bại
+ → Thiết lập schedule backup
+ → Tự động hóa backup
+ → Kiểm tra backup thành công
+ → Cảnh báo nếu backup thất bại
 
 2. Thực hiện backup
-   → Thực hiện backup theo schedule
-   → Verify backup file
-   → Kiểm tra tính toàn vẹn
-   → Ghi nhận kết quả
+ → Thực hiện backup theo schedule
+ → Verify backup file
+ → Kiểm tra tính toàn vẹn
+ → Ghi nhận kết quả
 
 3. Lưu trữ backup
-   → Lưu trữ tại nhiều location
-   → Encrypt backup (nếu cần)
-   → Kiểm tra tính toàn vẹn
-   → Quản lý dung lượng
+ → Lưu trữ tại nhiều location
+ → Encrypt backup (nếu cần)
+ → Kiểm tra tính toàn vẹn
+ → Quản lý dung lượng
 
 4. Test restore
-   → Test restore định kỳ (hàng tháng)
-   → Test restore sau mỗi thay đổi lớn
-   → Đảm bảo backup có thể restore được
-   → Ghi nhận kết quả test
+ → Test restore định kỳ (hàng tháng)
+ → Test restore sau mỗi thay đổi lớn
+ → Đảm bảo backup có thể restore được
+ → Ghi nhận kết quả test
 
 5. Quản lý backup
-   → Xóa backup cũ theo chính sách
-   → Giám sát dung lượng backup
-   → Báo cáo định kỳ
-   → Đề xuất cải tiến
+ → Xóa backup cũ theo chính sách
+ → Giám sát dung lượng backup
+ → Báo cáo định kỳ
+ → Đề xuất cải tiến
 ```
 
 ### 4.4. Test restore
@@ -324,28 +324,28 @@ Quản lý cấu hình bao gồm việc tạo, lưu trữ, triển khai và qu�
 
 ```
 1. Tạo cấu hình
-   → Tạo cấu hình theo môi trường
-   → Sử dụng template
-   → Validate cấu hình
-   → Review cấu hình
+ → Tạo cấu hình theo môi trường
+ → Sử dụng template
+ → Validate cấu hình
+ → Review cấu hình
 
 2. Lưu trữ cấu hình
-   → Lưu trữ trong version control
-   → Sử dụng configuration management tool
-   → Encrypt sensitive data
-   → Tổ chức theo môi trường
+ → Lưu trữ trong version control
+ → Sử dụng configuration management tool
+ → Encrypt sensitive data
+ → Tổ chức theo môi trường
 
 3. Triển khai cấu hình
-   → Deploy cấu hình cùng với code
-   → Validate cấu hình sau khi deploy
-   → Rollback nếu cấu hình sai
-   → Ghi nhận thay đổi
+ → Deploy cấu hình cùng với code
+ → Validate cấu hình sau khi deploy
+ → Rollback nếu cấu hình sai
+ → Ghi nhận thay đổi
 
 4. Quản lý thay đổi
-   → Ghi nhận mọi thay đổi cấu hình
-   → Review thay đổi cấu hình
-   → Test cấu hình mới
-   → Phê duyệt thay đổi (nếu cần)
+ → Ghi nhận mọi thay đổi cấu hình
+ → Review thay đổi cấu hình
+ → Test cấu hình mới
+ → Phê duyệt thay đổi (nếu cần)
 ```
 
 ### 5.4. Quản lý secrets
@@ -395,28 +395,28 @@ Quản lý tài nguyên bao gồm việc giám sát, phân tích, tối ưu và 
 
 ```
 1. Giám sát tài nguyên
-   → Giám sát sử dụng tài nguyên
-   → Phát hiện tài nguyên thiếu
-   → Cảnh báo khi tài nguyên > 80%
-   → Ghi nhận sử dụng
+ → Giám sát sử dụng tài nguyên
+ → Phát hiện tài nguyên thiếu
+ → Cảnh báo khi tài nguyên > 80%
+ → Ghi nhận sử dụng
 
 2. Phân tích và dự báo
-   → Phân tích xu hướng sử dụng
-   → Dự báo nhu cầu tài nguyên
-   → Lập kế hoạch mở rộng
-   → Đề xuất tối ưu
+ → Phân tích xu hướng sử dụng
+ → Dự báo nhu cầu tài nguyên
+ → Lập kế hoạch mở rộng
+ → Đề xuất tối ưu
 
 3. Tối ưu tài nguyên
-   → Tối ưu code
-   → Tối ưu database
-   → Tối ưu infrastructure
-   → Đánh giá hiệu quả
+ → Tối ưu code
+ → Tối ưu database
+ → Tối ưu infrastructure
+ → Đánh giá hiệu quả
 
 4. Mở rộng tài nguyên
-   → Lập kế hoạch mở rộng
-   → Phê duyệt mở rộng
-   → Thực hiện mở rộng
-   → Kiểm tra sau mở rộng
+ → Lập kế hoạch mở rộng
+ → Phê duyệt mở rộng
+ → Thực hiện mở rộng
+ → Kiểm tra sau mở rộng
 ```
 
 ### 6.4. Auto-scaling
@@ -471,28 +471,28 @@ Xử lý sự cố vận hành là quy trình phát hiện, phân loại, xử l
 
 ```
 1. Phát hiện sự cố
-   → Từ monitoring/alerting
-   → Từ người dùng
-   → Từ log
-   → Từ team khác
+ → Từ monitoring/alerting
+ → Từ người dùng
+ → Từ log
+ → Từ team khác
 
 2. Phân loại sự cố
-   → Đánh giá mức độ nghiêm trọng
-   → Phân loại loại sự cố
-   → Xác định nguyên nhân
-   → Ưu tiên xử lý
+ → Đánh giá mức độ nghiêm trọng
+ → Phân loại loại sự cố
+ → Xác định nguyên nhân
+ → Ưu tiên xử lý
 
 3. Xử lý sự cố
-   → Thực hiện khắc phục
-   → Giám sát quá trình khắc phục
-   → Xác nhận đã khắc phục
-   → Ghi nhận
+ → Thực hiện khắc phục
+ → Giám sát quá trình khắc phục
+ → Xác nhận đã khắc phục
+ → Ghi nhận
 
 4. Đánh giá sau
-   → Phân tích nguyên nhân
-   → Đề xuất cải tiến
-   → Cập nhật runbook
-   → Báo cáo
+ → Phân tích nguyên nhân
+ → Đề xuất cải tiến
+ → Cập nhật runbook
+ → Báo cáo
 ```
 
 ### 7.4. Runbook
@@ -565,10 +565,10 @@ Xử lý sự cố vận hành là quy trình phát hiện, phân loại, xử l
 
 | Vai trò | SSH | Sudo | Config | Service |
 |---------|-----|------|--------|---------|
-| **Developer** | ❌ | ❌ | ❌ | ❌ |
-| **DevOps** | ✅* | ✅* | ✅* | ✅* |
-| **SysAdmin** | ✅* | ✅* | ✅* | ✅* |
-| **DBA** | ✅* (DB server only) | ❌ | ❌ | ❌ |
+| **Developer** | | | | |
+| **DevOps** | * | * | * | * |
+| **SysAdmin** | * | * | * | * |
+| **DBA** | * (DB server only) | | | |
 
 *Sau khi có phê duyệt, có log
 
@@ -576,10 +576,10 @@ Xử lý sự cố vận hành là quy trình phát hiện, phân loại, xử l
 
 | Vai trò | Read Log | Search Log | Export Log | Delete Log |
 |---------|----------|------------|------------|------------|
-| **Developer** | ✅ (dev/staging) | ✅ (dev/staging) | ❌ | ❌ |
-| **DevOps** | ✅ (all) | ✅ (all) | ✅* | ❌ |
-| **SysAdmin** | ✅ (all) | ✅ (all) | ✅* | ✅* |
-| **QA** | ✅ (dev/staging) | ✅ (dev/staging) | ❌ | ❌ |
+| **Developer** | (dev/staging) | (dev/staging) | | |
+| **DevOps** | (all) | (all) | * | |
+| **SysAdmin** | (all) | (all) | * | * |
+| **QA** | (dev/staging) | (dev/staging) | | |
 
 *Sau khi có phê duyệt
 
@@ -587,10 +587,10 @@ Xử lý sự cố vận hành là quy trình phát hiện, phân loại, xử l
 
 | Vai trò | View Backup | Create Backup | Restore Backup | Delete Backup |
 |---------|-------------|---------------|----------------|---------------|
-| **Developer** | ❌ | ❌ | ❌ | ❌ |
-| **DevOps** | ✅ | ✅* | ✅* | ❌ |
-| **SysAdmin** | ✅ | ✅* | ✅* | ✅* |
-| **DBA** | ✅ (DB backup) | ✅* (DB backup) | ✅* (DB backup) | ❌ |
+| **Developer** | | | | |
+| **DevOps** | | * | * | |
+| **SysAdmin** | | * | * | * |
+| **DBA** | (DB backup) | * (DB backup) | * (DB backup) | |
 
 *Sau khi có phê duyệt
 
@@ -598,9 +598,9 @@ Xử lý sự cố vận hành là quy trình phát hiện, phân loại, xử l
 
 | Vai trò | View Config | Modify Config | Deploy Config | Rollback Config |
 |---------|-------------|---------------|---------------|-----------------|
-| **Developer** | ✅ (dev/staging) | ❌ | ❌ | ❌ |
-| **DevOps** | ✅ (all) | ✅* | ✅* | ✅* |
-| **SysAdmin** | ✅ (all) | ✅* | ✅* | ✅* |
+| **Developer** | (dev/staging) | | | |
+| **DevOps** | (all) | * | * | * |
+| **SysAdmin** | (all) | * | * | * |
 
 *Sau khi có phê duyệt
 
@@ -608,35 +608,35 @@ Xử lý sự cố vận hành là quy trình phát hiện, phân loại, xử l
 
 | Vai trò | View Metrics | View Alerts | Configure Alerts | Acknowledge Alerts |
 |---------|--------------|-------------|------------------|-------------------|
-| **Developer** | ✅ (dev/staging) | ✅ (dev/staging) | ❌ | ❌ |
-| **DevOps** | ✅ (all) | ✅ (all) | ✅* | ✅ |
-| **SysAdmin** | ✅ (all) | ✅ (all) | ✅* | ✅ |
-| **On-call** | ✅ (all) | ✅ (all) | ❌ | ✅ |
+| **Developer** | (dev/staging) | (dev/staging) | | |
+| **DevOps** | (all) | (all) | * | |
+| **SysAdmin** | (all) | (all) | * | |
+| **On-call** | (all) | (all) | | |
 
 *Sau khi có phê duyệt
 
 ### 9.3. Quy trình cấp quyền cho vận hành
 
 1. **Yêu cầu quyền**
-   - Tạo yêu cầu trong hệ thống quản lý quyền
-   - Mô tả lý do cần quyền (ví dụ: Giám sát hệ thống, Xử lý sự cố)
-   - Xác định loại quyền và tài nguyên
-   - Xác định thời gian: Vĩnh viễn hoặc tạm thời
+ - Tạo yêu cầu trong hệ thống quản lý quyền
+ - Mô tả lý do cần quyền (ví dụ: Giám sát hệ thống, Xử lý sự cố)
+ - Xác định loại quyền và tài nguyên
+ - Xác định thời gian: Vĩnh viễn hoặc tạm thời
 
 2. **Phê duyệt**
-   - PM/PDM phê duyệt cho quyền Level 1.0-2.0
-   - Ban CLGSP phê duyệt cho quyền Level 3.0
-   - Lãnh đạo phê duyệt cho quyền Level 4.0
+ - PM/PDM phê duyệt cho quyền Level 1.0-2.0
+ - Ban CLGSP phê duyệt cho quyền Level 3.0
+ - Lãnh đạo phê duyệt cho quyền Level 4.0
 
 3. **Cấp quyền**
-   - IT cấp quyền theo role
-   - Cấp quyền cho tài nguyên cụ thể
-   - Ghi log đầy đủ
+ - IT cấp quyền theo role
+ - Cấp quyền cho tài nguyên cụ thể
+ - Ghi log đầy đủ
 
 4. **Thu hồi quyền**
-   - Thu hồi quyền khi không còn cần
-   - Thu hồi quyền khi nhân viên nghỉ việc
-   - Ghi log thu hồi
+ - Thu hồi quyền khi không còn cần
+ - Thu hồi quyền khi nhân viên nghỉ việc
+ - Ghi log thu hồi
 
 ### 9.4. Giám sát và ghi log
 

@@ -1,6 +1,6 @@
 # TP-004: TEMPLATE PROVISIONING REQUEST
 
-**Mã template**: TP-004  
+**Mã template**: TP-004 
 **Tham chiếu quy trình**: QT-005
 
 ---

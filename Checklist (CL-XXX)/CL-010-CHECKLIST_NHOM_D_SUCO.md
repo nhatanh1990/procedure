@@ -1,6 +1,6 @@
 # CL-010: CHECKLIST NHÓM D - XỬ LÝ SỰ CỐ
 
-**Mã checklist**: CL-010  
+**Mã checklist**: CL-010 
 **Tham chiếu**: `QT-008-DANH_SACH_THAY_DOI_CHUAN.md` - Nhóm D, `QT-004-HOTFIX.md`
 
 ---

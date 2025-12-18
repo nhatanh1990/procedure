@@ -2,27 +2,30 @@
 
 ---
 
-## 📋 THÔNG TIN TÀI LIỆU
+## THÔNG TIN TÀI LIỆU
 
 - **Mã quy trình**: QT-003
 - **Tên quy trình**: Quy trình Upcode
-- **Phiên bản**: 1.0
+- **Phiên bản**: 2.0
 - **Ngày ban hành**: [Ngày hiện tại]
 - **Người soạn**: 
 - **Trạng thái**: Chính thức
 
 ---
 
-## 📚 MỤC LỤC
+## MỤC LỤC
 
 1. [Tổng quan](#1-tổng-quan)
 2. [Quy trình upcode](#2-quy-trình-upcode)
-3. [Phân loại thay đổi](#3-phân-loại-thay-đổi)
-4. [Đánh giá rủi ro](#4-đánh-giá-rủi-ro)
-5. [Quy trình kiểm thử](#5-quy-trình-kiểm-thử)
-6. [Quy trình triển khai](#6-quy-trình-triển-khai)
-7. [Quy trình rollback](#7-quy-trình-rollback)
-8. [Checklist](#8-checklist)
+3. [Quy trình Git và đánh mã Jira](#3-quy-trình-git-và-đánh-mã-jira)
+4. [Phân loại thay đổi](#4-phân-loại-thay-đổi)
+5. [Đánh giá rủi ro](#5-đánh-giá-rủi-ro)
+6. [Quy trình kiểm thử](#6-quy-trình-kiểm-thử)
+7. [Quy trình triển khai](#7-quy-trình-triển-khai)
+8. [Quy trình rollback](#8-quy-trình-rollback)
+9. [Quy trình xử lý ngoại lệ](#9-quy-trình-xử-lý-ngoại-lệ)
+10. [Quy định về quyền truy cập tối thiểu](#10-quy-định-về-quyền-truy-cập-tối-thiểu)
+11. [Checklist](#11-checklist)
 
 ---
 
@@ -37,8 +40,8 @@ Quy trình upcode nhằm đảm bảo code được triển khai an toàn, có k
 - Triển khai code lên môi trường Production, DR, UAT, Staging
 - Áp dụng cho tất cả loại thay đổi: Standard, Normal, Emergency
 - Áp dụng cho các hệ thống:
-  - Hệ thống Cốt lõi/Trọng điểm
-  - Hệ thống Vệ tinh
+ - Hệ thống Cốt lõi/Trọng điểm
+ - Hệ thống Vệ tinh
 
 ### 1.3. Đối tượng
 
@@ -58,49 +61,49 @@ Quy trình upcode nhằm đảm bảo code được triển khai an toàn, có k
 
 ```mermaid
 flowchart TD
-    Start([Bắt đầu: Code đã sẵn sàng]) --> Identify[Xác định loại thay đổi]
-    
-    Identify --> AssessRisk[Đánh giá rủi ro]
-    
-    AssessRisk --> Plan[Lập kế hoạch triển khai]
-    
-    Plan --> Approve[Phê duyệt]
-    
-    Approve -->|Chưa phê duyệt| Wait[Chờ phê duyệt]
-    Wait --> Approve
-    
-    Approve -->|Đã phê duyệt| Test[Kiểm thử]
-    
-    Test -->|Fail| Fix[Sửa lỗi]
-    Fix --> Test
-    
-    Test -->|Pass| Backup[Backup]
-    
-    Backup --> Deploy[Triển khai]
-    
-    Deploy --> Verify[Kiểm tra deployment]
-    
-    Verify -->|Fail| Rollback[Rollback]
-    Rollback --> End([Kết thúc])
-    
-    Verify -->|Pass| SmokeTest[Smoke test]
-    
-    SmokeTest -->|Fail| Rollback
-    
-    SmokeTest -->|Pass| Monitor[Giám sát]
-    
-    Monitor -->|Có vấn đề| Rollback
-    
-    Monitor -->|OK| Confirm[Xác nhận thành công]
-    
-    Confirm --> Record[Ghi nhận]
-    
-    Record --> End
-    
-    style Start fill:#90EE90
-    style End fill:#FFB6C1
-    style Rollback fill:#FFA500
-    style Deploy fill:#87CEEB
+ Start([Bắt đầu: Code đã sẵn sàng]) --> Identify[Xác định loại thay đổi]
+ 
+ Identify --> AssessRisk[Đánh giá rủi ro]
+ 
+ AssessRisk --> Plan[Lập kế hoạch triển khai]
+ 
+ Plan --> Approve[Phê duyệt]
+ 
+ Approve -->|Chưa phê duyệt| Wait[Chờ phê duyệt]
+ Wait --> Approve
+ 
+ Approve -->|Đã phê duyệt| Test[Kiểm thử]
+ 
+ Test -->|Fail| Fix[Sửa lỗi]
+ Fix --> Test
+ 
+ Test -->|Pass| Backup[Backup]
+ 
+ Backup --> Deploy[Triển khai]
+ 
+ Deploy --> Verify[Kiểm tra deployment]
+ 
+ Verify -->|Fail| Rollback[Rollback]
+ Rollback --> End([Kết thúc])
+ 
+ Verify -->|Pass| SmokeTest[Smoke test]
+ 
+ SmokeTest -->|Fail| Rollback
+ 
+ SmokeTest -->|Pass| Monitor[Giám sát]
+ 
+ Monitor -->|Có vấn đề| Rollback
+ 
+ Monitor -->|OK| Confirm[Xác nhận thành công]
+ 
+ Confirm --> Record[Ghi nhận]
+ 
+ Record --> End
+ 
+ style Start fill:#90EE90
+ style End fill:#FFB6C1
+ style Rollback fill:#FFA500
+ style Deploy fill:#87CEEB
 ```
 
 ### 2.2. Chi tiết từng bước
@@ -179,7 +182,396 @@ flowchart TD
 
 ---
 
-## 3. PHÂN LOẠI THAY ĐỔI
+## 3. QUY TRÌNH GIT VÀ ĐÁNH MÃ JIRA
+
+### 3.1. Mục đích
+
+Quy trình này quy định cách thức quản lý code trên Git và liên kết với Jira để:
+- **Quản trị xuyên suốt**: Theo dõi code từ Jira task đến Git commit, từ Git commit đến deployment
+- **Truy vết đầy đủ**: Biết được code nào thuộc task nào, ai thực hiện, khi nào
+- **Audit dễ dàng**: Có thể truy vết toàn bộ lịch sử thay đổi
+- **Tăng tính minh bạch**: Mọi thay đổi đều được ghi nhận và liên kết
+
+### 3.2. Quy trình Git
+
+#### 3.2.1. Quy trình tổng quan
+
+```mermaid
+flowchart TD
+ Start([Bắt đầu: Task từ Jira]) --> CreateBranch[Tạo branch từ Jira task]
+ CreateBranch --> Develop[Phát triển code]
+ Develop --> Commit[Commit với mã Jira]
+ Commit --> Push[Push lên Git]
+ Push --> CreatePR[Tạo Pull Request]
+ CreatePR --> Review[Code Review]
+ Review -->|Cần sửa| Fix[Sửa code]
+ Fix --> Commit
+ Review -->|Approve| Merge[Merge vào main/develop]
+ Merge --> Tag[Tạo tag nếu cần]
+ Tag --> Deploy[Deploy]
+ Deploy --> CloseJira[Đóng task Jira]
+ CloseJira --> End([Kết thúc])
+ 
+ style Start fill:#90EE90
+ style End fill:#FFB6C1
+ style Commit fill:#87CEEB
+ style Merge fill:#FFD700
+```
+
+#### 3.2.2. Quy tắc đặt tên branch
+
+**Format**: `{type}/{JIRA-TASK-ID}-{short-description}`
+
+**Ví dụ**:
+- `feature/PROJ-123-add-user-authentication`
+- `bugfix/PROJ-456-fix-login-error`
+- `hotfix/PROJ-789-critical-security-patch`
+- `refactor/PROJ-101-optimize-database-query`
+
+**Quy tắc**:
+- **type**: `feature`, `bugfix`, `hotfix`, `refactor`, `docs`, `test`
+- **JIRA-TASK-ID**: Mã task từ Jira (ví dụ: `PROJ-123`)
+- **short-description**: Mô tả ngắn gọn, dùng ký tự thường, nối bằng dấu gạch ngang
+
+**Ví dụ tạo branch**:
+```bash
+# Từ Jira task PROJ-123: "Add user authentication"
+git checkout -b feature/PROJ-123-add-user-authentication
+
+# Từ Jira task PROJ-456: "Fix login error"
+git checkout -b bugfix/PROJ-456-fix-login-error
+```
+
+#### 3.2.3. Quy tắc commit message
+
+**Format**: `{JIRA-TASK-ID}: {Mô tả ngắn gọn}`
+
+**Ví dụ**:
+```
+PROJ-123: Add user authentication with JWT
+PROJ-456: Fix login error when password contains special characters
+PROJ-789: Hotfix - Critical security patch for SQL injection
+```
+
+**Quy tắc chi tiết**:
+- **Bắt buộc có mã Jira**: Mọi commit phải có mã Jira task
+- **Mô tả rõ ràng**: Mô tả ngắn gọn nhưng đủ thông tin
+- **Sử dụng present tense**: "Add", "Fix", "Update" (không dùng "Added", "Fixed")
+- **Giới hạn độ dài**: Dòng đầu tiên ≤ 72 ký tự
+- **Body (tùy chọn)**: Có thể thêm mô tả chi tiết sau dòng đầu tiên
+
+**Ví dụ commit message đầy đủ**:
+```
+PROJ-123: Add user authentication with JWT
+
+- Implement JWT token generation
+- Add login endpoint
+- Add middleware for token validation
+- Update user model to include refresh token
+- Add unit tests for authentication
+
+Closes PROJ-123
+```
+
+**Ví dụ commit với multiple tasks**:
+```
+PROJ-123, PROJ-124: Refactor authentication module
+
+- Consolidate authentication logic
+- Update both login and registration flows
+- Improve error handling
+
+Closes PROJ-123
+Closes PROJ-124
+```
+
+#### 3.2.4. Quy trình commit và push
+
+**Bước 1: Commit code**
+```bash
+# Stage files
+git add .
+
+# Commit với mã Jira
+git commit -m "PROJ-123: Add user authentication with JWT"
+
+# Hoặc commit với message đầy đủ
+git commit -m "PROJ-123: Add user authentication with JWT
+
+- Implement JWT token generation
+- Add login endpoint
+- Add middleware for token validation
+
+Closes PROJ-123"
+```
+
+**Bước 2: Push lên remote**
+```bash
+# Push branch lên remote
+git push origin feature/PROJ-123-add-user-authentication
+
+# Nếu branch chưa tồn tại trên remote
+git push -u origin feature/PROJ-123-add-user-authentication
+```
+
+**Bước 3: Tạo Pull Request**
+- Tạo PR trên Git platform (GitHub, GitLab, Bitbucket)
+- **Title**: `[PROJ-123] Add user authentication with JWT`
+- **Description**: Mô tả chi tiết, link đến Jira task
+- **Reviewers**: Assign reviewers theo quy trình
+
+**Bước 4: Code Review**
+- Reviewers review code
+- Nếu cần sửa, sửa và commit tiếp (vẫn giữ mã Jira)
+- Sau khi approve, merge vào main/develop
+
+**Bước 5: Merge và đóng task**
+- Merge PR vào main/develop
+- Git tự động link commit với Jira (nếu có integration)
+- Đóng task Jira hoặc chuyển sang trạng thái "Done"
+
+### 3.3. Đánh mã task từ Jira sang Git
+
+#### 3.3.1. Mục đích
+
+Đánh mã task từ Jira sang Git nhằm:
+- **Liên kết xuyên suốt**: Từ Jira → Git → Deployment → Production
+- **Truy vết đầy đủ**: Biết được code nào thuộc task nào
+- **Quản trị hiệu quả**: Dễ dàng quản lý và theo dõi
+- **Audit dễ dàng**: Có thể audit toàn bộ quy trình
+
+#### 3.3.2. Quy tắc đánh mã
+
+**Format**: `{PROJECT-PREFIX}-{TASK-NUMBER}`
+
+**Ví dụ**:
+- `PROJ-123`
+- `PROJ-456`
+- `PROJ-789`
+
+**Quy tắc**:
+- **PROJECT-PREFIX**: Tiền tố dự án (ví dụ: `PROJ`, `APP`, `API`)
+- **TASK-NUMBER**: Số thứ tự task (ví dụ: `123`, `456`)
+- **Format nhất quán**: Tất cả task phải có format nhất quán
+
+#### 3.3.3. Nơi đánh mã
+
+**1. Git Branch Name**
+```bash
+# Format: {type}/{JIRA-TASK-ID}-{short-description}
+feature/PROJ-123-add-user-authentication
+bugfix/PROJ-456-fix-login-error
+```
+
+**2. Git Commit Message**
+```bash
+# Format: {JIRA-TASK-ID}: {Mô tả}
+PROJ-123: Add user authentication with JWT
+PROJ-456: Fix login error when password contains special characters
+```
+
+**3. Pull Request Title**
+```
+[PROJ-123] Add user authentication with JWT
+[PROJ-456] Fix login error when password contains special characters
+```
+
+**4. Pull Request Description**
+```markdown
+## Mô tả
+Thêm tính năng xác thực người dùng với JWT
+
+## Jira Task
+- [PROJ-123](https://jira.company.com/browse/PROJ-123)
+
+## Thay đổi
+- Implement JWT token generation
+- Add login endpoint
+- Add middleware for token validation
+
+## Testing
+- [ ] Unit tests pass
+- [ ] Integration tests pass
+- [ ] Manual testing completed
+
+Closes PROJ-123
+```
+
+**5. Code Comments (tùy chọn)**
+```python
+# PROJ-123: Add user authentication with JWT
+def generate_jwt_token(user_id):
+ """
+ Generate JWT token for user authentication.
+ 
+ Related Jira task: PROJ-123
+ """
+ # Implementation
+ pass
+```
+
+#### 3.3.4. Quy trình đánh mã
+
+**Bước 1: Tạo task trong Jira**
+- Tạo task trong Jira với mã task (ví dụ: `PROJ-123`)
+- Ghi nhận mã task
+
+**Bước 2: Tạo branch với mã Jira**
+```bash
+# Tạo branch với mã Jira
+git checkout -b feature/PROJ-123-add-user-authentication
+```
+
+**Bước 3: Commit với mã Jira**
+```bash
+# Commit với mã Jira trong message
+git commit -m "PROJ-123: Add user authentication with JWT"
+```
+
+**Bước 4: Push và tạo PR**
+- Push branch lên remote
+- Tạo PR với title có mã Jira: `[PROJ-123] Add user authentication with JWT`
+- Link PR với Jira task (nếu có integration)
+
+**Bước 5: Merge và đóng task**
+- Merge PR vào main/develop
+- Git tự động link commit với Jira (nếu có integration)
+- Đóng task Jira hoặc chuyển sang trạng thái "Done"
+
+#### 3.3.5. Tích hợp Jira-Git
+
+**Cấu hình Git Integration trong Jira**:
+1. Cài đặt Git Integration trong Jira
+2. Cấu hình Git repository
+3. Cấu hình branch pattern: `{type}/{JIRA-TASK-ID}-*`
+4. Cấu hình commit message pattern: `{JIRA-TASK-ID}: *`
+
+**Lợi ích**:
+- Tự động link commit với Jira task
+- Tự động cập nhật trạng thái task khi merge
+- Hiển thị commit trong Jira task
+- Hiển thị Jira task trong Git commit
+
+**Ví dụ tích hợp**:
+- **Jira**: Task `PROJ-123` hiển thị tất cả commit liên quan
+- **Git**: Commit `PROJ-123: Add user authentication` hiển thị link đến Jira task
+
+### 3.4. Best Practices
+
+#### 3.4.1. Git Best Practices
+
+** Nên làm**:
+- Luôn tạo branch từ Jira task
+- Luôn commit với mã Jira
+- Commit thường xuyên, mỗi commit là một thay đổi logic
+- Viết commit message rõ ràng
+- Tạo PR sau mỗi feature/bugfix
+- Review code trước khi merge
+- Merge vào main/develop sau khi approve
+
+** Không nên làm**:
+- Commit mà không có mã Jira
+- Commit nhiều thay đổi không liên quan trong một commit
+- Push trực tiếp lên main/develop (trừ hotfix)
+- Merge mà không có code review
+- Xóa branch ngay sau khi merge (giữ ít nhất 30 ngày)
+
+#### 3.4.2. Jira-Git Integration Best Practices
+
+** Nên làm**:
+- Tạo task Jira trước khi bắt đầu code
+- Sử dụng mã Jira nhất quán trong branch, commit, PR
+- Link PR với Jira task
+- Đóng task Jira sau khi merge
+- Sử dụng Jira để track progress
+
+** Không nên làm**:
+- Code mà không có task Jira
+- Sử dụng mã Jira không nhất quán
+- Quên đóng task Jira sau khi merge
+- Tạo nhiều task Jira cho một feature nhỏ
+
+### 3.5. Ví dụ quy trình hoàn chỉnh
+
+**Scenario**: Thêm tính năng xác thực người dùng
+
+**Bước 1: Tạo task Jira**
+- Tạo task: `PROJ-123: Add user authentication with JWT`
+- Mã task: `PROJ-123`
+
+**Bước 2: Tạo branch**
+```bash
+git checkout main
+git pull origin main
+git checkout -b feature/PROJ-123-add-user-authentication
+```
+
+**Bước 3: Phát triển code**
+```bash
+# Develop code...
+# Test code...
+```
+
+**Bước 4: Commit**
+```bash
+git add .
+git commit -m "PROJ-123: Add user authentication with JWT
+
+- Implement JWT token generation
+- Add login endpoint
+- Add middleware for token validation
+- Update user model to include refresh token
+- Add unit tests for authentication
+
+Closes PROJ-123"
+```
+
+**Bước 5: Push và tạo PR**
+```bash
+git push origin feature/PROJ-123-add-user-authentication
+```
+
+**PR Title**: `[PROJ-123] Add user authentication with JWT`
+
+**PR Description**:
+```markdown
+## Mô tả
+Thêm tính năng xác thực người dùng với JWT
+
+## Jira Task
+- [PROJ-123](https://jira.company.com/browse/PROJ-123)
+
+## Thay đổi
+- Implement JWT token generation
+- Add login endpoint
+- Add middleware for token validation
+- Update user model to include refresh token
+- Add unit tests for authentication
+
+## Testing
+- [x] Unit tests pass
+- [x] Integration tests pass
+- [x] Manual testing completed
+
+Closes PROJ-123
+```
+
+**Bước 6: Code Review và Merge**
+- Reviewers review code
+- Approve và merge vào main
+- Git tự động link commit với Jira (nếu có integration)
+
+**Bước 7: Đóng task Jira**
+- Đóng task `PROJ-123` hoặc chuyển sang trạng thái "Done"
+
+**Kết quả**:
+- Code được quản lý trên Git với mã Jira
+- Có thể truy vết từ Jira → Git → Deployment
+- Audit dễ dàng với lịch sử đầy đủ
+
+---
+
+## 4. PHÂN LOẠI THAY ĐỔI
 
 ### 3.1. Standard Change (Thay đổi chuẩn)
 
@@ -196,10 +588,10 @@ flowchart TD
 **Danh sách thay đổi chuẩn**: 
 - **Tham chiếu**: `QT-008-DANH_SACH_THAY_DOI_CHUAN.md`
 - Danh sách bao gồm 58 loại thay đổi được phân thành 4 nhóm:
-  - **Nhóm A**: Hạ tầng (19 loại)
-  - **Nhóm B**: Ứng dụng (28 loại)
-  - **Nhóm C**: Dữ liệu & Cấu hình (7 loại)
-  - **Nhóm D**: Xử lý sự cố (4 loại)
+ - **Nhóm A**: Hạ tầng (19 loại)
+ - **Nhóm B**: Ứng dụng (28 loại)
+ - **Nhóm C**: Dữ liệu & Cấu hình (7 loại)
+ - **Nhóm D**: Xử lý sự cố (4 loại)
 
 ### 3.2. Normal Change (Thay đổi thông thường)
 
@@ -227,7 +619,7 @@ flowchart TD
 
 ---
 
-## 4. ĐÁNH GIÁ RỦI RO
+## 5. ĐÁNH GIÁ RỦI RO
 
 ### 4.1. Ma trận đánh giá rủi ro
 
@@ -311,18 +703,18 @@ flowchart TD
 
 ---
 
-## 5. QUY TRÌNH KIỂM THỬ
+## 6. QUY TRÌNH KIỂM THỬ
 
-### 5.1. Mức độ kiểm thử theo Level
+### 6.1. Mức độ kiểm thử theo Level
 
 | Level | Loại kiểm thử | Bắt buộc | Tùy chọn | Môi trường kiểm thử |
 |-------|---------------|----------|----------|---------------------|
-| **1.0** | Unit Test | ✅ | - | Development |
-| **2.0** | Unit Test + Integration Test | ✅ | Regression Test | UAT/Staging |
-| **3.0** | Unit + Integration + Regression | ✅ | Load Test, Security Test | UAT/Staging |
-| **4.0** | Tất cả + Load Test + Security Test | ✅ | Performance Test, Stress Test | UAT/Staging + DR |
+| **1.0** | Unit Test | | - | Development |
+| **2.0** | Unit Test + Integration Test | | Regression Test | UAT/Staging |
+| **3.0** | Unit + Integration + Regression | | Load Test, Security Test | UAT/Staging |
+| **4.0** | Tất cả + Load Test + Security Test | | Performance Test, Stress Test | UAT/Staging + DR |
 
-### 5.2. Các loại kiểm thử
+### 6.2. Các loại kiểm thử
 
 #### 5.2.1. Unit Test
 
@@ -360,7 +752,7 @@ flowchart TD
 - Sau khi deploy
 - Xác nhận hệ thống hoạt động
 
-### 5.3. Quy trình kiểm thử
+### 6.3. Quy trình kiểm thử
 
 ```
 1. Chuẩn bị môi trường test
@@ -375,7 +767,7 @@ flowchart TD
 
 ---
 
-## 6. QUY TRÌNH TRIỂN KHAI
+## 7. QUY TRÌNH TRIỂN KHAI
 
 ### 6.1. Chuẩn bị triển khai
 
@@ -415,7 +807,7 @@ flowchart TD
 
 ---
 
-## 7. QUY TRÌNH ROLLBACK
+## 8. QUY TRÌNH ROLLBACK
 
 ### 7.1. Khi nào cần rollback
 
@@ -431,78 +823,78 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    Start([Bắt đầu: Lập kế hoạch thay đổi]) --> CheckRisk{Mức độ rủi ro<br/>Trung bình trở lên?}
-    
-    CheckRisk -->|Thấp| Optional[Rollback<br/>tùy chọn]
-    CheckRisk -->|Trung bình/Cao/Nghiêm trọng| Required[Rollback<br/>bắt buộc]
-    
-    Optional --> PlanRollback
-    Required --> PlanRollback
-    
-    PlanRollback[Lập kế hoạch rollback<br/>- Các bước rollback chi tiết<br/>- Thời gian rollback dự kiến<br/>- Điều kiện kích hoạt rollback<br/>- Script rollback]
-    
-    PlanRollback --> PrepareBackup[Chuẩn bị backup<br/>- Backup database<br/>- Backup code<br/>- Backup cấu hình]
-    
-    PrepareBackup --> TestRollback[Test rollback<br/>trên UAT/Staging]
-    
-    TestRollback --> ExecuteTestRollback[Thực hiện rollback<br/>trên môi trường test]
-    
-    ExecuteTestRollback --> VerifyTestRollback{Kiểm tra<br/>Rollback thành công?}
-    
-    VerifyTestRollback -->|Thất bại| FixPlan[Sửa kế hoạch<br/>rollback]
-    FixPlan --> TestRollback
-    
-    VerifyTestRollback -->|Thành công| MeasureTime[Đo thời gian<br/>rollback thực tế]
-    
-    MeasureTime --> UpdatePlan[Cập nhật kế hoạch<br/>với thời gian thực tế]
-    
-    UpdatePlan --> Ready[Chuẩn bị sẵn sàng<br/>- Backup đầy đủ<br/>- Script rollback sẵn sàng<br/>- Người thực hiện sẵn sàng]
-    
-    Ready --> Deploy[Triển khai<br/>thay đổi lên Production]
-    
-    Deploy --> Monitor[Giám sát<br/>sau triển khai]
-    
-    Monitor --> CheckIssue{Có vấn đề?}
-    
-    CheckIssue -->|Không| Success[Thành công<br/>Không cần rollback]
-    CheckIssue -->|Có| AssessIssue{Đánh giá<br/>mức độ vấn đề}
-    
-    AssessIssue -->|Nhỏ, có thể chấp nhận| MonitorMore[Giám sát thêm]
-    AssessIssue -->|Nghiêm trọng| TriggerRollback[Kích hoạt rollback]
-    
-    MonitorMore --> CheckIssue
-    
-    TriggerRollback --> StopService[Dừng dịch vụ<br/>nếu cần]
-    
-    StopService --> ExecuteRollback[Thực hiện rollback<br/>Theo kế hoạch đã test]
-    
-    ExecuteRollback --> VerifyRollback{Kiểm tra<br/>Rollback thành công?}
-    
-    VerifyRollback -->|Thất bại| Escalate[Escalate<br/>Tăng cường xử lý]
-    Escalate --> ExecuteRollback
-    
-    VerifyRollback -->|Thành công| RestartService[Khởi động lại<br/>dịch vụ]
-    
-    RestartService --> VerifySystem{Kiểm tra hệ thống<br/>Hoạt động bình thường?}
-    
-    VerifySystem -->|Đúng| Document[Ghi nhận<br/>- Thời điểm rollback<br/>- Nguyên nhân<br/>- Kết quả]
-    VerifySystem -->|Sai| Escalate
-    
-    Document --> PostMortem[Đánh giá sau rollback<br/>- Phân tích nguyên nhân<br/>- Rút kinh nghiệm<br/>- Cải tiến quy trình]
-    
-    PostMortem --> UpdateJIRA[Cập nhật JIRA<br/>Đóng ticket]
-    
-    UpdateJIRA --> End([Kết thúc])
-    Success --> End
-    
-    style Start fill:#90EE90
-    style End fill:#FFB6C1
-    style PlanRollback fill:#87CEEB
-    style TestRollback fill:#FFE4B5
-    style ExecuteRollback fill:#FFA500
-    style VerifyRollback fill:#90EE90
-    style Document fill:#DDA0DD
-    style TriggerRollback fill:#FF6B6B
+ Start([Bắt đầu: Lập kế hoạch thay đổi]) --> CheckRisk{Mức độ rủi ro<br/>Trung bình trở lên?}
+ 
+ CheckRisk -->|Thấp| Optional[Rollback<br/>tùy chọn]
+ CheckRisk -->|Trung bình/Cao/Nghiêm trọng| Required[Rollback<br/>bắt buộc]
+ 
+ Optional --> PlanRollback
+ Required --> PlanRollback
+ 
+ PlanRollback[Lập kế hoạch rollback<br/>- Các bước rollback chi tiết<br/>- Thời gian rollback dự kiến<br/>- Điều kiện kích hoạt rollback<br/>- Script rollback]
+ 
+ PlanRollback --> PrepareBackup[Chuẩn bị backup<br/>- Backup database<br/>- Backup code<br/>- Backup cấu hình]
+ 
+ PrepareBackup --> TestRollback[Test rollback<br/>trên UAT/Staging]
+ 
+ TestRollback --> ExecuteTestRollback[Thực hiện rollback<br/>trên môi trường test]
+ 
+ ExecuteTestRollback --> VerifyTestRollback{Kiểm tra<br/>Rollback thành công?}
+ 
+ VerifyTestRollback -->|Thất bại| FixPlan[Sửa kế hoạch<br/>rollback]
+ FixPlan --> TestRollback
+ 
+ VerifyTestRollback -->|Thành công| MeasureTime[Đo thời gian<br/>rollback thực tế]
+ 
+ MeasureTime --> UpdatePlan[Cập nhật kế hoạch<br/>với thời gian thực tế]
+ 
+ UpdatePlan --> Ready[Chuẩn bị sẵn sàng<br/>- Backup đầy đủ<br/>- Script rollback sẵn sàng<br/>- Người thực hiện sẵn sàng]
+ 
+ Ready --> Deploy[Triển khai<br/>thay đổi lên Production]
+ 
+ Deploy --> Monitor[Giám sát<br/>sau triển khai]
+ 
+ Monitor --> CheckIssue{Có vấn đề?}
+ 
+ CheckIssue -->|Không| Success[Thành công<br/>Không cần rollback]
+ CheckIssue -->|Có| AssessIssue{Đánh giá<br/>mức độ vấn đề}
+ 
+ AssessIssue -->|Nhỏ, có thể chấp nhận| MonitorMore[Giám sát thêm]
+ AssessIssue -->|Nghiêm trọng| TriggerRollback[Kích hoạt rollback]
+ 
+ MonitorMore --> CheckIssue
+ 
+ TriggerRollback --> StopService[Dừng dịch vụ<br/>nếu cần]
+ 
+ StopService --> ExecuteRollback[Thực hiện rollback<br/>Theo kế hoạch đã test]
+ 
+ ExecuteRollback --> VerifyRollback{Kiểm tra<br/>Rollback thành công?}
+ 
+ VerifyRollback -->|Thất bại| Escalate[Escalate<br/>Tăng cường xử lý]
+ Escalate --> ExecuteRollback
+ 
+ VerifyRollback -->|Thành công| RestartService[Khởi động lại<br/>dịch vụ]
+ 
+ RestartService --> VerifySystem{Kiểm tra hệ thống<br/>Hoạt động bình thường?}
+ 
+ VerifySystem -->|Đúng| Document[Ghi nhận<br/>- Thời điểm rollback<br/>- Nguyên nhân<br/>- Kết quả]
+ VerifySystem -->|Sai| Escalate
+ 
+ Document --> PostMortem[Đánh giá sau rollback<br/>- Phân tích nguyên nhân<br/>- Rút kinh nghiệm<br/>- Cải tiến quy trình]
+ 
+ PostMortem --> UpdateJIRA[Cập nhật JIRA<br/>Đóng ticket]
+ 
+ UpdateJIRA --> End([Kết thúc])
+ Success --> End
+ 
+ style Start fill:#90EE90
+ style End fill:#FFB6C1
+ style PlanRollback fill:#87CEEB
+ style TestRollback fill:#FFE4B5
+ style ExecuteRollback fill:#FFA500
+ style VerifyRollback fill:#90EE90
+ style Document fill:#DDA0DD
+ style TriggerRollback fill:#FF6B6B
 ```
 
 #### 7.2.2. Chi tiết các bước
@@ -539,7 +931,7 @@ flowchart TD
 
 ---
 
-## 8. QUY TRÌNH XỬ LÝ NGOẠI LỆ
+## 9. QUY TRÌNH XỬ LÝ NGOẠI LỆ
 
 ### 8.1. Định nghĩa ngoại lệ
 
@@ -553,37 +945,37 @@ Ngoại lệ là các trường hợp thay đổi không nằm trong danh sách 
 ### 8.2. Quy trình xử lý ngoại lệ
 
 1. **Xác định loại thay đổi**
-   - Tra cứu trong danh sách chuẩn (QT-008)
-   - So sánh với danh sách chuẩn
-   - Xác định có phải ngoại lệ không
+ - Tra cứu trong danh sách chuẩn (QT-008)
+ - So sánh với danh sách chuẩn
+ - Xác định có phải ngoại lệ không
 
 2. **Đánh giá rủi ro**
-   - Sử dụng ma trận rủi ro (Phần 4)
-   - Tính điểm Likelihood × Impact
-   - Xác định mức độ rủi ro
+ - Sử dụng ma trận rủi ro (Phần 4)
+ - Tính điểm Likelihood × Impact
+ - Xác định mức độ rủi ro
 
 3. **Phân loại tạm thời**
-   - Phân vào loại gần nhất trong danh sách chuẩn
-   - Hoặc phân vào loại "Thay đổi thông thường" nếu không có loại tương ứng
+ - Phân vào loại gần nhất trong danh sách chuẩn
+ - Hoặc phân vào loại "Thay đổi thông thường" nếu không có loại tương ứng
 
 4. **Lập kế hoạch chi tiết**
-   - Mô tả chi tiết thay đổi
-   - Kế hoạch triển khai
-   - Kế hoạch rollback
-   - Đánh giá rủi ro chi tiết
+ - Mô tả chi tiết thay đổi
+ - Kế hoạch triển khai
+ - Kế hoạch rollback
+ - Đánh giá rủi ro chi tiết
 
 5. **Phê duyệt**
-   - Theo cấp độ tương ứng với mức độ rủi ro
-   - Có thể cần phê duyệt từ cấp cao hơn 1 bậc so với loại tương ứng
+ - Theo cấp độ tương ứng với mức độ rủi ro
+ - Có thể cần phê duyệt từ cấp cao hơn 1 bậc so với loại tương ứng
 
 6. **Thực hiện**
-   - Theo quy trình của loại tương ứng
-   - Tăng cường giám sát và kiểm tra
+ - Theo quy trình của loại tương ứng
+ - Tăng cường giám sát và kiểm tra
 
 7. **Đánh giá sau**
-   - Đánh giá kết quả
-   - Rút kinh nghiệm
-   - Đề xuất bổ sung vào danh sách chuẩn (nếu phù hợp)
+ - Đánh giá kết quả
+ - Rút kinh nghiệm
+ - Đề xuất bổ sung vào danh sách chuẩn (nếu phù hợp)
 
 ### 8.3. Lưu ý quan trọng
 
@@ -594,7 +986,7 @@ Ngoại lệ là các trường hợp thay đổi không nằm trong danh sách 
 
 ---
 
-## 9. QUY ĐỊNH VỀ QUYỀN TRUY CẬP TỐI THIỂU
+## 10. QUY ĐỊNH VỀ QUYỀN TRUY CẬP TỐI THIỂU
 
 ### 9.1. Nguyên tắc
 
@@ -636,24 +1028,24 @@ Ngoại lệ là các trường hợp thay đổi không nằm trong danh sách 
 ### 9.3. Quy trình cấp quyền tạm thời (JIT)
 
 1. **Yêu cầu quyền**
-   - Tạo yêu cầu trong hệ thống quản lý quyền
-   - Mô tả lý do cần quyền
-   - Xác định thời gian cần quyền
+ - Tạo yêu cầu trong hệ thống quản lý quyền
+ - Mô tả lý do cần quyền
+ - Xác định thời gian cần quyền
 
 2. **Phê duyệt**
-   - PM/PDM phê duyệt cho quyền Level 1.0-2.0
-   - Ban CLGSP phê duyệt cho quyền Level 3.0
-   - Lãnh đạo phê duyệt cho quyền Level 4.0
+ - PM/PDM phê duyệt cho quyền Level 1.0-2.0
+ - Ban CLGSP phê duyệt cho quyền Level 3.0
+ - Lãnh đạo phê duyệt cho quyền Level 4.0
 
 3. **Cấp quyền**
-   - IT cấp quyền theo role
-   - Tự động hết hạn sau thời gian quy định
-   - Ghi log đầy đủ
+ - IT cấp quyền theo role
+ - Tự động hết hạn sau thời gian quy định
+ - Ghi log đầy đủ
 
 4. **Thu hồi quyền**
-   - Tự động thu hồi sau khi hết hạn
-   - Thu hồi ngay sau khi hoàn thành công việc
-   - Ghi log thu hồi
+ - Tự động thu hồi sau khi hết hạn
+ - Thu hồi ngay sau khi hoàn thành công việc
+ - Ghi log thu hồi
 
 ### 9.4. Giám sát và ghi log
 
@@ -666,7 +1058,7 @@ Ngoại lệ là các trường hợp thay đổi không nằm trong danh sách 
 
 ---
 
-## 10. CHECKLIST
+## 11. CHECKLIST
 
 **Tham chiếu chi tiết**: `CL-002-CHECKLIST_UPCODE.md`
 
@@ -705,6 +1097,10 @@ Ngoại lệ là các trường hợp thay đổi không nằm trong danh sách 
 **Ngày ban hành**: [Ngày hiện tại]
 **Người soạn**: 
 **Trạng thái**: Chính thức
+
+**Cập nhật lần cuối**: 2024-12-17
+- Bổ sung quy trình Git và đánh mã Jira (Phần 3)
+- Cập nhật số thứ tự các phần (4-11)
 
 ---
 

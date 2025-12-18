@@ -1,6 +1,6 @@
 # CL-004: CHECKLIST PROVISIONING
 
-**Mã checklist**: CL-004  
+**Mã checklist**: CL-004 
 **Tham chiếu quy trình**: QT-005
 
 ---

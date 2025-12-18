@@ -1,6 +1,6 @@
 # TP-002: TEMPLATE HOTFIX REQUEST
 
-**Mã template**: TP-002  
+**Mã template**: TP-002 
 **Tham chiếu quy trình**: QT-004
 
 ---

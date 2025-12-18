@@ -1,14 +1,14 @@
 # TP-003: TEMPLATE RELEASE NOTE
 
-**Mã template**: TP-003  
-**Tham chiếu quy trình**: QT-007  
+**Mã template**: TP-003 
+**Tham chiếu quy trình**: QT-007 
 **Phiên bản**: 2.0 (Agile Release Note)
 
 ---
 
 # Release Note - [Service Name] v[Version]
 
-## 📋 Thông tin Release
+## Thông tin Release
 
 | Thông tin | Giá trị |
 |-----------|---------|
@@ -18,7 +18,7 @@
 | **Release Type** | [Major/Minor/Patch] |
 | **Previous Version** | [X.Y.Z] |
 
-## 🔖 Version Information
+## Version Information
 
 ### Git Version
 - **Git Tag**: `v[X.Y.Z]` hoặc `[tag-name]`
@@ -43,55 +43,55 @@ docker pull registry.example.com/myorg/user-service:v1.2.3@sha256:abc123def456..
 
 ---
 
-## 🎯 Tóm tắt
+## Tóm tắt
 
 [Mô tả ngắn gọn 1-2 câu về release này]
 
 **Highlights**:
-- ✨ [Tính năng chính 1]
-- 🐛 [Bug fix quan trọng 1]
-- 🔧 [Cải tiến chính 1]
+- [Tính năng chính 1]
+- [Bug fix quan trọng 1]
+- [Cải tiến chính 1]
 
 ---
 
-## ⚠️ Breaking Changes
+## Breaking Changes
 
-> **⚠️ QUAN TRỌNG**: Nếu có breaking changes, đọc kỹ phần này trước khi upgrade.
+> ** QUAN TRỌNG**: Nếu có breaking changes, đọc kỹ phần này trước khi upgrade.
 
 - **[Tên breaking change]**: [Mô tả ngắn gọn]
-  - **Impact**: [Ảnh hưởng đến gì]
-  - **Migration**: [Hướng dẫn ngắn gọn hoặc link]
+ - **Impact**: [Ảnh hưởng đến gì]
+ - **Migration**: [Hướng dẫn ngắn gọn hoặc link]
 
 ---
 
-## ✨ Tính năng mới
+## Tính năng mới
 
 - **[Tên tính năng]**: [Mô tả ngắn gọn]
-  - Issue: [#123](link) | PR: [#456](link)
+ - Issue: [#123](link) | PR: [#456](link)
 
 ---
 
-## 🐛 Sửa lỗi
+## Sửa lỗi
 
 - **[Tên lỗi]**: [Mô tả ngắn gọn]
-  - Issue: [#123](link) | PR: [#456](link)
+ - Issue: [#123](link) | PR: [#456](link)
 
 ---
 
-## 🔧 Cải tiến
+## Cải tiến
 
 - **[Cải tiến]**: [Mô tả ngắn gọn]
 
 ---
 
-## 🔒 Bảo mật
+## Bảo mật
 
 - **[Vấn đề bảo mật]**: [Mô tả ngắn gọn]
-  - CVE: [CVE-YYYY-NNNN] | Severity: [Critical/High/Medium/Low]
+ - CVE: [CVE-YYYY-NNNN] | Severity: [Critical/High/Medium/Low]
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
 **Updated**:
 - `[package]`: `[old-version]` → `[new-version]`
@@ -104,7 +104,7 @@ docker pull registry.example.com/myorg/user-service:v1.2.3@sha256:abc123def456..
 
 ---
 
-## 🔄 Upgrade Instructions
+## Upgrade Instructions
 
 ### Docker/Kubernetes
 
@@ -114,26 +114,26 @@ kubectl set image deployment/[deployment-name] [container-name]=[registry]/[name
 
 # Hoặc update trong values.yaml (Helm)
 image:
-  repository: [registry]/[namespace]/[service-name]
-  tag: v[X.Y.Z]
-  digest: sha256:[digest]  # Khuyến nghị
+ repository: [registry]/[namespace]/[service-name]
+ tag: v[X.Y.Z]
+ digest: sha256:[digest] # Khuyến nghị
 ```
 
 ### Docker Compose
 
 ```yaml
 services:
-  service-name:
-    image: [registry]/[namespace]/[service-name]:v[X.Y.Z]
-    # Hoặc với digest
-    # image: [registry]/[namespace]/[service-name]:v[X.Y.Z]@sha256:[digest]
+ service-name:
+ image: [registry]/[namespace]/[service-name]:v[X.Y.Z]
+ # Hoặc với digest
+ # image: [registry]/[namespace]/[service-name]:v[X.Y.Z]@sha256:[digest]
 ```
 
 ---
 
-## 🧪 Testing Results (Kiến nghị)
+## Testing Results (Kiến nghị)
 
-> **💡 Lưu ý**: Phần này là kiến nghị, điền nếu có thông tin test quan trọng hoặc cần thiết.
+> ** Lưu ý**: Phần này là kiến nghị, điền nếu có thông tin test quan trọng hoặc cần thiết.
 
 - **Unit Tests**: [Coverage %] - [Pass/Fail]
 - **Integration Tests**: [Pass/Fail]
@@ -146,9 +146,9 @@ services:
 
 ---
 
-## 📊 Performance Metrics (Kiến nghị)
+## Performance Metrics (Kiến nghị)
 
-> **💡 Lưu ý**: Phần này là kiến nghị, điền nếu có cải thiện performance đáng kể hoặc cần lưu ý.
+> ** Lưu ý**: Phần này là kiến nghị, điền nếu có cải thiện performance đáng kể hoặc cần lưu ý.
 
 ### Metrics cải thiện
 
@@ -162,7 +162,7 @@ services:
 
 ---
 
-## 🔗 Links
+## Links
 
 - **Full Changelog**: [Link](https://github.com/org/service/compare/v[X.Y.Z-1]...v[X.Y.Z])
 - **Documentation**: [Link]
@@ -171,15 +171,15 @@ services:
 
 ---
 
-## 👥 Contributors
+## Contributors
 
 - [@username1](link) - [Role]
 - [@username2](link) - [Role]
 
 ---
 
-**Release Manager**: [@username](link)  
-**Reviewed By**: [@username](link)  
+**Release Manager**: [@username](link) 
+**Reviewed By**: [@username](link) 
 **Approved By**: [@username](link)
 
 ---
