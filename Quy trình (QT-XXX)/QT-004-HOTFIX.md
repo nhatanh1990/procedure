@@ -206,11 +206,65 @@ flowchart TD
 
 **Quy tắc đặt tên**: `hotfix/vX.Y.Z` hoặc `hotfix/issue-XXX`
 
-**Ví dụ**:
+**Quy trình tạo hotfix branch**:
+
+**Bước 1: Xác định branch đang chạy Production cho khách hàng**
+- Xác định branch/tag đang được deploy lên Production
+- Kiểm tra version hiện tại trên Production
+- Xác nhận với DevOps/Release Manager về branch chính xác
+
+**Bước 2: Clone đúng branch đang chạy Production**
 ```bash
+# Fetch latest từ remote
+git fetch origin
+
+# Kiểm tra branch/tag đang chạy trên Production
+# Ví dụ: branch production, tag v1.2.3, hoặc release/v1.2.3
+git checkout production
+# hoặc
+git checkout v1.2.3
+# hoặc
+git checkout release/v1.2.3
+
+# Đảm bảo đã sync với remote
+git pull origin production
+```
+
+**Bước 3: Tạo hotfix branch từ branch Production**
+```bash
+# Tạo hotfix branch từ branch đang chạy Production
 git checkout -b hotfix/v1.2.4
 # hoặc
 git checkout -b hotfix/issue-123
+
+# Verify branch đã được tạo đúng
+git branch
+git log --oneline -5
+```
+
+**Lưu ý quan trọng**:
+- **Bắt buộc**: Hotfix branch phải được tạo từ branch đang chạy Production, không được tạo từ develop/main
+- **Xác nhận**: Phải xác nhận với DevOps/Release Manager về branch chính xác trước khi tạo hotfix branch
+- **Không merge**: Không merge code từ develop/main vào hotfix branch (chỉ sửa lỗi tối thiểu)
+- **Ghi nhận**: Ghi nhận branch gốc trong Hotfix Request (TP-002)
+
+**Ví dụ đầy đủ**:
+```bash
+# 1. Xác định branch Production
+# Production đang chạy version 1.2.3 từ branch release/v1.2.3
+
+# 2. Clone đúng branch
+git fetch origin
+git checkout release/v1.2.3
+git pull origin release/v1.2.3
+
+# 3. Tạo hotfix branch
+git checkout -b hotfix/v1.2.4
+
+# 4. Verify
+git branch
+# * hotfix/v1.2.4
+#   release/v1.2.3
 ```
 
 ### 4.2. Sửa lỗi

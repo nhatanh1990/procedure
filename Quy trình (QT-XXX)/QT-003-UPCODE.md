@@ -244,17 +244,39 @@ git checkout -b bugfix/PROJ-456-fix-login-error
 
 #### 3.2.3. Quy tắc commit message
 
-**Format**: `{JIRA-TASK-ID}: {Mô tả ngắn gọn}`
+**Format**: `{type}/{JIRA-TASK-ID}: {Mô tả ngắn gọn}`
+
+**Các loại commit (type)**:
+
+| Type | Mô tả | Ví dụ |
+|------|-------|-------|
+| **feat** | Thêm vào mã nguồn | Chức năng, test, thư viện |
+| **Drop** | Xóa khỏi mã nguồn | Chức năng, test, thư viện |
+| **Fix** | Sửa trong mã nguồn | Lỗi, typo |
+| **Bump** | Thay đổi version | Nâng phiên bản một thư viện đang sử dụng |
+| **Make** | Thay đổi công cụ hoặc quy trình build | Liên quan hạ tầng |
+| **Refactor** | Sửa đổi nhằm mục đích tái cấu trúc mã nguồn cũ | Tách logic xử lý trong controller layer về business layer |
+| **Optimize** | Sửa đổi nhằm mục đích tối ưu hiệu năng cho mã nguồn cũ | Tối ưu hiệu năng chức năng tìm kiếm đơn hàng bằng cách sử dụng thêm caching layer để giảm thời gian truy vấn từ cơ sở dữ liệu |
+| **Reformat** | Sửa đổi nhằm mục đích định dạng lại code cũ | Xóa khoảng trắng, dòng trắng sai coding convention |
+| **Rephrase** | Sửa đổi liên quan tài liệu trong source code | Comment trong source code (TODO / FIXME / …) |
+| **Document** | Sửa đổi liên quan đến tài liệu bên ngoài source code | Thêm mô tả vào file README.md |
 
 **Ví dụ**:
 ```
-PROJ-123: Add user authentication with JWT
-PROJ-456: Fix login error when password contains special characters
-PROJ-789: Hotfix - Critical security patch for SQL injection
+feat/PROJ-123: Add user authentication with JWT
+Fix/PROJ-456: Fix login error when password contains special characters
+Drop/PROJ-789: Remove deprecated authentication module
+Bump/PROJ-100: Bump React version from 17.0.0 to 18.0.0
+Make/PROJ-200: Update Docker build configuration
+Refactor/PROJ-300: Extract business logic from controller to service layer
+Optimize/PROJ-400: Add caching layer to improve order search performance
+Reformat/PROJ-500: Fix code formatting according to coding convention
+Rephrase/PROJ-600: Update TODO comments in authentication module
+Document/PROJ-700: Add API documentation to README.md
 ```
 
 **Quy tắc chi tiết**:
-- **Bắt buộc có mã Jira**: Mọi commit phải có mã Jira task
+- **Bắt buộc có type và mã Jira**: Mọi commit phải có type và mã Jira task
 - **Mô tả rõ ràng**: Mô tả ngắn gọn nhưng đủ thông tin
 - **Sử dụng present tense**: "Add", "Fix", "Update" (không dùng "Added", "Fixed")
 - **Giới hạn độ dài**: Dòng đầu tiên ≤ 72 ký tự
@@ -262,7 +284,7 @@ PROJ-789: Hotfix - Critical security patch for SQL injection
 
 **Ví dụ commit message đầy đủ**:
 ```
-PROJ-123: Add user authentication with JWT
+feat/PROJ-123: Add user authentication with JWT
 
 - Implement JWT token generation
 - Add login endpoint
@@ -275,7 +297,7 @@ Closes PROJ-123
 
 **Ví dụ commit với multiple tasks**:
 ```
-PROJ-123, PROJ-124: Refactor authentication module
+Refactor/PROJ-123, PROJ-124: Refactor authentication module
 
 - Consolidate authentication logic
 - Update both login and registration flows
@@ -292,11 +314,11 @@ Closes PROJ-124
 # Stage files
 git add .
 
-# Commit với mã Jira
-git commit -m "PROJ-123: Add user authentication with JWT"
+# Commit với type và mã Jira
+git commit -m "feat/PROJ-123: Add user authentication with JWT"
 
 # Hoặc commit với message đầy đủ
-git commit -m "PROJ-123: Add user authentication with JWT
+git commit -m "feat/PROJ-123: Add user authentication with JWT
 
 - Implement JWT token generation
 - Add login endpoint
@@ -365,9 +387,9 @@ bugfix/PROJ-456-fix-login-error
 
 **2. Git Commit Message**
 ```bash
-# Format: {JIRA-TASK-ID}: {Mô tả}
-PROJ-123: Add user authentication with JWT
-PROJ-456: Fix login error when password contains special characters
+# Format: {type}/{JIRA-TASK-ID}: {Mô tả}
+feat/PROJ-123: Add user authentication with JWT
+Fix/PROJ-456: Fix login error when password contains special characters
 ```
 
 **3. Pull Request Title**
@@ -424,8 +446,8 @@ git checkout -b feature/PROJ-123-add-user-authentication
 
 **Bước 3: Commit với mã Jira**
 ```bash
-# Commit với mã Jira trong message
-git commit -m "PROJ-123: Add user authentication with JWT"
+# Commit với type và mã Jira trong message
+git commit -m "feat/PROJ-123: Add user authentication with JWT"
 ```
 
 **Bước 4: Push và tạo PR**
@@ -454,7 +476,7 @@ git commit -m "PROJ-123: Add user authentication with JWT"
 
 **Ví dụ tích hợp**:
 - **Jira**: Task `PROJ-123` hiển thị tất cả commit liên quan
-- **Git**: Commit `PROJ-123: Add user authentication` hiển thị link đến Jira task
+- **Git**: Commit `feat/PROJ-123: Add user authentication` hiển thị link đến Jira task
 
 ### 3.4. Best Practices
 
@@ -515,7 +537,7 @@ git checkout -b feature/PROJ-123-add-user-authentication
 **Bước 4: Commit**
 ```bash
 git add .
-git commit -m "PROJ-123: Add user authentication with JWT
+git commit -m "feat/PROJ-123: Add user authentication with JWT
 
 - Implement JWT token generation
 - Add login endpoint
