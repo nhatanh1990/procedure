@@ -12,8 +12,8 @@ Hệ thống Quy trình và Quy định này là bộ tài liệu toàn diện q
 
 Hệ thống bao gồm:
 - **9 quy trình chính**: Quản trị vận hành, Upcode, Hotfix, Provisioning, Versioning, Release, Danh sách Thay đổi Chuẩn, Bổ sung Thay đổi, Rà soát Hệ thống Audit
-- **11 checklist**: Hỗ trợ thực hiện từng quy trình
-- **12 template và example**: Chuẩn hóa tài liệu và yêu cầu
+- **12 checklist**: Hỗ trợ thực hiện từng quy trình
+- **16 template và example**: Chuẩn hóa tài liệu và yêu cầu
 - **Chính sách Quyền Truy Cập Tối Thiểu**: Đảm bảo bảo mật và tuân thủ
 - **Tài liệu hỗ trợ**: Hướng dẫn sử dụng, troubleshooting, training
 
@@ -336,10 +336,10 @@ QT/
  QT-010-RA_SOAT_HE_THONG_AUDIT.md 
 
  Checklist (CL-XXX)/
- CL-001 đến CL-011 (11 checklist)
+ CL-001 đến CL-012 (12 checklist)
 
  Template (TP-XXX)/
- TP-001 đến TP-006 (6 template + 6 example)
+ TP-001 đến TP-008 (8 template + 8 example)
 
  Hỗ trợ (Support)/
  QUICK_START.md
@@ -373,7 +373,7 @@ QT/
 
 ## CHECKLIST VÀ TEMPLATE
 
-### Checklist (11 file)
+### Checklist (12 file)
 
 | Mã | Tên | File |
 |----|-----|------|
@@ -385,8 +385,9 @@ QT/
 | **CL-006** | Tra Cứu Thay Đổi | `Checklist (CL-XXX)/CL-006-TRA_CUU_THAY_DOI.md` |
 | **CL-007-010** | Nhóm A/B/C/D | `Checklist (CL-XXX)/CL-007 đến CL-010` |
 | **CL-011** | Quyền Truy Cập | `Checklist (CL-XXX)/CL-011-CHECKLIST_QUYEN_TRUY_CAP.md` |
+| **CL-012** | Rà soát Hệ thống | `Checklist (CL-XXX)/CL-012-CHECKLIST_RA_SOAT_HE_THONG.md` |
 
-### Template (6 template + 5 example)
+### Template (8 template + 8 example)
 
 | Mã | Tên | Template | Example |
 |----|-----|----------|---------|
@@ -396,6 +397,8 @@ QT/
 | **TP-004** | Provisioning | `Template (TP-XXX)/TP-004-TEMPLATE_PROVISIONING.md` | `TP-004-EXAMPLE_PROVISIONING.md` |
 | **TP-005** | Tra Cứu | `Template (TP-XXX)/TP-005-TEMPLATE_TRA_CUU_THAY_DOI.md` | `TP-005-EXAMPLE_TRA_CUU_THAY_DOI.md` |
 | **TP-006** | Cấp Quyền | `Template (TP-XXX)/TP-006-TEMPLATE_YEU_CAU_CAP_QUYEN.md` | `TP-006-EXAMPLE_YEU_CAU_CAP_QUYEN.md` |
+| **TP-007** | Báo cáo Rà soát | `Template (TP-XXX)/TP-007-TEMPLATE_BAO_CAO_RA_SOAT.md` | `TP-007-EXAMPLE_BAO_CAO_RA_SOAT.md` |
+| **TP-008** | Kế hoạch Hành động | `Template (TP-XXX)/TP-008-TEMPLATE_KE_HOACH_HANH_DONG.md` | `TP-008-EXAMPLE_KE_HOACH_HANH_DONG.md` |
 
 ---
 
